@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>GUNKOWII SABA | Digital Commerce • Marketing • Technology</title>
+    <title>GUNKOWII SABA | Digital Commerce, Marketing & Technology</title>
 
     <meta name="description"
-        content="GUNKOWII SABA — Digital Commerce, Marketing and Technology. E-commerce, Shopify, email marketing, websites and digital solutions.">
+        content="GUNKOWII SABA provides professional digital commerce, marketing and technology solutions, including e-commerce, Shopify, email marketing, website development and custom digital systems.">
 
     <meta name="author" content="H.M. Gunkowii">
 
     <style>
+
         * {
             margin: 0;
             padding: 0;
@@ -41,7 +42,7 @@
 
         /* =========================
            NAVIGATION
-        ========================= */
+        ========================== */
 
         header {
             background: #14251d;
@@ -87,7 +88,7 @@
 
         /* =========================
            HERO
-        ========================= */
+        ========================== */
 
         .hero {
             min-height: 88vh;
@@ -95,13 +96,18 @@
             align-items: center;
             position: relative;
             overflow: hidden;
+
             background:
                 radial-gradient(
                     circle at 90% 15%,
                     rgba(194, 157, 74, 0.16),
                     transparent 30%
                 ),
-                linear-gradient(135deg, #f7f4ed, #e9e2d4);
+                linear-gradient(
+                    135deg,
+                    #f7f4ed,
+                    #e9e2d4
+                );
         }
 
         .hero::after {
@@ -159,7 +165,7 @@
 
         /* =========================
            BUTTONS
-        ========================= */
+        ========================== */
 
         .buttons {
             display: flex;
@@ -198,7 +204,7 @@
 
         /* =========================
            GENERAL SECTIONS
-        ========================= */
+        ========================== */
 
         section {
             padding: 105px 0;
@@ -232,8 +238,104 @@
         }
 
         /* =========================
+           PROFILE
+        ========================== */
+
+        .profile {
+            background: white;
+        }
+
+        .profile-grid {
+            display: grid;
+            grid-template-columns: 0.8fr 1.2fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .profile-card {
+            min-height: 420px;
+            background:
+                linear-gradient(
+                    145deg,
+                    #14251d,
+                    #1b3026
+                );
+            border: 1px solid #39483f;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            padding: 40px;
+        }
+
+        .profile-card::before {
+            content: "";
+            position: absolute;
+            width: 260px;
+            height: 260px;
+            border: 1px solid rgba(194, 157, 74, 0.35);
+            border-radius: 50%;
+        }
+
+        .profile-initial {
+            width: 150px;
+            height: 150px;
+            border: 2px solid #c29d4a;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #c29d4a;
+            font-family: Georgia, serif;
+            font-size: 3rem;
+            font-weight: bold;
+            position: relative;
+            z-index: 2;
+        }
+
+        .profile-caption {
+            position: absolute;
+            bottom: 25px;
+            left: 25px;
+            color: #bdc7c0;
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            font-weight: bold;
+        }
+
+        .profile-name {
+            font-family: Georgia, serif;
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            line-height: 1;
+            margin-bottom: 12px;
+        }
+
+        .profile-role {
+            color: #92702c;
+            font-weight: bold;
+            font-size: 1rem;
+            margin-bottom: 25px;
+        }
+
+        .profile-details {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin-top: 30px;
+        }
+
+        .profile-detail {
+            background: #f7f4ed;
+            border: 1px solid #ded8cb;
+            padding: 15px;
+            font-size: 0.85rem;
+            font-weight: bold;
+        }
+
+        /* =========================
            ABOUT
-        ========================= */
+        ========================== */
 
         .about-grid {
             display: grid;
@@ -262,7 +364,7 @@
 
         /* =========================
            SERVICES
-        ========================= */
+        ========================== */
 
         .dark-section {
             background: #14251d;
@@ -316,7 +418,7 @@
 
         /* =========================
            PROJECTS
-        ========================= */
+        ========================== */
 
         .project-intro {
             max-width: 760px;
@@ -364,7 +466,7 @@
 
         /* =========================
            PROCESS
-        ========================= */
+        ========================== */
 
         .process {
             background: #eee8dc;
@@ -400,7 +502,7 @@
 
         /* =========================
            CTA
-        ========================= */
+        ========================== */
 
         .cta {
             background: white;
@@ -422,7 +524,7 @@
 
         /* =========================
            CONTACT
-        ========================= */
+        ========================== */
 
         .contact {
             background: #14251d;
@@ -470,7 +572,7 @@
 
         /* =========================
            FOOTER
-        ========================= */
+        ========================== */
 
         footer {
             background: #0c1712;
@@ -486,9 +588,14 @@
 
         /* =========================
            MOBILE
-        ========================= */
+        ========================== */
 
-        @media (max-width: 850px) {
+        @media (max-width: 900px) {
+
+            .profile-grid {
+                grid-template-columns: 1fr;
+                gap: 45px;
+            }
 
             .about-grid {
                 grid-template-columns: 1fr;
@@ -523,6 +630,10 @@
                 grid-template-columns: 1fr;
             }
 
+            .profile-details {
+                grid-template-columns: 1fr;
+            }
+
             section {
                 padding: 75px 0;
             }
@@ -537,6 +648,10 @@
 
             .project {
                 padding: 30px;
+            }
+
+            .profile-card {
+                min-height: 350px;
             }
         }
 
@@ -559,7 +674,16 @@
                 width: 100%;
                 text-align: center;
             }
+
+            .hero h1 {
+                font-size: 3rem;
+            }
+
+            .profile-name {
+                font-size: 2.7rem;
+            }
         }
+
     </style>
 </head>
 
@@ -574,7 +698,7 @@
         </div>
 
         <div class="nav-links">
-            <a href="#about">About</a>
+            <a href="#profile">Profile</a>
             <a href="#services">Services</a>
             <a href="#projects">Work</a>
             <a href="#contact">Contact</a>
@@ -586,6 +710,7 @@
 
 
 <main>
+
 
     <!-- =========================
          HERO
@@ -609,8 +734,8 @@
             </h1>
 
             <p>
-                I'm H.M. Gunkowii, an E-commerce & Digital Solutions
-                Specialist helping businesses improve their online stores,
+                I'm H.M. Gunkowii, an E-commerce and Digital Solutions
+                Specialist helping businesses strengthen their online stores,
                 customer journeys, marketing systems and digital products.
             </p>
 
@@ -623,6 +748,98 @@
                 <a href="#projects" class="button secondary">
                     Explore My Work
                 </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         PROFILE
+    ========================== -->
+
+    <section id="profile" class="profile">
+
+        <div class="container">
+
+            <div class="profile-grid">
+
+
+                <div class="profile-card">
+
+                    <div class="profile-initial">
+                        GS
+                    </div>
+
+                    <div class="profile-caption">
+                        GUNKOWII SABA
+                    </div>
+
+                </div>
+
+
+                <div>
+
+                    <div class="label">
+                        THE PERSON BEHIND THE WORK
+                    </div>
+
+                    <div class="profile-name">
+                        H.M. Gunkowii
+                    </div>
+
+                    <div class="profile-role">
+                        Founder, GUNKOWII SABA
+                    </div>
+
+                    <p class="section-text">
+                        I work with businesses and organizations to turn
+                        digital challenges into practical, purposeful
+                        solutions. My work combines e-commerce, marketing
+                        and technology to help businesses build stronger
+                        digital operations and better customer experiences.
+                    </p>
+
+                    <p class="section-text">
+                        Whether the challenge is an underperforming online
+                        store, an ineffective customer journey, a marketing
+                        system that needs structure or a digital product
+                        that needs to be built, I focus on understanding
+                        the real problem before recommending a solution.
+                    </p>
+
+
+                    <div class="profile-details">
+
+                        <div class="profile-detail">
+                            E-commerce
+                        </div>
+
+                        <div class="profile-detail">
+                            Shopify
+                        </div>
+
+                        <div class="profile-detail">
+                            Email Marketing
+                        </div>
+
+                        <div class="profile-detail">
+                            Web Development
+                        </div>
+
+                        <div class="profile-detail">
+                            App Development
+                        </div>
+
+                        <div class="profile-detail">
+                            Digital Solutions
+                        </div>
+
+                    </div>
+
+                </div>
 
             </div>
 
@@ -655,16 +872,16 @@
                     <p class="section-text">
                         I work at the intersection of e-commerce, digital
                         marketing and technology. My focus is not simply
-                        creating something that looks good — it is creating
+                        creating something that looks good—it is developing
                         digital solutions that serve a clear business purpose.
                     </p>
 
                     <p class="section-text">
-                        From improving an online store and building email
+                        From optimizing online stores and building email
                         marketing systems to developing websites and
                         business applications, I approach every project
-                        by first understanding the problem and then building
-                        the right solution.
+                        by first understanding the challenge and then
+                        delivering the right solution.
                     </p>
 
                 </div>
@@ -685,8 +902,8 @@
                     <p>
                         E-commerce Specialist<br>
                         Shopify Specialist<br>
-                        Email Marketer<br>
-                        Web & App Developer
+                        Email Marketing Specialist<br>
+                        Web and Application Developer
                     </p>
 
                 </div>
@@ -717,6 +934,7 @@
 
             <div class="services">
 
+
                 <div class="service">
 
                     <div class="service-number">
@@ -724,13 +942,13 @@
                     </div>
 
                     <h3>
-                        E-commerce & Shopify
+                        E-commerce and Shopify
                     </h3>
 
                     <p>
                         Store setup, customization, product-page
                         optimization, conversion improvements, customer
-                        experience and detailed store audits.
+                        experience enhancements and comprehensive store audits.
                     </p>
 
                 </div>
@@ -749,7 +967,7 @@
                     <p>
                         Strategic campaigns, automated customer journeys,
                         welcome sequences, abandoned-cart flows,
-                        retention and lifecycle marketing.
+                        retention programs and lifecycle marketing.
                     </p>
 
                 </div>
@@ -781,7 +999,7 @@
                     </div>
 
                     <h3>
-                        Web & App Development
+                        Web and Application Development
                     </h3>
 
                     <p>
@@ -818,7 +1036,7 @@
 
             <p class="project-intro">
                 A selection of digital work demonstrating my approach
-                to technology, business systems and practical problem solving.
+                to technology, business systems and practical problem-solving.
             </p>
 
 
@@ -835,8 +1053,8 @@
 
                 <p>
                     A comprehensive digital school management platform
-                    designed to bring academic, administrative and
-                    operational activities into one connected system.
+                    designed to integrate academic, administrative and
+                    operational activities within one connected system.
                     The project is being developed with Flutter and Firebase,
                     with role-based functionality for administrators,
                     teachers, students and parents.
@@ -879,11 +1097,12 @@
 
             <div class="steps">
 
+
                 <div class="step">
                     <strong>01</strong>
                     <h3>Understand</h3>
                     <p>
-                        Understand the business, audience and objectives.
+                        Understand the business, target audience and objectives.
                     </p>
                 </div>
 
@@ -892,7 +1111,7 @@
                     <strong>02</strong>
                     <h3>Audit</h3>
                     <p>
-                        Identify weaknesses, friction and missed opportunities.
+                        Identify weaknesses, friction points and missed opportunities.
                     </p>
                 </div>
 
@@ -901,7 +1120,7 @@
                     <strong>03</strong>
                     <h3>Strategize</h3>
                     <p>
-                        Build a focused plan based on the actual needs.
+                        Develop a focused plan based on the organization's specific needs.
                     </p>
                 </div>
 
@@ -910,7 +1129,7 @@
                     <strong>04</strong>
                     <h3>Implement</h3>
                     <p>
-                        Execute the strategy with attention to detail.
+                        Execute the strategy with precision and attention to detail.
                     </p>
                 </div>
 
@@ -919,7 +1138,7 @@
                     <strong>05</strong>
                     <h3>Optimize</h3>
                     <p>
-                        Monitor performance and continuously improve.
+                        Monitor performance and continuously improve the solution.
                     </p>
                 </div>
 
@@ -953,7 +1172,8 @@
 
                     <p>
                         Tell me what you're working on, what isn't working,
-                        or what you want to build. We'll start from there.
+                        or what you want to build. We'll begin by defining
+                        the right path forward.
                     </p>
 
                 </div>
@@ -988,10 +1208,10 @@
             </h2>
 
             <p>
-                Have an online store that needs improvement, a digital
-                product you want to build, or a marketing system that
-                needs a stronger strategy? Tell me what you're working
-                on and let's discuss the right way forward.
+                Whether you need to improve an online store, develop a
+                digital product or strengthen your marketing system,
+                share your objectives and let's discuss the most effective
+                way forward.
             </p>
 
 
