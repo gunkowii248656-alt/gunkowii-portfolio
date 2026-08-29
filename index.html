@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Gunkowii | E-commerce Specialist</title>
+    <title>GUNKOWII SABA | Digital Commerce • Marketing • Technology</title>
 
     <meta name="description"
-        content="Gunkowii - E-commerce Specialist, Shopify Expert, Email Marketer and Web & App Developer.">
+        content="GUNKOWII SABA — Digital Commerce, Marketing and Technology. E-commerce, Shopify, email marketing, websites and digital solutions.">
+
+    <meta name="author" content="H.M. Gunkowii">
 
     <style>
         * {
@@ -24,16 +26,22 @@
             font-family: Arial, Helvetica, sans-serif;
             background: #f7f4ed;
             color: #14251d;
-            line-height: 1.6;
+            line-height: 1.7;
+        }
+
+        a {
+            transition: all 0.25s ease;
         }
 
         .container {
             width: 90%;
-            max-width: 1100px;
+            max-width: 1180px;
             margin: auto;
         }
 
-        /* NAVIGATION */
+        /* =========================
+           NAVIGATION
+        ========================= */
 
         header {
             background: #14251d;
@@ -41,10 +49,11 @@
             position: sticky;
             top: 0;
             z-index: 1000;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
         }
 
         nav {
-            min-height: 70px;
+            min-height: 76px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -52,71 +61,107 @@
 
         .logo {
             font-family: Georgia, serif;
-            font-size: 1.4rem;
+            font-size: 1.25rem;
             font-weight: bold;
             letter-spacing: 2px;
         }
 
+        .logo span {
+            color: #c29d4a;
+        }
+
         .nav-links {
             display: flex;
-            gap: 25px;
+            gap: 28px;
         }
 
         .nav-links a {
-            color: white;
+            color: #eef2ef;
             text-decoration: none;
-            font-size: 0.9rem;
+            font-size: 0.88rem;
         }
 
-        /* HERO */
+        .nav-links a:hover {
+            color: #c29d4a;
+        }
+
+        /* =========================
+           HERO
+        ========================= */
 
         .hero {
             min-height: 88vh;
             display: flex;
             align-items: center;
-            background: linear-gradient(135deg, #f7f4ed, #e9e2d4);
+            position: relative;
+            overflow: hidden;
+            background:
+                radial-gradient(circle at 90% 15%, rgba(194,157,74,0.16), transparent 30%),
+                linear-gradient(135deg, #f7f4ed, #e9e2d4);
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            width: 420px;
+            height: 420px;
+            border: 1px solid rgba(146,112,44,0.18);
+            border-radius: 50%;
+            right: -180px;
+            bottom: -180px;
         }
 
         .hero-content {
-            padding: 80px 0;
+            padding: 100px 0;
+            max-width: 900px;
+            position: relative;
+            z-index: 2;
         }
 
         .eyebrow {
             color: #92702c;
-            font-size: 0.8rem;
+            font-size: 0.78rem;
             font-weight: bold;
-            letter-spacing: 2px;
-            margin-bottom: 20px;
+            letter-spacing: 3px;
+            margin-bottom: 22px;
         }
 
-        h1 {
+        .hero h1 {
             font-family: Georgia, serif;
-            font-size: clamp(3rem, 8vw, 6rem);
-            line-height: 1;
-            margin-bottom: 30px;
+            font-size: clamp(3.2rem, 9vw, 6.8rem);
+            line-height: 0.98;
+            letter-spacing: -2px;
+            margin-bottom: 28px;
+            max-width: 1000px;
         }
 
-        h1 span,
-        h2 span {
+        .hero h1 span {
             color: #92702c;
         }
 
+        .hero-subtitle {
+            font-size: 1.05rem;
+            font-weight: bold;
+            color: #14251d;
+            margin-bottom: 15px;
+        }
+
         .hero p {
-            max-width: 700px;
+            max-width: 760px;
             color: #59645e;
-            font-size: 1.1rem;
-            margin-bottom: 30px;
+            font-size: 1.08rem;
+            margin-bottom: 35px;
         }
 
         .buttons {
             display: flex;
-            gap: 15px;
+            gap: 14px;
             flex-wrap: wrap;
         }
 
         .button {
             display: inline-block;
-            padding: 14px 24px;
+            padding: 14px 25px;
             text-decoration: none;
             font-weight: bold;
             border-radius: 4px;
@@ -127,39 +172,87 @@
             color: white;
         }
 
+        .primary:hover {
+            background: #92702c;
+        }
+
         .secondary {
             border: 1px solid #14251d;
             color: #14251d;
         }
 
-        /* SECTIONS */
+        .secondary:hover {
+            background: #14251d;
+            color: white;
+        }
+
+        /* =========================
+           GENERAL SECTIONS
+        ========================= */
 
         section {
-            padding: 100px 0;
+            padding: 105px 0;
         }
 
         .label {
             color: #92702c;
-            font-size: 0.8rem;
+            font-size: 0.76rem;
             font-weight: bold;
-            letter-spacing: 2px;
-            margin-bottom: 15px;
+            letter-spacing: 2.5px;
+            margin-bottom: 16px;
         }
 
         h2 {
             font-family: Georgia, serif;
-            font-size: clamp(2.3rem, 5vw, 4rem);
-            line-height: 1.1;
-            margin-bottom: 25px;
+            font-size: clamp(2.4rem, 5vw, 4.2rem);
+            line-height: 1.08;
+            letter-spacing: -1px;
+            margin-bottom: 28px;
+        }
+
+        h2 span {
+            color: #92702c;
         }
 
         .section-text {
-            max-width: 760px;
+            max-width: 780px;
             color: #59645e;
             margin-bottom: 18px;
+            font-size: 1rem;
         }
 
-        /* SERVICES */
+        /* =========================
+           ABOUT
+        ========================= */
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1.4fr 0.6fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .about-card {
+            background: white;
+            border: 1px solid #ded8cb;
+            padding: 32px;
+        }
+
+        .about-card strong {
+            display: block;
+            font-family: Georgia, serif;
+            font-size: 1.5rem;
+            margin-bottom: 8px;
+        }
+
+        .about-card p {
+            color: #59645e;
+            font-size: 0.92rem;
+        }
+
+        /* =========================
+           SERVICES
+        ========================= */
 
         .dark-section {
             background: #14251d;
@@ -177,72 +270,90 @@
         .services {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-            margin-top: 45px;
+            gap: 18px;
+            margin-top: 48px;
         }
 
         .service {
-            padding: 30px;
+            padding: 34px;
             border: 1px solid #39483f;
             background: #1b3026;
+        }
+
+        .service:hover {
+            border-color: #c29d4a;
+            transform: translateY(-3px);
         }
 
         .service-number {
             color: #c29d4a;
             font-weight: bold;
-            margin-bottom: 15px;
+            font-size: 0.82rem;
+            margin-bottom: 16px;
         }
 
         .service h3 {
             font-family: Georgia, serif;
-            font-size: 1.5rem;
+            font-size: 1.55rem;
             margin-bottom: 10px;
         }
 
         .service p {
             color: #bdc7c0;
+            font-size: 0.93rem;
         }
 
-        /* PROJECT */
+        /* =========================
+           PROJECTS
+        ========================= */
+
+        .project-intro {
+            max-width: 760px;
+            color: #59645e;
+        }
 
         .project {
             background: white;
             border: 1px solid #ded8cb;
-            padding: 45px;
-            margin-top: 40px;
+            padding: 48px;
+            margin-top: 45px;
         }
 
         .project small {
             color: #92702c;
             font-weight: bold;
-            letter-spacing: 1px;
+            letter-spacing: 1.5px;
         }
 
         .project h3 {
             font-family: Georgia, serif;
-            font-size: 2.5rem;
-            margin: 15px 0;
+            font-size: clamp(2rem, 4vw, 3rem);
+            line-height: 1.1;
+            margin: 16px 0;
         }
 
         .project p {
             color: #59645e;
+            max-width: 760px;
         }
 
         .tags {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 25px;
+            gap: 9px;
+            margin-top: 28px;
         }
 
         .tags span {
             background: #eee8dc;
             padding: 7px 12px;
-            font-size: 0.8rem;
+            font-size: 0.78rem;
             font-weight: bold;
         }
 
-        /* PROCESS */
+        /* =========================
+           PROCESS
+        ========================= */
 
         .process {
             background: #eee8dc;
@@ -251,8 +362,8 @@
         .steps {
             display: grid;
             grid-template-columns: repeat(5, 1fr);
-            gap: 15px;
-            margin-top: 45px;
+            gap: 14px;
+            margin-top: 48px;
         }
 
         .step {
@@ -263,19 +374,44 @@
 
         .step strong {
             color: #92702c;
+            font-size: 0.85rem;
         }
 
         .step h3 {
-            margin: 12px 0 5px;
+            margin: 12px 0 7px;
             font-family: Georgia, serif;
         }
 
         .step p {
-            font-size: 0.9rem;
+            font-size: 0.86rem;
             color: #59645e;
         }
 
-        /* CONTACT */
+        /* =========================
+           CTA
+        ========================= */
+
+        .cta {
+            background: white;
+            border-top: 1px solid #ded8cb;
+            border-bottom: 1px solid #ded8cb;
+        }
+
+        .cta-box {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .cta-box p {
+            max-width: 650px;
+            color: #59645e;
+        }
+
+        /* =========================
+           CONTACT
+        ========================= */
 
         .contact {
             background: #14251d;
@@ -293,30 +429,64 @@
 
         .contact p {
             max-width: 650px;
-            margin: 0 auto 30px;
+            margin: 0 auto 32px;
             color: #bdc7c0;
         }
 
-        /* FOOTER */
+        .contact .primary {
+            background: #c29d4a;
+            color: #14251d;
+        }
+
+        .contact .primary:hover {
+            background: white;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
 
         footer {
             background: #0c1712;
             color: #9daaa2;
-            padding: 25px 0;
+            padding: 28px 0;
             text-align: center;
-            font-size: 0.85rem;
+            font-size: 0.82rem;
         }
 
-        /* MOBILE */
+        footer strong {
+            color: white;
+        }
 
-        @media (max-width: 750px) {
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 850px) {
+
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .steps {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .cta-box {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        @media (max-width: 650px) {
 
             .nav-links {
                 gap: 12px;
             }
 
             .nav-links a {
-                font-size: 0.75rem;
+                font-size: 0.72rem;
             }
 
             .services {
@@ -327,16 +497,28 @@
                 grid-template-columns: 1fr;
             }
 
+            section {
+                padding: 75px 0;
+            }
+
+            .hero-content {
+                padding: 75px 0;
+            }
+
+            .hero h1 {
+                letter-spacing: -1px;
+            }
+
             .project {
                 padding: 30px;
             }
-
-            .project h3 {
-                font-size: 2rem;
-            }
         }
 
-        @media (max-width: 500px) {
+        @media (max-width: 480px) {
+
+            .logo {
+                font-size: 1rem;
+            }
 
             .nav-links a:nth-child(1),
             .nav-links a:nth-child(2) {
@@ -348,8 +530,8 @@
             }
 
             .button {
-                text-align: center;
                 width: 100%;
+                text-align: center;
             }
         }
     </style>
@@ -360,12 +542,14 @@
 <header>
     <nav class="container">
 
-        <div class="logo">GUNKOWII</div>
+        <div class="logo">
+            GUNKOWII <span>SABA</span>
+        </div>
 
         <div class="nav-links">
             <a href="#about">About</a>
             <a href="#services">Services</a>
-            <a href="#projects">Projects</a>
+            <a href="#projects">Work</a>
             <a href="#contact">Contact</a>
         </div>
 
@@ -382,29 +566,32 @@
         <div class="container hero-content">
 
             <div class="eyebrow">
-                E-COMMERCE • MARKETING • DEVELOPMENT
+                GUNKOWII SABA
+            </div>
+
+            <div class="hero-subtitle">
+                DIGITAL COMMERCE • MARKETING • TECHNOLOGY
             </div>
 
             <h1>
-                Helping businesses
-                <span>grow better online.</span>
+                I build digital experiences
+                <span>that move businesses forward.</span>
             </h1>
 
             <p>
-                I'm Gunkowii, an E-commerce Specialist, Shopify Expert,
-                Email Marketer and Web & App Developer helping businesses
-                improve their digital presence and turn opportunities
-                into measurable growth.
+                I'm H.M. Gunkowii, an E-commerce & Digital Solutions
+                Specialist helping businesses improve their online stores,
+                customer journeys, marketing systems and digital products.
             </p>
 
             <div class="buttons">
 
                 <a href="#contact" class="button primary">
-                    Let's Work Together
+                    Start a Conversation
                 </a>
 
                 <a href="#projects" class="button secondary">
-                    View My Work
+                    Explore My Work
                 </a>
 
             </div>
@@ -420,25 +607,54 @@
 
         <div class="container">
 
-            <div class="label">ABOUT ME</div>
+            <div class="about-grid">
 
-            <h2>
-                Strategy, technology and
-                <span>practical solutions.</span>
-            </h2>
+                <div>
 
-            <p class="section-text">
-                I help online businesses strengthen their stores,
-                improve customer experiences, build effective email
-                marketing systems and develop digital solutions that
-                solve real business problems.
-            </p>
+                    <div class="label">ABOUT GUNKOWII SABA</div>
 
-            <p class="section-text">
-                My approach is simple: understand the business first,
-                identify what is holding it back, and then implement
-                practical improvements that support its goals.
-            </p>
+                    <h2>
+                        Strategy first.
+                        <span>Execution that matters.</span>
+                    </h2>
+
+                    <p class="section-text">
+                        I work at the intersection of e-commerce, digital
+                        marketing and technology. My focus is not simply
+                        creating something that looks good — it is creating
+                        digital solutions that serve a clear business purpose.
+                    </p>
+
+                    <p class="section-text">
+                        From improving an online store and building email
+                        marketing systems to developing websites and
+                        business applications, I approach every project
+                        by first understanding the problem and then building
+                        the right solution.
+                    </p>
+
+                </div>
+
+                <div class="about-card">
+
+                    <strong>H.M. Gunkowii</strong>
+
+                    <p>
+                        Founder, GUNKOWII SABA
+                    </p>
+
+                    <br>
+
+                    <p>
+                        E-commerce Specialist<br>
+                        Shopify Specialist<br>
+                        Email Marketer<br>
+                        Web & App Developer
+                    </p>
+
+                </div>
+
+            </div>
 
         </div>
 
@@ -451,53 +667,72 @@
 
         <div class="container">
 
-            <div class="label">WHAT I DO</div>
+            <div class="label">EXPERTISE</div>
 
             <h2>
-                Services designed around
-                <span>your business.</span>
+                Digital solutions built around
+                <span>real business needs.</span>
             </h2>
 
             <div class="services">
 
                 <div class="service">
+
                     <div class="service-number">01</div>
+
                     <h3>E-commerce & Shopify</h3>
+
                     <p>
-                        Shopify store setup, customization,
-                        optimization, product pages, conversion
-                        improvement and store audits.
+                        Store setup, customization, product-page
+                        optimization, conversion improvements, customer
+                        experience and detailed store audits.
                     </p>
+
                 </div>
 
+
                 <div class="service">
+
                     <div class="service-number">02</div>
+
                     <h3>Email Marketing</h3>
+
                     <p>
-                        Email campaigns, automation, welcome
-                        sequences, abandoned-cart flows, retention
-                        and customer segmentation.
+                        Strategic campaigns, automated customer journeys,
+                        welcome sequences, abandoned-cart flows,
+                        retention and lifecycle marketing.
                     </p>
+
                 </div>
 
+
                 <div class="service">
+
                     <div class="service-number">03</div>
-                    <h3>Website Development</h3>
+
+                    <h3>Web Development</h3>
+
                     <p>
-                        Responsive websites, landing pages,
-                        maintenance, performance improvements
-                        and user experience optimization.
+                        Responsive websites, landing pages, business
+                        websites, maintenance, performance improvements
+                        and user-focused digital experiences.
                     </p>
+
                 </div>
 
+
                 <div class="service">
+
                     <div class="service-number">04</div>
+
                     <h3>Web & App Development</h3>
+
                     <p>
-                        Flutter applications, Firebase systems,
-                        authentication, databases and custom
-                        business applications.
+                        Flutter applications, Firebase-powered systems,
+                        authentication, databases and custom digital
+                        solutions for organizations and businesses.
                     </p>
+
                 </div>
 
             </div>
@@ -507,23 +742,29 @@
     </section>
 
 
-    <!-- PROJECT -->
+    <!-- PROJECTS -->
 
     <section id="projects">
 
         <div class="container">
 
-            <div class="label">FEATURED PROJECT</div>
+            <div class="label">SELECTED WORK</div>
 
             <h2>
-                Work I'm
-                <span>building.</span>
+                Building solutions with
+                <span>purpose.</span>
             </h2>
+
+            <p class="project-intro">
+                A selection of digital work demonstrating my approach
+                to technology, business systems and practical problem solving.
+            </p>
+
 
             <div class="project">
 
                 <small>
-                    FLUTTER • FIREBASE • MANAGEMENT SYSTEM
+                    FLUTTER • DART • FIREBASE • EDUCATION TECHNOLOGY
                 </small>
 
                 <h3>
@@ -532,16 +773,23 @@
                 </h3>
 
                 <p>
-                    A Flutter-based school management platform
-                    designed to centralize and streamline school
-                    operations within a single digital system.
+                    A comprehensive digital school management platform
+                    designed to bring academic, administrative and
+                    operational activities into one connected system.
+                    The project is being developed with Flutter and Firebase,
+                    with role-based functionality for administrators,
+                    teachers, students and parents.
                 </p>
 
                 <div class="tags">
+
                     <span>Flutter</span>
                     <span>Dart</span>
                     <span>Firebase</span>
+                    <span>Cloud Firestore</span>
                     <span>Authentication</span>
+                    <span>Education Technology</span>
+
                 </div>
 
             </div>
@@ -557,11 +805,11 @@
 
         <div class="container">
 
-            <div class="label">MY APPROACH</div>
+            <div class="label">HOW I WORK</div>
 
             <h2>
-                From understanding the problem
-                <span>to improving the result.</span>
+                A clear process from
+                <span>problem to solution.</span>
             </h2>
 
             <div class="steps">
@@ -569,32 +817,77 @@
                 <div class="step">
                     <strong>01</strong>
                     <h3>Understand</h3>
-                    <p>Learn about the business and its goals.</p>
+                    <p>
+                        Understand the business, audience and objectives.
+                    </p>
                 </div>
 
                 <div class="step">
                     <strong>02</strong>
                     <h3>Audit</h3>
-                    <p>Identify weaknesses and missed opportunities.</p>
+                    <p>
+                        Identify weaknesses, friction and missed opportunities.
+                    </p>
                 </div>
 
                 <div class="step">
                     <strong>03</strong>
                     <h3>Strategize</h3>
-                    <p>Create a practical improvement plan.</p>
+                    <p>
+                        Build a focused plan based on the actual needs.
+                    </p>
                 </div>
 
                 <div class="step">
                     <strong>04</strong>
                     <h3>Implement</h3>
-                    <p>Execute the necessary improvements.</p>
+                    <p>
+                        Execute the strategy with attention to detail.
+                    </p>
                 </div>
 
                 <div class="step">
                     <strong>05</strong>
-                    <h3>Monitor</h3>
-                    <p>Review performance and continue optimizing.</p>
+                    <h3>Optimize</h3>
+                    <p>
+                        Monitor performance and continuously improve.
+                    </p>
                 </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CTA -->
+
+    <section class="cta">
+
+        <div class="container">
+
+            <div class="cta-box">
+
+                <div>
+
+                    <div class="label">READY TO BUILD?</div>
+
+                    <h2>
+                        Let's turn your
+                        <span>next idea</span> into something useful.
+                    </h2>
+
+                    <p>
+                        Tell me what you're working on, what isn't working,
+                        or what you want to build. We'll start from there.
+                    </p>
+
+                </div>
+
+                <a href="#contact" class="button primary">
+                    Discuss a Project
+                </a>
 
             </div>
 
@@ -609,22 +902,24 @@
 
         <div class="container">
 
-            <div class="label">LET'S WORK TOGETHER</div>
+            <div class="label">GET IN TOUCH</div>
 
             <h2>
                 Have a project in mind?
-                <span>Let's discuss it.</span>
+                <span>Let's talk.</span>
             </h2>
 
             <p>
-                Whether you need help with an online store,
-                email marketing, a website or a digital product,
-                I'd be happy to discuss what you're working on.
+                Whether you need help improving an online store,
+                developing a digital product, building a website or
+                strengthening your marketing system, I'd be glad to hear
+                about it.
             </p>
 
-            <a href="mailto:your@email.com"
-               class="button primary">
-                Contact Me
+            <!-- Replace the email below with your real professional email -->
+
+            <a href="mailto:your@email.com" class="button primary">
+                Contact Gunkowii SABA
             </a>
 
         </div>
@@ -635,9 +930,21 @@
 
 
 <footer>
+
     <div class="container">
-        © 2026 Gunkowii. All rights reserved.
+
+        <strong>GUNKOWII SABA</strong>
+
+        <br>
+
+        Digital Commerce • Marketing • Technology
+
+        <br><br>
+
+        © 2026 GUNKOWII SABA. All rights reserved.
+
     </div>
+
 </footer>
 
 </body>
