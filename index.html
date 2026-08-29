@@ -4,15 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>GUNKOWII SABA | Digital Commerce, Marketing & Technology</title>
+    <title>GUNKOWII SABA | E-commerce & Digital Solutions Specialist</title>
 
     <meta name="description"
-        content="GUNKOWII SABA provides professional digital commerce, marketing and technology solutions, including e-commerce, Shopify, email marketing, website development and custom digital systems.">
+        content="GUNKOWII SABA — E-commerce, Shopify, email marketing, web development and digital solutions for businesses.">
 
-    <meta name="author" content="H.M. Gunkowii">
+    <meta name="author" content="GUNKOWII SABA">
 
     <style>
-
         * {
             margin: 0;
             padding: 0;
@@ -42,7 +41,7 @@
 
         /* =========================
            NAVIGATION
-        ========================== */
+        ========================= */
 
         header {
             background: #14251d;
@@ -50,7 +49,7 @@
             position: sticky;
             top: 0;
             z-index: 1000;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            border-bottom: 1px solid rgba(255,255,255,0.08);
         }
 
         nav {
@@ -88,7 +87,7 @@
 
         /* =========================
            HERO
-        ========================== */
+        ========================= */
 
         .hero {
             min-height: 88vh;
@@ -96,18 +95,9 @@
             align-items: center;
             position: relative;
             overflow: hidden;
-
             background:
-                radial-gradient(
-                    circle at 90% 15%,
-                    rgba(194, 157, 74, 0.16),
-                    transparent 30%
-                ),
-                linear-gradient(
-                    135deg,
-                    #f7f4ed,
-                    #e9e2d4
-                );
+                radial-gradient(circle at 90% 15%, rgba(194,157,74,0.16), transparent 30%),
+                linear-gradient(135deg, #f7f4ed, #e9e2d4);
         }
 
         .hero::after {
@@ -115,17 +105,23 @@
             position: absolute;
             width: 420px;
             height: 420px;
-            border: 1px solid rgba(146, 112, 44, 0.18);
+            border: 1px solid rgba(146,112,44,0.18);
             border-radius: 50%;
             right: -180px;
             bottom: -180px;
         }
 
-        .hero-content {
-            padding: 100px 0;
-            max-width: 900px;
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            align-items: center;
+            gap: 60px;
             position: relative;
             z-index: 2;
+        }
+
+        .hero-content {
+            padding: 90px 0;
         }
 
         .eyebrow {
@@ -133,39 +129,101 @@
             font-size: 0.78rem;
             font-weight: bold;
             letter-spacing: 3px;
-            margin-bottom: 22px;
+            margin-bottom: 20px;
         }
 
         .hero-subtitle {
-            font-size: 1.05rem;
+            font-size: 0.88rem;
             font-weight: bold;
             color: #14251d;
-            margin-bottom: 15px;
+            letter-spacing: 1.5px;
+            margin-bottom: 18px;
         }
 
         .hero h1 {
             font-family: Georgia, serif;
-            font-size: clamp(3.2rem, 9vw, 6.8rem);
+            font-size: clamp(3rem, 6vw, 5.8rem);
             line-height: 0.98;
             letter-spacing: -2px;
             margin-bottom: 28px;
-            max-width: 1000px;
         }
 
         .hero h1 span {
             color: #92702c;
+            display: block;
         }
 
         .hero p {
-            max-width: 760px;
+            max-width: 690px;
             color: #59645e;
-            font-size: 1.08rem;
-            margin-bottom: 35px;
+            font-size: 1.05rem;
+            margin-bottom: 32px;
+        }
+
+        /* =========================
+           PROFILE IMAGE
+        ========================= */
+
+        .hero-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .portrait-frame {
+            width: min(430px, 100%);
+            aspect-ratio: 4 / 5;
+            padding: 10px;
+            background: #c29d4a;
+            box-shadow: 25px 25px 0 #14251d;
+            position: relative;
+        }
+
+        .portrait-frame::before {
+            content: "";
+            position: absolute;
+            inset: 22px;
+            border: 1px solid rgba(255,255,255,0.65);
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        .portrait {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+            display: block;
+            background: #ddd;
+        }
+
+        .profile-caption {
+            position: absolute;
+            left: -25px;
+            bottom: 35px;
+            background: #14251d;
+            color: white;
+            padding: 14px 20px;
+            z-index: 3;
+            box-shadow: 5px 5px 0 #c29d4a;
+        }
+
+        .profile-caption strong {
+            display: block;
+            font-family: Georgia, serif;
+            font-size: 1rem;
+        }
+
+        .profile-caption span {
+            color: #c29d4a;
+            font-size: 0.72rem;
+            letter-spacing: 1px;
         }
 
         /* =========================
            BUTTONS
-        ========================== */
+        ========================= */
 
         .buttons {
             display: flex;
@@ -179,7 +237,6 @@
             text-decoration: none;
             font-weight: bold;
             border-radius: 4px;
-            cursor: pointer;
         }
 
         .primary {
@@ -194,7 +251,6 @@
         .secondary {
             border: 1px solid #14251d;
             color: #14251d;
-            background: transparent;
         }
 
         .secondary:hover {
@@ -204,7 +260,7 @@
 
         /* =========================
            GENERAL SECTIONS
-        ========================== */
+        ========================= */
 
         section {
             padding: 105px 0;
@@ -238,104 +294,8 @@
         }
 
         /* =========================
-           PROFILE
-        ========================== */
-
-        .profile {
-            background: white;
-        }
-
-        .profile-grid {
-            display: grid;
-            grid-template-columns: 0.8fr 1.2fr;
-            gap: 70px;
-            align-items: center;
-        }
-
-        .profile-card {
-            min-height: 420px;
-            background:
-                linear-gradient(
-                    145deg,
-                    #14251d,
-                    #1b3026
-                );
-            border: 1px solid #39483f;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            overflow: hidden;
-            padding: 40px;
-        }
-
-        .profile-card::before {
-            content: "";
-            position: absolute;
-            width: 260px;
-            height: 260px;
-            border: 1px solid rgba(194, 157, 74, 0.35);
-            border-radius: 50%;
-        }
-
-        .profile-initial {
-            width: 150px;
-            height: 150px;
-            border: 2px solid #c29d4a;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #c29d4a;
-            font-family: Georgia, serif;
-            font-size: 3rem;
-            font-weight: bold;
-            position: relative;
-            z-index: 2;
-        }
-
-        .profile-caption {
-            position: absolute;
-            bottom: 25px;
-            left: 25px;
-            color: #bdc7c0;
-            font-size: 0.75rem;
-            letter-spacing: 2px;
-            font-weight: bold;
-        }
-
-        .profile-name {
-            font-family: Georgia, serif;
-            font-size: clamp(2.5rem, 5vw, 4.5rem);
-            line-height: 1;
-            margin-bottom: 12px;
-        }
-
-        .profile-role {
-            color: #92702c;
-            font-weight: bold;
-            font-size: 1rem;
-            margin-bottom: 25px;
-        }
-
-        .profile-details {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 12px;
-            margin-top: 30px;
-        }
-
-        .profile-detail {
-            background: #f7f4ed;
-            border: 1px solid #ded8cb;
-            padding: 15px;
-            font-size: 0.85rem;
-            font-weight: bold;
-        }
-
-        /* =========================
            ABOUT
-        ========================== */
+        ========================= */
 
         .about-grid {
             display: grid;
@@ -364,7 +324,7 @@
 
         /* =========================
            SERVICES
-        ========================== */
+        ========================= */
 
         .dark-section {
             background: #14251d;
@@ -390,7 +350,6 @@
             padding: 34px;
             border: 1px solid #39483f;
             background: #1b3026;
-            transition: all 0.25s ease;
         }
 
         .service:hover {
@@ -418,7 +377,7 @@
 
         /* =========================
            PROJECTS
-        ========================== */
+        ========================= */
 
         .project-intro {
             max-width: 760px;
@@ -466,7 +425,7 @@
 
         /* =========================
            PROCESS
-        ========================== */
+        ========================= */
 
         .process {
             background: #eee8dc;
@@ -501,8 +460,37 @@
         }
 
         /* =========================
+           WHY WORK WITH ME
+        ========================= */
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+            margin-top: 45px;
+        }
+
+        .why-card {
+            background: white;
+            border: 1px solid #ded8cb;
+            padding: 30px;
+        }
+
+        .why-card strong {
+            display: block;
+            font-family: Georgia, serif;
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
+        .why-card p {
+            color: #59645e;
+            font-size: 0.9rem;
+        }
+
+        /* =========================
            CTA
-        ========================== */
+        ========================= */
 
         .cta {
             background: white;
@@ -524,7 +512,7 @@
 
         /* =========================
            CONTACT
-        ========================== */
+        ========================= */
 
         .contact {
             background: #14251d;
@@ -546,8 +534,11 @@
             color: #bdc7c0;
         }
 
-        .contact .buttons {
+        .contact-buttons {
+            display: flex;
             justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
         }
 
         .contact .primary {
@@ -557,7 +548,6 @@
 
         .contact .primary:hover {
             background: white;
-            color: #14251d;
         }
 
         .contact .secondary {
@@ -566,13 +556,31 @@
         }
 
         .contact .secondary:hover {
-            background: white;
+            background: #c29d4a;
             color: #14251d;
+        }
+
+        .contact-info {
+            margin-top: 35px;
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+            font-size: 0.88rem;
+        }
+
+        .contact-info a {
+            color: #bdc7c0;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            color: #c29d4a;
         }
 
         /* =========================
            FOOTER
-        ========================== */
+        ========================= */
 
         footer {
             background: #0c1712;
@@ -588,685 +596,13 @@
 
         /* =========================
            MOBILE
-        ========================== */
+        ========================= */
 
         @media (max-width: 900px) {
 
-            .profile-grid {
+            .hero-grid {
                 grid-template-columns: 1fr;
-                gap: 45px;
-            }
-
-            .about-grid {
-                grid-template-columns: 1fr;
-                gap: 30px;
-            }
-
-            .steps {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .cta-box {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-        }
-
-        @media (max-width: 650px) {
-
-            .nav-links {
-                gap: 12px;
-            }
-
-            .nav-links a {
-                font-size: 0.72rem;
-            }
-
-            .services {
-                grid-template-columns: 1fr;
-            }
-
-            .steps {
-                grid-template-columns: 1fr;
-            }
-
-            .profile-details {
-                grid-template-columns: 1fr;
-            }
-
-            section {
-                padding: 75px 0;
+                gap: 20px;
             }
 
             .hero-content {
-                padding: 75px 0;
-            }
-
-            .hero h1 {
-                letter-spacing: -1px;
-            }
-
-            .project {
-                padding: 30px;
-            }
-
-            .profile-card {
-                min-height: 350px;
-            }
-        }
-
-        @media (max-width: 480px) {
-
-            .logo {
-                font-size: 1rem;
-            }
-
-            .nav-links a:nth-child(1),
-            .nav-links a:nth-child(2) {
-                display: none;
-            }
-
-            .buttons {
-                flex-direction: column;
-            }
-
-            .button {
-                width: 100%;
-                text-align: center;
-            }
-
-            .hero h1 {
-                font-size: 3rem;
-            }
-
-            .profile-name {
-                font-size: 2.7rem;
-            }
-        }
-
-    </style>
-</head>
-
-<body>
-
-<header>
-
-    <nav class="container">
-
-        <div class="logo">
-            GUNKOWII <span>SABA</span>
-        </div>
-
-        <div class="nav-links">
-            <a href="#profile">Profile</a>
-            <a href="#services">Services</a>
-            <a href="#projects">Work</a>
-            <a href="#contact">Contact</a>
-        </div>
-
-    </nav>
-
-</header>
-
-
-<main>
-
-
-    <!-- =========================
-         HERO
-    ========================== -->
-
-    <section class="hero">
-
-        <div class="container hero-content">
-
-            <div class="eyebrow">
-                GUNKOWII SABA
-            </div>
-
-            <div class="hero-subtitle">
-                DIGITAL COMMERCE • MARKETING • TECHNOLOGY
-            </div>
-
-            <h1>
-                I build digital experiences
-                <span>that move businesses forward.</span>
-            </h1>
-
-            <p>
-                I'm H.M. Gunkowii, an E-commerce and Digital Solutions
-                Specialist helping businesses strengthen their online stores,
-                customer journeys, marketing systems and digital products.
-            </p>
-
-            <div class="buttons">
-
-                <a href="#contact" class="button primary">
-                    Start a Conversation
-                </a>
-
-                <a href="#projects" class="button secondary">
-                    Explore My Work
-                </a>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================
-         PROFILE
-    ========================== -->
-
-    <section id="profile" class="profile">
-
-        <div class="container">
-
-            <div class="profile-grid">
-
-
-                <div class="profile-card">
-
-                    <div class="profile-initial">
-                        GS
-                    </div>
-
-                    <div class="profile-caption">
-                        GUNKOWII SABA
-                    </div>
-
-                </div>
-
-
-                <div>
-
-                    <div class="label">
-                        THE PERSON BEHIND THE WORK
-                    </div>
-
-                    <div class="profile-name">
-                        H.M. Gunkowii
-                    </div>
-
-                    <div class="profile-role">
-                        Founder, GUNKOWII SABA
-                    </div>
-
-                    <p class="section-text">
-                        I work with businesses and organizations to turn
-                        digital challenges into practical, purposeful
-                        solutions. My work combines e-commerce, marketing
-                        and technology to help businesses build stronger
-                        digital operations and better customer experiences.
-                    </p>
-
-                    <p class="section-text">
-                        Whether the challenge is an underperforming online
-                        store, an ineffective customer journey, a marketing
-                        system that needs structure or a digital product
-                        that needs to be built, I focus on understanding
-                        the real problem before recommending a solution.
-                    </p>
-
-
-                    <div class="profile-details">
-
-                        <div class="profile-detail">
-                            E-commerce
-                        </div>
-
-                        <div class="profile-detail">
-                            Shopify
-                        </div>
-
-                        <div class="profile-detail">
-                            Email Marketing
-                        </div>
-
-                        <div class="profile-detail">
-                            Web Development
-                        </div>
-
-                        <div class="profile-detail">
-                            App Development
-                        </div>
-
-                        <div class="profile-detail">
-                            Digital Solutions
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================
-         ABOUT
-    ========================== -->
-
-    <section id="about">
-
-        <div class="container">
-
-            <div class="about-grid">
-
-                <div>
-
-                    <div class="label">
-                        ABOUT GUNKOWII SABA
-                    </div>
-
-                    <h2>
-                        Strategy first.
-                        <span>Execution that matters.</span>
-                    </h2>
-
-                    <p class="section-text">
-                        I work at the intersection of e-commerce, digital
-                        marketing and technology. My focus is not simply
-                        creating something that looks good—it is developing
-                        digital solutions that serve a clear business purpose.
-                    </p>
-
-                    <p class="section-text">
-                        From optimizing online stores and building email
-                        marketing systems to developing websites and
-                        business applications, I approach every project
-                        by first understanding the challenge and then
-                        delivering the right solution.
-                    </p>
-
-                </div>
-
-
-                <div class="about-card">
-
-                    <strong>
-                        H.M. Gunkowii
-                    </strong>
-
-                    <p>
-                        Founder, GUNKOWII SABA
-                    </p>
-
-                    <br>
-
-                    <p>
-                        E-commerce Specialist<br>
-                        Shopify Specialist<br>
-                        Email Marketing Specialist<br>
-                        Web and Application Developer
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================
-         SERVICES
-    ========================== -->
-
-    <section id="services" class="dark-section">
-
-        <div class="container">
-
-            <div class="label">
-                EXPERTISE
-            </div>
-
-            <h2>
-                Digital solutions built around
-                <span>real business needs.</span>
-            </h2>
-
-            <div class="services">
-
-
-                <div class="service">
-
-                    <div class="service-number">
-                        01
-                    </div>
-
-                    <h3>
-                        E-commerce and Shopify
-                    </h3>
-
-                    <p>
-                        Store setup, customization, product-page
-                        optimization, conversion improvements, customer
-                        experience enhancements and comprehensive store audits.
-                    </p>
-
-                </div>
-
-
-                <div class="service">
-
-                    <div class="service-number">
-                        02
-                    </div>
-
-                    <h3>
-                        Email Marketing
-                    </h3>
-
-                    <p>
-                        Strategic campaigns, automated customer journeys,
-                        welcome sequences, abandoned-cart flows,
-                        retention programs and lifecycle marketing.
-                    </p>
-
-                </div>
-
-
-                <div class="service">
-
-                    <div class="service-number">
-                        03
-                    </div>
-
-                    <h3>
-                        Web Development
-                    </h3>
-
-                    <p>
-                        Responsive websites, landing pages, business
-                        websites, maintenance, performance improvements
-                        and user-focused digital experiences.
-                    </p>
-
-                </div>
-
-
-                <div class="service">
-
-                    <div class="service-number">
-                        04
-                    </div>
-
-                    <h3>
-                        Web and Application Development
-                    </h3>
-
-                    <p>
-                        Flutter applications, Firebase-powered systems,
-                        authentication, databases and custom digital
-                        solutions for organizations and businesses.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================
-         PROJECTS
-    ========================== -->
-
-    <section id="projects">
-
-        <div class="container">
-
-            <div class="label">
-                SELECTED WORK
-            </div>
-
-            <h2>
-                Building solutions with
-                <span>purpose.</span>
-            </h2>
-
-            <p class="project-intro">
-                A selection of digital work demonstrating my approach
-                to technology, business systems and practical problem-solving.
-            </p>
-
-
-            <div class="project">
-
-                <small>
-                    FLUTTER • DART • FIREBASE • EDUCATION TECHNOLOGY
-                </small>
-
-                <h3>
-                    MANBAUL ANWAR ARABIC SCHOOL
-                    MANAGEMENT SYSTEM
-                </h3>
-
-                <p>
-                    A comprehensive digital school management platform
-                    designed to integrate academic, administrative and
-                    operational activities within one connected system.
-                    The project is being developed with Flutter and Firebase,
-                    with role-based functionality for administrators,
-                    teachers, students and parents.
-                </p>
-
-                <div class="tags">
-
-                    <span>Flutter</span>
-                    <span>Dart</span>
-                    <span>Firebase</span>
-                    <span>Cloud Firestore</span>
-                    <span>Authentication</span>
-                    <span>Education Technology</span>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================
-         PROCESS
-    ========================== -->
-
-    <section class="process">
-
-        <div class="container">
-
-            <div class="label">
-                HOW I WORK
-            </div>
-
-            <h2>
-                A clear process from
-                <span>problem to solution.</span>
-            </h2>
-
-            <div class="steps">
-
-
-                <div class="step">
-                    <strong>01</strong>
-                    <h3>Understand</h3>
-                    <p>
-                        Understand the business, target audience and objectives.
-                    </p>
-                </div>
-
-
-                <div class="step">
-                    <strong>02</strong>
-                    <h3>Audit</h3>
-                    <p>
-                        Identify weaknesses, friction points and missed opportunities.
-                    </p>
-                </div>
-
-
-                <div class="step">
-                    <strong>03</strong>
-                    <h3>Strategize</h3>
-                    <p>
-                        Develop a focused plan based on the organization's specific needs.
-                    </p>
-                </div>
-
-
-                <div class="step">
-                    <strong>04</strong>
-                    <h3>Implement</h3>
-                    <p>
-                        Execute the strategy with precision and attention to detail.
-                    </p>
-                </div>
-
-
-                <div class="step">
-                    <strong>05</strong>
-                    <h3>Optimize</h3>
-                    <p>
-                        Monitor performance and continuously improve the solution.
-                    </p>
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================
-         CTA
-    ========================== -->
-
-    <section class="cta">
-
-        <div class="container">
-
-            <div class="cta-box">
-
-                <div>
-
-                    <div class="label">
-                        READY TO BUILD?
-                    </div>
-
-                    <h2>
-                        Let's turn your
-                        <span>next idea</span> into something useful.
-                    </h2>
-
-                    <p>
-                        Tell me what you're working on, what isn't working,
-                        or what you want to build. We'll begin by defining
-                        the right path forward.
-                    </p>
-
-                </div>
-
-
-                <a href="#contact" class="button primary">
-                    Discuss a Project
-                </a>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================
-         CONTACT
-    ========================== -->
-
-    <section id="contact" class="contact">
-
-        <div class="container">
-
-            <div class="label">
-                GET IN TOUCH
-            </div>
-
-            <h2>
-                Have a project in mind?
-                <span>Let's talk.</span>
-            </h2>
-
-            <p>
-                Whether you need to improve an online store, develop a
-                digital product or strengthen your marketing system,
-                share your objectives and let's discuss the most effective
-                way forward.
-            </p>
-
-
-            <div class="buttons">
-
-                <a
-                    href="https://wa.me/2348137343887"
-                    class="button primary"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Chat on WhatsApp
-                </a>
-
-
-                <a
-                    href="mailto:ahmeedagunko@gmail.com"
-                    class="button secondary"
-                >
-                    Send Me an Email
-                </a>
-
-            </div>
-
-        </div>
-
-    </section>
-
-</main>
-
-
-<!-- =========================
-     FOOTER
-========================== -->
-
-<footer>
-
-    <div class="container">
-
-        <strong>
-            GUNKOWII SABA
-        </strong>
-
-        <br>
-
-        Digital Commerce • Marketing • Technology
-
-        <br><br>
-
-        © 2026 GUNKOWII SABA. All rights reserved.
-
-    </div>
-
-</footer>
-
-
-</body>
-</html>
