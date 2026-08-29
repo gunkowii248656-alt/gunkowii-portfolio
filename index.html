@@ -49,7 +49,7 @@
             position: sticky;
             top: 0;
             z-index: 1000;
-            border-bottom: 1px solid rgba(255,255,255,0.08);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
         }
 
         nav {
@@ -96,7 +96,11 @@
             position: relative;
             overflow: hidden;
             background:
-                radial-gradient(circle at 90% 15%, rgba(194,157,74,0.16), transparent 30%),
+                radial-gradient(
+                    circle at 90% 15%,
+                    rgba(194, 157, 74, 0.16),
+                    transparent 30%
+                ),
                 linear-gradient(135deg, #f7f4ed, #e9e2d4);
         }
 
@@ -105,7 +109,7 @@
             position: absolute;
             width: 420px;
             height: 420px;
-            border: 1px solid rgba(146,112,44,0.18);
+            border: 1px solid rgba(146, 112, 44, 0.18);
             border-radius: 50%;
             right: -180px;
             bottom: -180px;
@@ -126,6 +130,13 @@
             margin-bottom: 22px;
         }
 
+        .hero-subtitle {
+            font-size: 1.05rem;
+            font-weight: bold;
+            color: #14251d;
+            margin-bottom: 15px;
+        }
+
         .hero h1 {
             font-family: Georgia, serif;
             font-size: clamp(3.2rem, 9vw, 6.8rem);
@@ -139,19 +150,16 @@
             color: #92702c;
         }
 
-        .hero-subtitle {
-            font-size: 1.05rem;
-            font-weight: bold;
-            color: #14251d;
-            margin-bottom: 15px;
-        }
-
         .hero p {
             max-width: 760px;
             color: #59645e;
             font-size: 1.08rem;
             margin-bottom: 35px;
         }
+
+        /* =========================
+           BUTTONS
+        ========================= */
 
         .buttons {
             display: flex;
@@ -165,6 +173,7 @@
             text-decoration: none;
             font-weight: bold;
             border-radius: 4px;
+            cursor: pointer;
         }
 
         .primary {
@@ -179,6 +188,7 @@
         .secondary {
             border: 1px solid #14251d;
             color: #14251d;
+            background: transparent;
         }
 
         .secondary:hover {
@@ -278,6 +288,7 @@
             padding: 34px;
             border: 1px solid #39483f;
             background: #1b3026;
+            transition: all 0.25s ease;
         }
 
         .service:hover {
@@ -433,6 +444,10 @@
             color: #bdc7c0;
         }
 
+        .contact .buttons {
+            justify-content: center;
+        }
+
         .contact .primary {
             background: #c29d4a;
             color: #14251d;
@@ -440,6 +455,17 @@
 
         .contact .primary:hover {
             background: white;
+            color: #14251d;
+        }
+
+        .contact .secondary {
+            border-color: #c29d4a;
+            color: white;
+        }
+
+        .contact .secondary:hover {
+            background: white;
+            color: #14251d;
         }
 
         /* =========================
@@ -540,6 +566,7 @@
 <body>
 
 <header>
+
     <nav class="container">
 
         <div class="logo">
@@ -554,12 +581,15 @@
         </div>
 
     </nav>
+
 </header>
 
 
 <main>
 
-    <!-- HERO -->
+    <!-- =========================
+         HERO
+    ========================== -->
 
     <section class="hero">
 
@@ -601,7 +631,9 @@
     </section>
 
 
-    <!-- ABOUT -->
+    <!-- =========================
+         ABOUT
+    ========================== -->
 
     <section id="about">
 
@@ -611,7 +643,9 @@
 
                 <div>
 
-                    <div class="label">ABOUT GUNKOWII SABA</div>
+                    <div class="label">
+                        ABOUT GUNKOWII SABA
+                    </div>
 
                     <h2>
                         Strategy first.
@@ -635,9 +669,12 @@
 
                 </div>
 
+
                 <div class="about-card">
 
-                    <strong>H.M. Gunkowii</strong>
+                    <strong>
+                        H.M. Gunkowii
+                    </strong>
 
                     <p>
                         Founder, GUNKOWII SABA
@@ -661,13 +698,17 @@
     </section>
 
 
-    <!-- SERVICES -->
+    <!-- =========================
+         SERVICES
+    ========================== -->
 
     <section id="services" class="dark-section">
 
         <div class="container">
 
-            <div class="label">EXPERTISE</div>
+            <div class="label">
+                EXPERTISE
+            </div>
 
             <h2>
                 Digital solutions built around
@@ -678,9 +719,13 @@
 
                 <div class="service">
 
-                    <div class="service-number">01</div>
+                    <div class="service-number">
+                        01
+                    </div>
 
-                    <h3>E-commerce & Shopify</h3>
+                    <h3>
+                        E-commerce & Shopify
+                    </h3>
 
                     <p>
                         Store setup, customization, product-page
@@ -693,9 +738,13 @@
 
                 <div class="service">
 
-                    <div class="service-number">02</div>
+                    <div class="service-number">
+                        02
+                    </div>
 
-                    <h3>Email Marketing</h3>
+                    <h3>
+                        Email Marketing
+                    </h3>
 
                     <p>
                         Strategic campaigns, automated customer journeys,
@@ -708,9 +757,13 @@
 
                 <div class="service">
 
-                    <div class="service-number">03</div>
+                    <div class="service-number">
+                        03
+                    </div>
 
-                    <h3>Web Development</h3>
+                    <h3>
+                        Web Development
+                    </h3>
 
                     <p>
                         Responsive websites, landing pages, business
@@ -723,9 +776,13 @@
 
                 <div class="service">
 
-                    <div class="service-number">04</div>
+                    <div class="service-number">
+                        04
+                    </div>
 
-                    <h3>Web & App Development</h3>
+                    <h3>
+                        Web & App Development
+                    </h3>
 
                     <p>
                         Flutter applications, Firebase-powered systems,
@@ -742,13 +799,17 @@
     </section>
 
 
-    <!-- PROJECTS -->
+    <!-- =========================
+         PROJECTS
+    ========================== -->
 
     <section id="projects">
 
         <div class="container">
 
-            <div class="label">SELECTED WORK</div>
+            <div class="label">
+                SELECTED WORK
+            </div>
 
             <h2>
                 Building solutions with
@@ -799,13 +860,17 @@
     </section>
 
 
-    <!-- PROCESS -->
+    <!-- =========================
+         PROCESS
+    ========================== -->
 
     <section class="process">
 
         <div class="container">
 
-            <div class="label">HOW I WORK</div>
+            <div class="label">
+                HOW I WORK
+            </div>
 
             <h2>
                 A clear process from
@@ -822,6 +887,7 @@
                     </p>
                 </div>
 
+
                 <div class="step">
                     <strong>02</strong>
                     <h3>Audit</h3>
@@ -829,6 +895,7 @@
                         Identify weaknesses, friction and missed opportunities.
                     </p>
                 </div>
+
 
                 <div class="step">
                     <strong>03</strong>
@@ -838,6 +905,7 @@
                     </p>
                 </div>
 
+
                 <div class="step">
                     <strong>04</strong>
                     <h3>Implement</h3>
@@ -845,6 +913,7 @@
                         Execute the strategy with attention to detail.
                     </p>
                 </div>
+
 
                 <div class="step">
                     <strong>05</strong>
@@ -861,7 +930,9 @@
     </section>
 
 
-    <!-- CTA -->
+    <!-- =========================
+         CTA
+    ========================== -->
 
     <section class="cta">
 
@@ -871,7 +942,9 @@
 
                 <div>
 
-                    <div class="label">READY TO BUILD?</div>
+                    <div class="label">
+                        READY TO BUILD?
+                    </div>
 
                     <h2>
                         Let's turn your
@@ -885,6 +958,7 @@
 
                 </div>
 
+
                 <a href="#contact" class="button primary">
                     Discuss a Project
                 </a>
@@ -896,13 +970,17 @@
     </section>
 
 
-    <!-- CONTACT -->
+    <!-- =========================
+         CONTACT
+    ========================== -->
 
     <section id="contact" class="contact">
 
         <div class="container">
 
-            <div class="label">GET IN TOUCH</div>
+            <div class="label">
+                GET IN TOUCH
+            </div>
 
             <h2>
                 Have a project in mind?
@@ -910,17 +988,33 @@
             </h2>
 
             <p>
-                Whether you need help improving an online store,
-                developing a digital product, building a website or
-                strengthening your marketing system, I'd be glad to hear
-                about it.
+                Have an online store that needs improvement, a digital
+                product you want to build, or a marketing system that
+                needs a stronger strategy? Tell me what you're working
+                on and let's discuss the right way forward.
             </p>
 
-            <!-- Replace the email below with your real professional email -->
 
-            <a href="mailto:your@email.com" class="button primary">
-                Contact Gunkowii SABA
-            </a>
+            <div class="buttons">
+
+                <a
+                    href="https://wa.me/2348137343887"
+                    class="button primary"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Chat on WhatsApp
+                </a>
+
+
+                <a
+                    href="mailto:ahmeedagunko@gmail.com"
+                    class="button secondary"
+                >
+                    Send Me an Email
+                </a>
+
+            </div>
 
         </div>
 
@@ -929,11 +1023,17 @@
 </main>
 
 
+<!-- =========================
+     FOOTER
+========================== -->
+
 <footer>
 
     <div class="container">
 
-        <strong>GUNKOWII SABA</strong>
+        <strong>
+            GUNKOWII SABA
+        </strong>
 
         <br>
 
@@ -946,6 +1046,7 @@
     </div>
 
 </footer>
+
 
 </body>
 </html>
