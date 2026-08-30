@@ -1,608 +1,1275 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>GUNKOWII SABA | E-commerce & Digital Solutions Specialist</title>
 
-    <title>GUNKOWII SABA | E-commerce & Digital Solutions Specialist</title>
+<meta name="description"
+    content="GUNKOWII SABA — E-commerce, Shopify, email marketing, web development and digital solutions for businesses.">
 
-    <meta name="description"
-        content="GUNKOWII SABA — E-commerce, Shopify, email marketing, web development and digital solutions for businesses.">
+<meta name="author" content="GUNKOWII SABA">
 
-    <meta name="author" content="GUNKOWII SABA">
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    html {
+        scroll-behavior: smooth;
+    }
 
-        html {
-            scroll-behavior: smooth;
-        }
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background: #f7f4ed;
+        color: #14251d;
+        line-height: 1.7;
+    }
 
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: #f7f4ed;
-            color: #14251d;
-            line-height: 1.7;
-        }
+    a {
+        transition: all 0.25s ease;
+    }
 
-        a {
-            transition: all 0.25s ease;
-        }
+    .container {
+        width: 90%;
+        max-width: 1180px;
+        margin: auto;
+    }
 
-        .container {
-            width: 90%;
-            max-width: 1180px;
-            margin: auto;
-        }
+    /* =========================
+       NAVIGATION
+    ========================= */
 
-        /* =========================
-           NAVIGATION
-        ========================= */
+    header {
+        background: #14251d;
+        color: white;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
 
-        header {
-            background: #14251d;
-            color: white;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            border-bottom: 1px solid rgba(255,255,255,0.08);
-        }
+    nav {
+        min-height: 76px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 
-        nav {
-            min-height: 76px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+    .logo {
+        font-family: Georgia, serif;
+        font-size: 1.25rem;
+        font-weight: bold;
+        letter-spacing: 2px;
+    }
 
-        .logo {
-            font-family: Georgia, serif;
-            font-size: 1.25rem;
-            font-weight: bold;
-            letter-spacing: 2px;
-        }
+    .logo span {
+        color: #c29d4a;
+    }
 
-        .logo span {
-            color: #c29d4a;
-        }
+    .nav-links {
+        display: flex;
+        gap: 28px;
+    }
 
-        .nav-links {
-            display: flex;
-            gap: 28px;
-        }
+    .nav-links a {
+        color: #eef2ef;
+        text-decoration: none;
+        font-size: 0.88rem;
+    }
 
-        .nav-links a {
-            color: #eef2ef;
-            text-decoration: none;
-            font-size: 0.88rem;
-        }
+    .nav-links a:hover {
+        color: #c29d4a;
+    }
 
-        .nav-links a:hover {
-            color: #c29d4a;
-        }
+    /* =========================
+       HERO
+    ========================= */
 
-        /* =========================
-           HERO
-        ========================= */
+    .hero {
+        min-height: 88vh;
+        display: flex;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+        background:
+            radial-gradient(circle at 90% 15%, rgba(194,157,74,0.16), transparent 30%),
+            linear-gradient(135deg, #f7f4ed, #e9e2d4);
+    }
 
-        .hero {
-            min-height: 88vh;
-            display: flex;
-            align-items: center;
-            position: relative;
-            overflow: hidden;
-            background:
-                radial-gradient(circle at 90% 15%, rgba(194,157,74,0.16), transparent 30%),
-                linear-gradient(135deg, #f7f4ed, #e9e2d4);
-        }
+    .hero::after {
+        content: "";
+        position: absolute;
+        width: 420px;
+        height: 420px;
+        border: 1px solid rgba(146,112,44,0.18);
+        border-radius: 50%;
+        right: -180px;
+        bottom: -180px;
+    }
 
-        .hero::after {
-            content: "";
-            position: absolute;
-            width: 420px;
-            height: 420px;
-            border: 1px solid rgba(146,112,44,0.18);
-            border-radius: 50%;
-            right: -180px;
-            bottom: -180px;
-        }
+    .hero-grid {
+        display: grid;
+        grid-template-columns: 1.15fr 0.85fr;
+        align-items: center;
+        gap: 60px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .hero-content {
+        padding: 90px 0;
+    }
+
+    .eyebrow {
+        color: #92702c;
+        font-size: 0.78rem;
+        font-weight: bold;
+        letter-spacing: 3px;
+        margin-bottom: 20px;
+    }
+
+    .hero-subtitle {
+        font-size: 0.88rem;
+        font-weight: bold;
+        color: #14251d;
+        letter-spacing: 1.5px;
+        margin-bottom: 18px;
+    }
+
+    .hero h1 {
+        font-family: Georgia, serif;
+        font-size: clamp(3rem, 6vw, 5.8rem);
+        line-height: 0.98;
+        letter-spacing: -2px;
+        margin-bottom: 28px;
+    }
+
+    .hero h1 span {
+        color: #92702c;
+        display: block;
+    }
+
+    .hero p {
+        max-width: 690px;
+        color: #59645e;
+        font-size: 1.05rem;
+        margin-bottom: 32px;
+    }
+
+    /* =========================
+       PROFILE IMAGE
+    ========================= */
+
+    .hero-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    .portrait-frame {
+        width: min(430px, 100%);
+        aspect-ratio: 4 / 5;
+        padding: 10px;
+        background: #c29d4a;
+        box-shadow: 25px 25px 0 #14251d;
+        position: relative;
+    }
+
+    .portrait-frame::before {
+        content: "";
+        position: absolute;
+        inset: 22px;
+        border: 1px solid rgba(255,255,255,0.65);
+        z-index: 2;
+        pointer-events: none;
+    }
+
+    .portrait {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center top;
+        display: block;
+        background: #ddd;
+    }
+
+    .profile-caption {
+        position: absolute;
+        left: -25px;
+        bottom: 35px;
+        background: #14251d;
+        color: white;
+        padding: 14px 20px;
+        z-index: 3;
+        box-shadow: 5px 5px 0 #c29d4a;
+    }
+
+    .profile-caption strong {
+        display: block;
+        font-family: Georgia, serif;
+        font-size: 1rem;
+    }
+
+    .profile-caption span {
+        color: #c29d4a;
+        font-size: 0.72rem;
+        letter-spacing: 1px;
+    }
+
+    /* =========================
+       BUTTONS
+    ========================= */
+
+    .buttons {
+        display: flex;
+        gap: 14px;
+        flex-wrap: wrap;
+    }
+
+    .button {
+        display: inline-block;
+        padding: 14px 25px;
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 4px;
+    }
+
+    .primary {
+        background: #14251d;
+        color: white;
+    }
+
+    .primary:hover {
+        background: #92702c;
+    }
+
+    .secondary {
+        border: 1px solid #14251d;
+        color: #14251d;
+    }
+
+    .secondary:hover {
+        background: #14251d;
+        color: white;
+    }
+
+    /* =========================
+       GENERAL SECTIONS
+    ========================= */
+
+    section {
+        padding: 105px 0;
+    }
+
+    .label {
+        color: #92702c;
+        font-size: 0.76rem;
+        font-weight: bold;
+        letter-spacing: 2.5px;
+        margin-bottom: 16px;
+    }
+
+    h2 {
+        font-family: Georgia, serif;
+        font-size: clamp(2.4rem, 5vw, 4.2rem);
+        line-height: 1.08;
+        letter-spacing: -1px;
+        margin-bottom: 28px;
+    }
+
+    h2 span {
+        color: #92702c;
+    }
+
+    .section-text {
+        max-width: 780px;
+        color: #59645e;
+        margin-bottom: 18px;
+        font-size: 1rem;
+    }
+
+    /* =========================
+       ABOUT
+    ========================= */
+
+    .about-grid {
+        display: grid;
+        grid-template-columns: 1.4fr 0.6fr;
+        gap: 60px;
+        align-items: start;
+    }
+
+    .about-card {
+        background: white;
+        border: 1px solid #ded8cb;
+        padding: 32px;
+    }
+
+    .about-card strong {
+        display: block;
+        font-family: Georgia, serif;
+        font-size: 1.5rem;
+        margin-bottom: 8px;
+    }
+
+    .about-card p {
+        color: #59645e;
+        font-size: 0.92rem;
+    }
+
+    /* =========================
+       SERVICES
+    ========================= */
+
+    .dark-section {
+        background: #14251d;
+        color: white;
+    }
+
+    .dark-section .label {
+        color: #c29d4a;
+    }
+
+    .dark-section h2 span {
+        color: #c29d4a;
+    }
+
+    .services {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+        margin-top: 48px;
+    }
+
+    .service {
+        padding: 34px;
+        border: 1px solid #39483f;
+        background: #1b3026;
+    }
+
+    .service:hover {
+        border-color: #c29d4a;
+        transform: translateY(-3px);
+    }
+
+    .service-number {
+        color: #c29d4a;
+        font-weight: bold;
+        font-size: 0.82rem;
+        margin-bottom: 16px;
+    }
+
+    .service h3 {
+        font-family: Georgia, serif;
+        font-size: 1.55rem;
+        margin-bottom: 10px;
+    }
+
+    .service p {
+        color: #bdc7c0;
+        font-size: 0.93rem;
+    }
+
+    /* =========================
+       PROJECTS
+    ========================= */
+
+    .project-intro {
+        max-width: 760px;
+        color: #59645e;
+    }
+
+    .project {
+        background: white;
+        border: 1px solid #ded8cb;
+        padding: 48px;
+        margin-top: 45px;
+    }
+
+    .project small {
+        color: #92702c;
+        font-weight: bold;
+        letter-spacing: 1.5px;
+    }
+
+    .project h3 {
+        font-family: Georgia, serif;
+        font-size: clamp(2rem, 4vw, 3rem);
+        line-height: 1.1;
+        margin: 16px 0;
+    }
+
+    .project p {
+        color: #59645e;
+        max-width: 760px;
+    }
+
+    .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 9px;
+        margin-top: 28px;
+    }
+
+    .tags span {
+        background: #eee8dc;
+        padding: 7px 12px;
+        font-size: 0.78rem;
+        font-weight: bold;
+    }
+
+    /* =========================
+       PROCESS
+    ========================= */
+
+    .process {
+        background: #eee8dc;
+    }
+
+    .steps {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 14px;
+        margin-top: 48px;
+    }
+
+    .step {
+        background: #f7f4ed;
+        padding: 25px;
+        border: 1px solid #ded8cb;
+    }
+
+    .step strong {
+        color: #92702c;
+        font-size: 0.85rem;
+    }
+
+    .step h3 {
+        margin: 12px 0 7px;
+        font-family: Georgia, serif;
+    }
+
+    .step p {
+        font-size: 0.86rem;
+        color: #59645e;
+    }
+
+    /* =========================
+       WHY WORK WITH ME
+    ========================= */
+
+    .why-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+        margin-top: 45px;
+    }
+
+    .why-card {
+        background: white;
+        border: 1px solid #ded8cb;
+        padding: 30px;
+    }
+
+    .why-card strong {
+        display: block;
+        font-family: Georgia, serif;
+        font-size: 1.3rem;
+        margin-bottom: 10px;
+    }
+
+    .why-card p {
+        color: #59645e;
+        font-size: 0.9rem;
+    }
+
+    /* =========================
+       CTA
+    ========================= */
+
+    .cta {
+        background: white;
+        border-top: 1px solid #ded8cb;
+        border-bottom: 1px solid #ded8cb;
+    }
+
+    .cta-box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .cta-box p {
+        max-width: 650px;
+        color: #59645e;
+    }
+
+    /* =========================
+       CONTACT
+    ========================= */
+
+    .contact {
+        background: #14251d;
+        color: white;
+        text-align: center;
+    }
+
+    .contact .label {
+        color: #c29d4a;
+    }
+
+    .contact h2 span {
+        color: #c29d4a;
+    }
+
+    .contact p {
+        max-width: 650px;
+        margin: 0 auto 32px;
+        color: #bdc7c0;
+    }
+
+    .contact-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+
+    .contact .primary {
+        background: #c29d4a;
+        color: #14251d;
+    }
+
+    .contact .primary:hover {
+        background: white;
+    }
+
+    .contact .secondary {
+        border-color: #c29d4a;
+        color: white;
+    }
+
+    .contact .secondary:hover {
+        background: #c29d4a;
+        color: #14251d;
+    }
+
+    .contact-info {
+        margin-top: 35px;
+        display: flex;
+        justify-content: center;
+        gap: 25px;
+        flex-wrap: wrap;
+        font-size: 0.88rem;
+    }
+
+    .contact-info a {
+        color: #bdc7c0;
+        text-decoration: none;
+    }
+
+    .contact-info a:hover {
+        color: #c29d4a;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+        background: #0c1712;
+        color: #9daaa2;
+        padding: 28px 0;
+        text-align: center;
+        font-size: 0.82rem;
+    }
+
+    footer strong {
+        color: white;
+    }
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 900px) {
 
         .hero-grid {
-            display: grid;
-            grid-template-columns: 1.15fr 0.85fr;
-            align-items: center;
-            gap: 60px;
-            position: relative;
-            z-index: 2;
+            grid-template-columns: 1fr;
+            gap: 20px;
         }
 
         .hero-content {
-            padding: 90px 0;
+            padding: 70px 0 30px;
         }
-
-        .eyebrow {
-            color: #92702c;
-            font-size: 0.78rem;
-            font-weight: bold;
-            letter-spacing: 3px;
-            margin-bottom: 20px;
-        }
-
-        .hero-subtitle {
-            font-size: 0.88rem;
-            font-weight: bold;
-            color: #14251d;
-            letter-spacing: 1.5px;
-            margin-bottom: 18px;
-        }
-
-        .hero h1 {
-            font-family: Georgia, serif;
-            font-size: clamp(3rem, 6vw, 5.8rem);
-            line-height: 0.98;
-            letter-spacing: -2px;
-            margin-bottom: 28px;
-        }
-
-        .hero h1 span {
-            color: #92702c;
-            display: block;
-        }
-
-        .hero p {
-            max-width: 690px;
-            color: #59645e;
-            font-size: 1.05rem;
-            margin-bottom: 32px;
-        }
-
-        /* =========================
-           PROFILE IMAGE
-        ========================= */
 
         .hero-image {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
+            padding: 20px 0 70px;
         }
 
         .portrait-frame {
-            width: min(430px, 100%);
-            aspect-ratio: 4 / 5;
-            padding: 10px;
-            background: #c29d4a;
-            box-shadow: 25px 25px 0 #14251d;
-            position: relative;
+            width: min(360px, 90%);
         }
-
-        .portrait-frame::before {
-            content: "";
-            position: absolute;
-            inset: 22px;
-            border: 1px solid rgba(255,255,255,0.65);
-            z-index: 2;
-            pointer-events: none;
-        }
-
-        .portrait {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center top;
-            display: block;
-            background: #ddd;
-        }
-
-        .profile-caption {
-            position: absolute;
-            left: -25px;
-            bottom: 35px;
-            background: #14251d;
-            color: white;
-            padding: 14px 20px;
-            z-index: 3;
-            box-shadow: 5px 5px 0 #c29d4a;
-        }
-
-        .profile-caption strong {
-            display: block;
-            font-family: Georgia, serif;
-            font-size: 1rem;
-        }
-
-        .profile-caption span {
-            color: #c29d4a;
-            font-size: 0.72rem;
-            letter-spacing: 1px;
-        }
-
-        /* =========================
-           BUTTONS
-        ========================= */
-
-        .buttons {
-            display: flex;
-            gap: 14px;
-            flex-wrap: wrap;
-        }
-
-        .button {
-            display: inline-block;
-            padding: 14px 25px;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 4px;
-        }
-
-        .primary {
-            background: #14251d;
-            color: white;
-        }
-
-        .primary:hover {
-            background: #92702c;
-        }
-
-        .secondary {
-            border: 1px solid #14251d;
-            color: #14251d;
-        }
-
-        .secondary:hover {
-            background: #14251d;
-            color: white;
-        }
-
-        /* =========================
-           GENERAL SECTIONS
-        ========================= */
-
-        section {
-            padding: 105px 0;
-        }
-
-        .label {
-            color: #92702c;
-            font-size: 0.76rem;
-            font-weight: bold;
-            letter-spacing: 2.5px;
-            margin-bottom: 16px;
-        }
-
-        h2 {
-            font-family: Georgia, serif;
-            font-size: clamp(2.4rem, 5vw, 4.2rem);
-            line-height: 1.08;
-            letter-spacing: -1px;
-            margin-bottom: 28px;
-        }
-
-        h2 span {
-            color: #92702c;
-        }
-
-        .section-text {
-            max-width: 780px;
-            color: #59645e;
-            margin-bottom: 18px;
-            font-size: 1rem;
-        }
-
-        /* =========================
-           ABOUT
-        ========================= */
 
         .about-grid {
-            display: grid;
-            grid-template-columns: 1.4fr 0.6fr;
-            gap: 60px;
-            align-items: start;
-        }
-
-        .about-card {
-            background: white;
-            border: 1px solid #ded8cb;
-            padding: 32px;
-        }
-
-        .about-card strong {
-            display: block;
-            font-family: Georgia, serif;
-            font-size: 1.5rem;
-            margin-bottom: 8px;
-        }
-
-        .about-card p {
-            color: #59645e;
-            font-size: 0.92rem;
-        }
-
-        /* =========================
-           SERVICES
-        ========================= */
-
-        .dark-section {
-            background: #14251d;
-            color: white;
-        }
-
-        .dark-section .label {
-            color: #c29d4a;
-        }
-
-        .dark-section h2 span {
-            color: #c29d4a;
+            grid-template-columns: 1fr;
+            gap: 25px;
         }
 
         .services {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 18px;
-            margin-top: 48px;
-        }
-
-        .service {
-            padding: 34px;
-            border: 1px solid #39483f;
-            background: #1b3026;
-        }
-
-        .service:hover {
-            border-color: #c29d4a;
-            transform: translateY(-3px);
-        }
-
-        .service-number {
-            color: #c29d4a;
-            font-weight: bold;
-            font-size: 0.82rem;
-            margin-bottom: 16px;
-        }
-
-        .service h3 {
-            font-family: Georgia, serif;
-            font-size: 1.55rem;
-            margin-bottom: 10px;
-        }
-
-        .service p {
-            color: #bdc7c0;
-            font-size: 0.93rem;
-        }
-
-        /* =========================
-           PROJECTS
-        ========================= */
-
-        .project-intro {
-            max-width: 760px;
-            color: #59645e;
-        }
-
-        .project {
-            background: white;
-            border: 1px solid #ded8cb;
-            padding: 48px;
-            margin-top: 45px;
-        }
-
-        .project small {
-            color: #92702c;
-            font-weight: bold;
-            letter-spacing: 1.5px;
-        }
-
-        .project h3 {
-            font-family: Georgia, serif;
-            font-size: clamp(2rem, 4vw, 3rem);
-            line-height: 1.1;
-            margin: 16px 0;
-        }
-
-        .project p {
-            color: #59645e;
-            max-width: 760px;
-        }
-
-        .tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 9px;
-            margin-top: 28px;
-        }
-
-        .tags span {
-            background: #eee8dc;
-            padding: 7px 12px;
-            font-size: 0.78rem;
-            font-weight: bold;
-        }
-
-        /* =========================
-           PROCESS
-        ========================= */
-
-        .process {
-            background: #eee8dc;
+            grid-template-columns: 1fr;
         }
 
         .steps {
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            gap: 14px;
-            margin-top: 48px;
+            grid-template-columns: 1fr 1fr;
         }
-
-        .step {
-            background: #f7f4ed;
-            padding: 25px;
-            border: 1px solid #ded8cb;
-        }
-
-        .step strong {
-            color: #92702c;
-            font-size: 0.85rem;
-        }
-
-        .step h3 {
-            margin: 12px 0 7px;
-            font-family: Georgia, serif;
-        }
-
-        .step p {
-            font-size: 0.86rem;
-            color: #59645e;
-        }
-
-        /* =========================
-           WHY WORK WITH ME
-        ========================= */
 
         .why-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 18px;
-            margin-top: 45px;
-        }
-
-        .why-card {
-            background: white;
-            border: 1px solid #ded8cb;
-            padding: 30px;
-        }
-
-        .why-card strong {
-            display: block;
-            font-family: Georgia, serif;
-            font-size: 1.3rem;
-            margin-bottom: 10px;
-        }
-
-        .why-card p {
-            color: #59645e;
-            font-size: 0.9rem;
-        }
-
-        /* =========================
-           CTA
-        ========================= */
-
-        .cta {
-            background: white;
-            border-top: 1px solid #ded8cb;
-            border-bottom: 1px solid #ded8cb;
+            grid-template-columns: 1fr;
         }
 
         .cta-box {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 40px;
+            flex-direction: column;
+            align-items: flex-start;
         }
 
-        .cta-box p {
-            max-width: 650px;
-            color: #59645e;
-        }
-
-        /* =========================
-           CONTACT
-        ========================= */
-
-        .contact {
-            background: #14251d;
-            color: white;
-            text-align: center;
-        }
-
-        .contact .label {
-            color: #c29d4a;
-        }
-
-        .contact h2 span {
-            color: #c29d4a;
-        }
-
-        .contact p {
-            max-width: 650px;
-            margin: 0 auto 32px;
-            color: #bdc7c0;
-        }
-
-        .contact-buttons {
-            display: flex;
-            justify-content: center;
+        .nav-links {
             gap: 12px;
-            flex-wrap: wrap;
         }
 
-        .contact .primary {
-            background: #c29d4a;
-            color: #14251d;
+        .nav-links a {
+            font-size: 0.75rem;
+        }
+    }
+
+    @media (max-width: 600px) {
+
+        .container {
+            width: 92%;
         }
 
-        .contact .primary:hover {
-            background: white;
+        nav {
+            min-height: 68px;
         }
 
-        .contact .secondary {
-            border-color: #c29d4a;
-            color: white;
+        .logo {
+            font-size: 1rem;
+            letter-spacing: 1px;
         }
 
-        .contact .secondary:hover {
-            background: #c29d4a;
-            color: #14251d;
+        .nav-links {
+            gap: 10px;
         }
 
-        .contact-info {
-            margin-top: 35px;
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-            flex-wrap: wrap;
-            font-size: 0.88rem;
+        .nav-links a:nth-child(3),
+        .nav-links a:nth-child(4) {
+            display: none;
         }
 
-        .contact-info a {
-            color: #bdc7c0;
-            text-decoration: none;
+        .hero {
+            min-height: auto;
         }
 
-        .contact-info a:hover {
-            color: #c29d4a;
+        .hero-content {
+            padding-top: 60px;
         }
 
-        /* =========================
-           FOOTER
-        ========================= */
-
-        footer {
-            background: #0c1712;
-            color: #9daaa2;
-            padding: 28px 0;
-            text-align: center;
-            font-size: 0.82rem;
+        .hero h1 {
+            font-size: clamp(2.8rem, 15vw, 4.2rem);
         }
 
-        footer strong {
-            color: white;
+        .hero p {
+            font-size: 0.95rem;
         }
 
-        /* =========================
-           MOBILE
-        ========================= */
+        section {
+            padding: 75px 0;
+        }
 
-        @media (max-width: 900px) {
+        .project {
+            padding: 28px 22px;
+        }
 
-            .hero-grid {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
+        .steps {
+            grid-template-columns: 1fr;
+        }
 
-            .hero-content {
+        .profile-caption {
+            left: 0;
+            bottom: 15px;
+        }
+    }
+</style>
+
+</head><body><!-- =========================
+     NAVIGATION
+========================= -->
+
+<header>
+    <div class="container">
+        <nav>
+            <div class="logo">
+                GUNKOWII <span>SABA</span>
+            </div>
+
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#projects">Work</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+    </div>
+</header>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<main>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-grid">
+
+                <div class="hero-content">
+
+                    <div class="eyebrow">
+                        E-COMMERCE • DIGITAL • TECHNOLOGY
+                    </div>
+
+                    <div class="hero-subtitle">
+                        E-COMMERCE & DIGITAL SOLUTIONS SPECIALIST
+                    </div>
+
+                    <h1>
+                        GUNKOWII
+                        <span>SABA</span>
+                    </h1>
+
+                    <p>
+                        I help businesses build stronger digital foundations,
+                        improve their online stores, attract the right customers,
+                        and turn more visitors into paying customers.
+                    </p>
+
+                    <div class="buttons">
+                        <a class="button primary" href="#contact">
+                            Work With Me
+                        </a>
+
+                        <a class="button secondary" href="#projects">
+                            View My Work
+                        </a>
+                    </div>
+
+                </div>
+
+
+                <div class="hero-image">
+
+                    <div class="portrait-frame">
+
+                        <img
+                            class="portrait"
+                            src="IMG-20260805-WA0080(1).jpg"
+                            alt="GUNKOWII SABA">
+
+                        <div class="profile-caption">
+                            <strong>GUNKOWII SABA</strong>
+                            <span>DIGITAL SOLUTIONS SPECIALIST</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- =========================
+         ABOUT
+    ========================= -->
+
+    <section id="about">
+        <div class="container">
+
+            <div class="about-grid">
+
+                <div>
+                    <div class="label">
+                        ABOUT ME
+                    </div>
+
+                    <h2>
+                        Digital solutions built around
+                        <span>real business goals.</span>
+                    </h2>
+
+                    <p class="section-text">
+                        I work with businesses and online store owners who want
+                        more than a website that simply looks good. My focus is
+                        on building practical digital systems that support
+                        visibility, customer experience, conversions and growth.
+                    </p>
+
+                    <p class="section-text">
+                        My work combines e-commerce strategy, Shopify
+                        optimization, SEO, email marketing, website development
+                        and digital problem-solving.
+                    </p>
+                </div>
+
+                <div class="about-card">
+
+                    <strong>What I Focus On</strong>
+
+                    <p>
+                        Understanding the business first, identifying what is
+                        holding its digital presence back, then applying the
+                        right strategy instead of using a one-size-fits-all
+                        approach.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- =========================
+         SERVICES
+    ========================= -->
+
+    <section id="services" class="dark-section">
+
+        <div class="container">
+
+            <div class="label">
+                SERVICES
+            </div>
+
+            <h2>
+                What I can do for
+                <span>your business.</span>
+            </h2>
+
+            <div class="services">
+
+                <div class="service">
+                    <div class="service-number">01</div>
+                    <h3>Shopify & E-commerce</h3>
+                    <p>
+                        Store optimization, product presentation, conversion
+                        improvements, customer journey analysis and practical
+                        strategies designed to help online stores perform better.
+                    </p>
+                </div>
+
+                <div class="service">
+                    <div class="service-number">02</div>
+                    <h3>SEO & Visibility</h3>
+                    <p>
+                        Search-focused optimization that helps businesses improve
+                        their online visibility, attract relevant traffic and
+                        build stronger organic foundations.
+                    </p>
+                </div>
+
+                <div class="service">
+                    <div class="service-number">03</div>
+                    <h3>Email Marketing</h3>
+                    <p>
+                        Email campaigns, customer retention strategies and
+                        automated communication designed to turn existing
+                        traffic and customers into long-term value.
+                    </p>
+                </div>
+
+                <div class="service">
+                    <div class="service-number">04</div>
+                    <h3>Web Development</h3>
+                    <p>
+                        Responsive websites and digital interfaces built with
+                        clean structure, usability and business objectives in
+                        mind.
+                    </p>
+                </div>
+
+                <div class="service">
+                    <div class="service-number">05</div>
+                    <h3>Conversion Optimization</h3>
+                    <p>
+                        Identifying friction points across a website or store
+                        and improving the experience so more qualified visitors
+                        take meaningful action.
+                    </p>
+                </div>
+
+                <div class="service">
+                    <div class="service-number">06</div>
+                    <h3>Digital Strategy</h3>
+                    <p>
+                        Practical digital planning that connects websites,
+                        e-commerce, marketing and customer acquisition into a
+                        clearer growth system.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         PROJECTS
+    ========================= -->
+
+    <section id="projects">
+
+        <div class="container">
+
+            <div class="label">
+                SELECTED WORK
+            </div>
+
+            <h2>
+                Projects & digital
+                <span>solutions.</span>
+            </h2>
+
+            <p class="project-intro">
+                A selection of the type of digital work, systems and solutions
+                I build and improve for businesses.
+            </p>
+
+
+            <div class="project">
+
+                <small>01 — E-COMMERCE</small>
+
+                <h3>
+                    Shopify Store Optimization
+                </h3>
+
+                <p>
+                    Improving the structure, presentation, user experience and
+                    conversion journey of an online store so customers can find
+                    products more easily and move confidently toward checkout.
+                </p>
+
+                <div class="tags">
+                    <span>Shopify</span>
+                    <span>CRO</span>
+                    <span>SEO</span>
+                    <span>UX</span>
+                </div>
+
+            </div>
+
+
+            <div class="project">
+
+                <small>02 — DIGITAL MARKETING</small>
+
+                <h3>
+                    Email Marketing & Retention
+                </h3>
+
+                <p>
+                    Building customer communication strategies that help
+                    businesses stay connected with their audience, recover
+                    opportunities and increase repeat purchases.
+                </p>
+
+                <div class="tags">
+                    <span>Email Marketing</span>
+                    <span>Automation</span>
+                    <span>Retention</span>
+                    <span>Campaigns</span>
+                </div>
+
+            </div>
+
+
+            <div class="project">
+
+                <small>03 — WEB DEVELOPMENT</small>
+
+                <h3>
+                    Modern Business Websites
+                </h3>
+
+                <p>
+                    Creating responsive digital experiences that communicate
+                    a business clearly, establish credibility and make it easy
+                    for visitors to take the next step.
+                </p>
+
+                <div class="tags">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                    <span>Responsive Design</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         PROCESS
+    ========================= -->
+
+    <section class="process">
+
+        <div class="container">
+
+            <div class="label">
+                MY PROCESS
+            </div>
+
+            <h2>
+                Strategy before
+                <span>execution.</span>
+            </h2>
+
+            <div class="steps">
+
+                <div class="step">
+                    <strong>01</strong>
+                    <h3>Discover</h3>
+                    <p>
+                        Understand the business, audience and current digital
+                        situation.
+                    </p>
+                </div>
+
+                <div class="step">
+                    <strong>02</strong>
+                    <h3>Audit</h3>
+                    <p>
+                        Identify weaknesses, opportunities and areas affecting
+                        performance.
+                    </p>
+                </div>
+
+                <div class="step">
+                    <strong>03</strong>
+                    <h3>Plan</h3>
+                    <p>
+                        Build a focused strategy based on the actual business
+                        objectives.
+                    </p>
+                </div>
+
+                <div class="step">
+                    <strong>04</strong>
+                    <h3>Implement</h3>
+                    <p>
+                        Apply the improvements, build the required systems and
+                        optimize the experience.
+                    </p>
+                </div>
+
+                <div class="step">
+                    <strong>05</strong>
+                    <h3>Improve</h3>
+                    <p>
+                        Review performance and continue improving what matters
+                        most.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         WHY WORK WITH ME
+    ========================= -->
+
+    <section>
+
+        <div class="container">
+
+            <div class="label">
+                WHY WORK WITH ME
+            </div>
+
+            <h2>
+                Practical thinking.
+                <span>Real execution.</span>
+            </h2>
+
+            <div class="why-grid">
+
+                <div class="why-card">
+                    <strong>Business First</strong>
+                    <p>
+                        I focus on what the business needs to achieve, not just
+                        what looks impressive on a screen.
+                    </p>
+                </div>
+
+                <div class="why-card">
+                    <strong>Conversion Focused</strong>
+                    <p>
+                        Every important part of a digital experience should help
+                        move the customer toward a useful action.
+                    </p>
+                </div>
+
+                <div class="why-card">
+                    <strong>Continuous Improvement</strong>
+                    <p>
+                        Digital performance is not a one-time task. I look for
+                        opportunities to test, improve and strengthen results.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CTA
+    ========================= -->
+
+    <section class="cta">
+
+        <div class="container">
+
+            <div class="cta-box">
+
+                <div>
+                    <div class="label">
+                        HAVE A DIGITAL PROJECT?
+                    </div>
+
+                    <h2>
+                        Let's make your
+                        <span>digital presence work harder.</span>
+                    </h2>
+
+                    <p>
+                        Whether you need a stronger Shopify store, a professional
+                        website, better visibility, email marketing or a complete
+                        digital strategy, let's discuss what your business needs.
+                    </p>
+                </div>
+
+                <div>
+                    <a class="button primary" href="#contact">
+                        Start a Conversation
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTACT
+    ========================= -->
+
+    <section id="contact" class="contact">
+
+        <div class="container">
+
+            <div class="label">
+                GET IN TOUCH
+            </div>
+
+            <h2>
+                Ready to improve your
+                <span>digital presence?</span>
+            </h2>
+
+            <p>
+                Tell me what you are working on, what is currently not working,
+                or what you want to build. We can start from there.
+            </p>
+
+            <div class="contact-buttons">
+
+                <a
+                    class="button primary"
+                    href="https://wa.me/"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    WhatsApp Me
+                </a>
+
+                <a
+                    class="button secondary"
+                    href="mailto:contact@gunkowii.com">
+                    Send an Email
+                </a>
+
+            </div>
+
+            <div class="contact-info">
+
+                <a href="mailto:contact@gunkowii.com">
+                    contact@gunkowii.com
+                </a>
+
+                <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
+                    LinkedIn
+                </a>
+
+                <a href="https://github.com/gunkowii248656-alt" target="_blank" rel="noopener noreferrer">
+                    GitHub
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <div class="container">
+
+        <p>
+            © 2026 <strong>GUNKOWII SABA</strong>.
+            All rights reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+</body>
+</html>
