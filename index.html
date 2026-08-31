@@ -1,12 +1,28 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>GUNKOWII SABA | E-commerce & Digital Solutions Specialist</title><meta name="description" content="GUNKOWII SABA helps businesses improve e-commerce stores, Shopify, Etsy, SEO, paid advertising, conversion rates, email marketing and digital systems.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>GUNKOWII SABA | E-commerce & Digital Solutions Specialist</title>
+
+<meta name="description" content="GUNKOWII SABA helps businesses improve e-commerce stores, Shopify, Etsy, SEO, paid advertising, conversion rates, email marketing and digital systems.">
 <meta name="author" content="GUNKOWII SABA">
 <meta name="keywords" content="Gunkowii Saba, Shopify Expert, E-commerce Specialist, Shopify SEO, Etsy SEO, Google Ads, Google Shopping, Meta Ads, TikTok Ads, CRO, Email Marketing, Web Development">
-<meta name="robots" content="index, follow"><meta property="og:title" content="GUNKOWII SABA | E-commerce & Digital Solutions Specialist">
+<meta name="robots" content="index, follow">
+
+<meta property="og:title" content="GUNKOWII SABA | E-commerce & Digital Solutions Specialist">
 <meta property="og:description" content="E-commerce strategy, Shopify optimization, digital marketing, SEO, conversion optimization and web solutions.">
-<meta property="og:type" content="website"><meta name="theme-color" content="#14251d"><style>
+<meta property="og:type" content="website">
+
+<meta name="theme-color" content="#14251d">
+
+<style>
+
+/* =========================================================
+   RESET
+========================================================= */
+
 * {
     margin: 0;
     padding: 0;
@@ -22,6 +38,7 @@ body {
     background: #f7f4ed;
     color: #14251d;
     line-height: 1.7;
+    overflow-x: hidden;
 }
 
 img {
@@ -38,7 +55,26 @@ a {
     margin: auto;
 }
 
-/* NAVIGATION */
+/* =========================================================
+   SCROLL ANIMATION
+========================================================= */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(35px);
+    transition:
+        opacity .8s ease,
+        transform .8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
 
 header {
     position: sticky;
@@ -54,7 +90,6 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative;
 }
 
 .logo {
@@ -62,6 +97,7 @@ nav {
     font-size: 1.2rem;
     font-weight: bold;
     letter-spacing: 2px;
+    white-space: nowrap;
 }
 
 .logo span {
@@ -70,8 +106,8 @@ nav {
 
 .nav-links {
     display: flex;
-    gap: 27px;
     align-items: center;
+    gap: 27px;
 }
 
 .nav-links a {
@@ -86,18 +122,22 @@ nav {
 
 /* MOBILE MENU BUTTON */
 
-.mobile-menu-button {
+.menu-toggle {
     display: none;
     background: transparent;
-    border: 0;
-    color: #fff;
-    font-size: 1.7rem;
+    border: 1px solid rgba(255,255,255,.25);
+    color: white;
+    width: 42px;
+    height: 38px;
+    border-radius: 4px;
     cursor: pointer;
-    padding: 8px;
+    font-size: 22px;
     line-height: 1;
 }
 
-/* HERO */
+/* =========================================================
+   HERO
+========================================================= */
 
 .hero {
     min-height: 88vh;
@@ -173,7 +213,9 @@ nav {
     margin-bottom: 32px;
 }
 
-/* BUTTONS */
+/* =========================================================
+   BUTTONS
+========================================================= */
 
 .buttons {
     display: flex;
@@ -208,7 +250,9 @@ nav {
     color: #fff;
 }
 
-/* PORTRAIT */
+/* =========================================================
+   PORTRAIT
+========================================================= */
 
 .hero-image {
     display: flex;
@@ -265,7 +309,9 @@ nav {
     letter-spacing: 1px;
 }
 
-/* GENERAL */
+/* =========================================================
+   GENERAL
+========================================================= */
 
 section {
     padding: 105px 0;
@@ -289,22 +335,9 @@ h2 span {
     margin-bottom: 18px;
 }
 
-/* SCROLL ANIMATION */
-
-.scroll-reveal {
-    opacity: 0;
-    transform: translateY(35px);
-    transition:
-        opacity .8s ease,
-        transform .8s ease;
-}
-
-.scroll-reveal.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* ABOUT */
+/* =========================================================
+   ABOUT
+========================================================= */
 
 .about-grid {
     display: grid;
@@ -329,7 +362,9 @@ h2 span {
     color: #59645e;
 }
 
-/* SERVICES */
+/* =========================================================
+   SERVICES
+========================================================= */
 
 .dark-section {
     background: #14251d;
@@ -355,6 +390,7 @@ h2 span {
     padding: 34px;
     border: 1px solid #39483f;
     background: #1b3026;
+    transition: .3s ease;
 }
 
 .service:hover {
@@ -380,7 +416,9 @@ h2 span {
     font-size: .93rem;
 }
 
-/* SELECTED WORK */
+/* =========================================================
+   SELECTED WORK
+========================================================= */
 
 .selected-work {
     background: #f7f4ed;
@@ -540,7 +578,9 @@ h2 span {
     font-size: .78rem;
 }
 
-/* CREDENTIALS */
+/* =========================================================
+   CREDENTIALS
+========================================================= */
 
 .credentials {
     background: #fff;
@@ -579,7 +619,9 @@ h2 span {
     margin-bottom: 18px;
 }
 
-/* PROCESS */
+/* =========================================================
+   PROCESS
+========================================================= */
 
 .process {
     background: #eee8dc;
@@ -614,7 +656,9 @@ h2 span {
     font-size: .88rem;
 }
 
-/* WHY */
+/* =========================================================
+   WHY
+========================================================= */
 
 .why-grid {
     display: grid;
@@ -641,7 +685,9 @@ h2 span {
     font-size: .9rem;
 }
 
-/* CTA */
+/* =========================================================
+   CTA
+========================================================= */
 
 .cta {
     background: white;
@@ -661,7 +707,9 @@ h2 span {
     color: #59645e;
 }
 
-/* CONTACT */
+/* =========================================================
+   CONTACT
+========================================================= */
 
 .contact {
     background: #14251d;
@@ -726,7 +774,9 @@ h2 span {
     color: #c29d4a;
 }
 
-/* FOOTER */
+/* =========================================================
+   FOOTER
+========================================================= */
 
 footer {
     background: #0c1712;
@@ -740,7 +790,9 @@ footer strong {
     color: white;
 }
 
-/* TABLET */
+/* =========================================================
+   TABLET
+========================================================= */
 
 @media(max-width:1000px) {
 
@@ -778,7 +830,9 @@ footer strong {
     }
 }
 
-/* MOBILE */
+/* =========================================================
+   MOBILE
+========================================================= */
 
 @media(max-width:700px) {
 
@@ -788,47 +842,50 @@ footer strong {
 
     nav {
         min-height: 68px;
+        position: relative;
     }
 
     .logo {
         font-size: .95rem;
     }
 
-    .mobile-menu-button {
-        display: block;
+    .menu-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
+    /* ONLY ONE MOBILE MENU */
+
     .nav-links {
-        display: none;
         position: absolute;
         top: 68px;
         left: 0;
         right: 0;
         width: 100%;
-        background: #14251d;
-        padding: 12px 20px 18px;
+        display: none;
         flex-direction: column;
         align-items: stretch;
         gap: 0;
+        background: #14251d;
         border-top: 1px solid rgba(255,255,255,.08);
-        box-shadow: 0 12px 25px rgba(0,0,0,.18);
-        z-index: 1001;
+        box-shadow: 0 15px 30px rgba(0,0,0,.18);
     }
 
-    .nav-links.mobile-open {
+    .nav-links.open {
         display: flex;
     }
 
     .nav-links a {
         display: block;
         width: 100%;
-        padding: 13px 5px;
-        font-size: .85rem;
-        border-bottom: 1px solid rgba(255,255,255,.07);
+        padding: 15px 20px;
+        font-size: .82rem;
+        border-bottom: 1px solid rgba(255,255,255,.08);
     }
 
-    .nav-links a:last-child {
-        border-bottom: none;
+    .nav-links a:hover {
+        background: #1b3026;
     }
 
     section {
@@ -893,562 +950,1117 @@ footer strong {
     }
 }
 
-/* ACCESSIBILITY */
+</style>
+</head>
 
-@media(prefers-reduced-motion: reduce) {
+<body>
 
-    html {
-        scroll-behavior: auto;
-    }
+<!-- =====================================================
+     HEADER
+===================================================== -->
 
-    .scroll-reveal {
-        opacity: 1;
-        transform: none;
-        transition: none;
-    }
-}
-</style></head><body><header>
+<header>
     <div class="container">
-        <nav>        <div class="logo">
-            GUNKOWII <span>SABA</span>
+
+        <nav>
+
+            <div class="logo">
+                GUNKOWII <span>SABA</span>
+            </div>
+
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                aria-label="Open navigation menu"
+                aria-expanded="false">
+                ☰
+            </button>
+
+            <div class="nav-links" id="navLinks">
+
+                <a href="#about">About</a>
+
+                <a href="#services">Services</a>
+
+                <a href="#projects">Work</a>
+
+                <a href="#contact">Contact</a>
+
+            </div>
+
+        </nav>
+
+    </div>
+</header>
+
+<main>
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero reveal">
+
+    <div class="container">
+
+        <div class="hero-grid">
+
+            <div class="hero-content">
+
+                <div class="eyebrow">
+                    E-COMMERCE • DIGITAL • TECHNOLOGY
+                </div>
+
+                <div class="hero-subtitle">
+                    E-COMMERCE &amp; DIGITAL SOLUTIONS SPECIALIST
+                </div>
+
+                <h1>
+                    GUNKOWII
+                    <span>SABA</span>
+                </h1>
+
+                <p>
+                    I help businesses strengthen their digital presence,
+                    improve online stores, attract relevant customers and
+                    build clearer paths from traffic to conversion.
+                </p>
+
+                <div class="buttons">
+
+                    <a class="button primary" href="#contact">
+                        Work With Me
+                    </a>
+
+                    <a class="button secondary" href="#projects">
+                        View My Work
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="hero-image">
+
+                <div class="portrait-frame">
+
+                    <img
+                        class="portrait"
+                        src="IMG-20260805-WA0080(1).jpg"
+                        alt="GUNKOWII SABA professional portrait">
+
+                    <div class="profile-caption">
+
+                        <strong>GUNKOWII SABA</strong>
+
+                        <span>
+                            DIGITAL SOLUTIONS SPECIALIST
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
         </div>
 
-        <div class="nav-links">
-            <a href="#about">About</a>
-            <a href="#services">Services</a>
-            <a href="#projects">Work</a>
-            <a href="#contact">Contact</a>
+    </div>
+
+</section>
+
+<!-- =====================================================
+     ABOUT
+===================================================== -->
+
+<section id="about" class="reveal">
+
+    <div class="container">
+
+        <div class="about-grid">
+
+            <div>
+
+                <div class="label">
+                    ABOUT ME
+                </div>
+
+                <h2>
+                    Digital solutions built around
+                    <span>real business goals.</span>
+                </h2>
+
+                <p class="section-text">
+                    I work with businesses and online store owners who want
+                    more than a website that simply looks good. My focus is
+                    on practical digital improvements that support visibility,
+                    customer experience, conversions and sustainable growth.
+                </p>
+
+                <p class="section-text">
+                    My work covers e-commerce strategy, Shopify and Etsy
+                    optimization, SEO, paid advertising, conversion
+                    optimization, email marketing, website development and
+                    digital problem-solving.
+                </p>
+
+            </div>
+
+            <div class="about-card">
+
+                <strong>
+                    What I Focus On
+                </strong>
+
+                <p>
+                    Understanding the business first, identifying what is
+                    holding its digital presence back, then applying the
+                    right strategy instead of using a one-size-fits-all
+                    approach.
+                </p>
+
+            </div>
+
         </div>
 
-        <button
-            class="mobile-menu-button"
-            type="button"
-            aria-label="Open navigation menu"
-            aria-expanded="false">
-            ☰
-        </button>
+    </div>
 
-    </nav>
-</div>
+</section>
 
-</header><main><!-- HERO --><section class="hero">
-<div class="container">
-<div class="hero-grid"><div class="hero-content"><div class="eyebrow">
-E-COMMERCE • DIGITAL • TECHNOLOGY
-</div><div class="hero-subtitle">
-E-COMMERCE &amp; DIGITAL SOLUTIONS SPECIALIST
-</div><h1>
-GUNKOWII
-<span>SABA</span>
-</h1><p>
-I help businesses strengthen their digital presence,
-improve online stores, attract relevant customers and
-build clearer paths from traffic to conversion.
-</p><div class="buttons"><a class="button primary" href="#contact">
-Work With Me
-</a><a class="button secondary" href="#projects">
-View My Work
-</a></div>
-</div><div class="hero-image"><div class="portrait-frame"><img
-class="portrait"
-src="IMG-20260805-WA0080(1).jpg"
-alt="GUNKOWII SABA professional portrait">
+<!-- =====================================================
+     SERVICES
+===================================================== -->
 
-<div class="profile-caption">
-<strong>GUNKOWII SABA</strong>
-<span>DIGITAL SOLUTIONS SPECIALIST</span>
-</div></div>
-</div></div>
-</div>
-</section><!-- ABOUT --><section id="about">
-<div class="container">
-<div class="about-grid"><div><div class="label">ABOUT ME</div><h2>
-Digital solutions built around
-<span>real business goals.</span>
-</h2><p class="section-text">
-I work with businesses and online store owners who want
-more than a website that simply looks good. My focus is
-on practical digital improvements that support visibility,
-customer experience, conversions and sustainable growth.
-</p><p class="section-text">
-My work covers e-commerce strategy, Shopify and Etsy
-optimization, SEO, paid advertising, conversion
-optimization, email marketing, website development and
-digital problem-solving.
-</p></div><div class="about-card"><strong>What I Focus On</strong>
+<section id="services" class="dark-section reveal">
 
-<p>
-Understanding the business first, identifying what is
-holding its digital presence back, then applying the
-right strategy instead of using a one-size-fits-all
-approach.
-</p></div></div>
-</div>
-</section><!-- SERVICES --><section id="services" class="dark-section">
-<div class="container"><div class="label">SERVICES</div><h2>
-E-commerce, marketing &
-<span>digital solutions.</span>
-</h2><div class="services"><div class="service">
-<div class="service-number">01</div>
-<h3>Shopify &amp; E-commerce</h3>
-<p>
-Store optimization, product presentation, navigation,
-customer journey improvements and conversion-focused
-e-commerce strategy.
-</p>
-</div><div class="service">
-<div class="service-number">02</div>
-<h3>Etsy SEO &amp; Store Growth</h3>
-<p>
-Listing optimization, keyword strategy, product
-presentation, search visibility and conversion support.
-</p>
-</div><div class="service">
-<div class="service-number">03</div>
-<h3>Google Ads &amp; Shopping</h3>
-<p>
-Search and Shopping campaign strategy focused on relevant
-buyers, product visibility and efficient acquisition.
-</p>
-</div><div class="service">
-<div class="service-number">04</div>
-<h3>Meta &amp; Instagram Ads</h3>
-<p>
-Campaign structure, audience targeting, creative direction
-and e-commerce customer acquisition.
-</p>
-</div><div class="service">
-<div class="service-number">05</div>
-<h3>TikTok Ads &amp; Social Growth</h3>
-<p>
-Social-commerce strategies designed to connect products
-with relevant audiences and increase discovery.
-</p>
-</div><div class="service">
-<div class="service-number">06</div>
-<h3>SEO &amp; Organic Visibility</h3>
-<p>
-Search-focused optimization for websites, stores,
-product pages and digital content.
-</p>
-</div><div class="service">
-<div class="service-number">07</div>
-<h3>Conversion Rate Optimization</h3>
-<p>
-Identifying friction across product pages, navigation,
-offers, calls to action and customer journeys.
-</p>
-</div><div class="service">
-<div class="service-number">08</div>
-<h3>Email Marketing &amp; Automation</h3>
-<p>
-Campaigns, automated flows, abandoned-cart opportunities
-and customer lifecycle communication.
-</p>
-</div><div class="service">
-<div class="service-number">09</div>
-<h3>Product &amp; Listing Optimization</h3>
-<p>
-Improving titles, descriptions, positioning and product
-presentation so customers understand the offer.
-</p>
-</div><div class="service">
-<div class="service-number">10</div>
-<h3>Analytics &amp; Performance</h3>
-<p>
-Reviewing digital performance and customer behavior to
-identify practical opportunities for improvement.
-</p>
-</div><div class="service">
-<div class="service-number">11</div>
-<h3>Web Development</h3>
-<p>
-Responsive websites and digital interfaces built around
-usability, performance and business objectives.
-</p>
-</div><div class="service">
-<div class="service-number">12</div>
-<h3>Digital Strategy</h3>
-<p>
-Connecting e-commerce, advertising, SEO, websites and
-retention into a clearer digital growth system.
-</p>
-</div></div>
-</div>
-</section><!-- SELECTED WORK --><section id="projects" class="selected-work">
-<div class="container"><div class="label">SELECTED WORK</div><h2>
-Real stores.
-<span>Real digital work.</span>
-</h2><p class="selected-work-intro">
-A selection of e-commerce projects, store analysis and software
-development work representing the areas I operate across.
-</p><div class="work-grid"><article class="work-card">
-<div><div class="work-top">
-<div class="work-number">01 — E-COMMERCE</div>
-<div class="work-status">STORE PROJECT</div>
-</div><h3>Teeology Clothing</h3><p>
-An e-commerce clothing store built around streetwear,
-graphic apparel, accessories and product-led
-merchandising.
-</p><div class="work-meta">
-<strong>Focus</strong>
-<span>
-Store presentation, product discovery,
-merchandising and customer journey.
-</span>
-</div></div><div><div class="work-tags">
-<span>Shopify</span>
-<span>E-commerce</span>
-<span>UX</span>
-<span>Product Pages</span>
-</div><a
-class="work-link"
-href="https://teeologyclothing.com/"
-target="_blank"
-rel="noopener noreferrer">
-VIEW STORE →
-</a>
+    <div class="container">
 
-</div>
-</article><article class="work-card">
-<div><div class="work-top">
-<div class="work-number">02 — FITNESS</div>
-<div class="work-status">STORE PROJECT</div>
-</div><h3>Iron Therapy</h3><p>
-A fitness-focused digital store and brand ecosystem
-combining products with training, content and fitness
-resources.
-</p><div class="work-meta">
-<strong>Focus</strong>
-<span>
-Product merchandising, customer experience,
-brand presentation and conversion.
-</span>
-</div></div><div><div class="work-tags">
-<span>E-commerce</span>
-<span>Fitness</span>
-<span>UX</span>
-<span>CRO</span>
-</div><a
-class="work-link"
-href="https://irontherapyfitness.net/"
-target="_blank"
-rel="noopener noreferrer">
-VIEW STORE →
-</a>
+        <div class="label">
+            SERVICES
+        </div>
 
-</div>
-</article><article class="work-card">
-<div><div class="work-top">
-<div class="work-number">03 — BEAUTY</div>
-<div class="work-status">STORE PROJECT</div>
-</div><h3>BeeYouti</h3><p>
-A beauty-focused online store covering beauty
-essentials, hair care, makeup, nail products and
-skincare categories.
-</p><div class="work-meta">
-<strong>Focus</strong>
-<span>
-Category structure, product discovery,
-navigation and customer experience.
-</span>
-</div></div><div><div class="work-tags">
-<span>Beauty</span>
-<span>E-commerce</span>
-<span>Navigation</span>
-<span>UX</span>
-</div><a
-class="work-link"
-href="https://beeyouti.com/"
-target="_blank"
-rel="noopener noreferrer">
-VIEW STORE →
-</a>
+        <h2>
+            E-commerce, marketing &
+            <span>digital solutions.</span>
+        </h2>
 
-</div>
-</article><article class="work-card">
-<div><div class="work-top">
-<div class="work-number">04 — E-COMMERCE</div>
-<div class="work-status">STORE PROJECT</div>
-</div><h3>Look For It Here</h3><p>
-A broad e-commerce storefront requiring clear product
-organization, collection structure and an accessible
-shopping experience.
-</p><div class="work-meta">
-<strong>Focus</strong>
-<span>
-Product organization, discoverability,
-collections and shopping experience.
-</span>
-</div></div><div><div class="work-tags">
-<span>E-commerce</span>
-<span>Collections</span>
-<span>Product Discovery</span>
-<span>UX</span>
-</div><a
-class="work-link"
-href="https://www.lookforithere.com.ar/"
-target="_blank"
-rel="noopener noreferrer">
-VIEW STORE →
-</a>
+        <div class="services">
 
-</div>
-</article><article class="work-card">
-<div><div class="work-top">
-<div class="work-number">05 — E-COMMERCE</div>
-<div class="work-status">AUDIT / ANALYSIS</div>
-</div><h3>Aestevi</h3><p>
-An e-commerce analysis focused on the relationship
-between store structure, targeted traffic, product
-presentation, customer confidence and conversion.
-</p><div class="work-meta">
-<strong>Focus</strong>
-<span>
-SEO, CRO, UX, traffic strategy and conversion
-opportunities.
-</span>
-</div></div><div><div class="work-tags">
-<span>SEO</span>
-<span>CRO</span>
-<span>UX Audit</span>
-<span>E-commerce</span>
-</div><a
-class="work-link"
-href="https://aestevi.com/"
-target="_blank"
-rel="noopener noreferrer">
-VIEW STORE →
-</a>
+            <div class="service">
+                <div class="service-number">01</div>
+                <h3>Shopify &amp; E-commerce</h3>
+                <p>
+                    Store optimization, product presentation, navigation,
+                    customer journey improvements and conversion-focused
+                    e-commerce strategy.
+                </p>
+            </div>
 
-</div>
-</article><article class="work-card featured">
-<div><div class="work-top">
-<div class="work-number">06 — SOFTWARE DEVELOPMENT</div>
-<div class="work-status">IN DEVELOPMENT</div>
-</div><h3>
-MANBAUL ANWAR Arabic School
-Management System
-</h3><p>
-A school management platform being developed to bring
-administration, teachers, students and parents into
-one structured digital system using Flutter and
-Firebase.
-</p><div class="work-meta">
-<strong>Focus</strong>
-<span>
-Application architecture, authentication,
-role-based access, academic records and
-digital school operations.
-</span>
-</div></div><div><div class="work-tags">
-<span>Flutter</span>
-<span>Firebase</span>
-<span>Firestore</span>
-<span>Authentication</span>
-<span>Role-Based Access</span>
-</div><a
-class="work-link"
-href="https://github.com/gunkowii248656-alt"
-target="_blank"
-rel="noopener noreferrer">
-VIEW GITHUB →
-</a>
+            <div class="service">
+                <div class="service-number">02</div>
+                <h3>Etsy SEO &amp; Store Growth</h3>
+                <p>
+                    Listing optimization, keyword strategy, product
+                    presentation, search visibility and conversion support.
+                </p>
+            </div>
 
-</div>
-</article></div><div class="work-disclaimer">
-<strong>Portfolio note:</strong>
-Projects shown here represent e-commerce work, store analysis
-and software development. Specific sales or revenue results are
-not claimed unless independently verified.
-</div></div>
-</section><!-- CREDENTIALS --><section class="credentials">
-<div class="container"><div class="label">PROFESSIONAL PRESENCE</div><h2>
-Work backed by
-<span>real-world platforms.</span>
-</h2><p class="section-text">
-I also maintain professional platforms where clients can learn
-more about my services, previous work and freelance experience.
-</p><div class="credential-grid"><div class="credential"><strong>AGENCY / DIGITAL SERVICES</strong>
+            <div class="service">
+                <div class="service-number">03</div>
+                <h3>Google Ads &amp; Shopping</h3>
+                <p>
+                    Search and Shopping campaign strategy focused on relevant
+                    buyers, product visibility and efficient acquisition.
+                </p>
+            </div>
 
-<h3>Bofowo Agency</h3><p>
-Professional digital services and project work covering
-websites, e-commerce and digital solutions.
-</p><a
-class="button primary"
-href="https://www.bofowoagency.com/"
-target="_blank"
-rel="noopener noreferrer">
-VISIT BOFOWO →
-</a>
+            <div class="service">
+                <div class="service-number">04</div>
+                <h3>Meta &amp; Instagram Ads</h3>
+                <p>
+                    Campaign structure, audience targeting, creative direction
+                    and e-commerce customer acquisition.
+                </p>
+            </div>
 
-</div><div class="credential"><strong>FREELANCE PROFILE</strong>
+            <div class="service">
+                <div class="service-number">05</div>
+                <h3>TikTok Ads &amp; Social Growth</h3>
+                <p>
+                    Social-commerce strategies designed to connect products
+                    with relevant audiences and increase discovery.
+                </p>
+            </div>
 
-<h3>Fiverr Profile</h3><p>
-My freelance profile provides another place to review
-my professional services and marketplace presence.
-</p><a
-class="button primary"
-href="https://www.fiverr.com/smith_stephiene"
-target="_blank"
-rel="noopener noreferrer">
-VIEW FIVERR →
-</a>
+            <div class="service">
+                <div class="service-number">06</div>
+                <h3>SEO &amp; Organic Visibility</h3>
+                <p>
+                    Search-focused optimization for websites, stores,
+                    product pages and digital content.
+                </p>
+            </div>
 
-</div></div>
-</div>
-</section><!-- PROCESS --><section class="process">
-<div class="container"><div class="label">MY PROCESS</div><h2>
-Strategy before
-<span>execution.</span>
-</h2><p class="section-text">
-I don't start by changing things randomly. I first understand
-the business, identify what is limiting performance and then
-prioritize the improvements that matter most.
-</p><div class="steps"><div class="step">
-<strong>01</strong>
-<h3>Discover</h3>
-<p>
-Understand the business, products, audience, current
-situation and goals.
-</p>
-</div><div class="step">
-<strong>02</strong>
-<h3>Audit</h3>
-<p>
-Examine the store or website for SEO, usability,
-content, conversion and marketing opportunities.
-</p>
-</div><div class="step">
-<strong>03</strong>
-<h3>Strategize</h3>
-<p>
-Turn findings into a clear action plan and prioritize
-high-impact improvements.
-</p>
-</div><div class="step">
-<strong>04</strong>
-<h3>Implement</h3>
-<p>
-Apply the agreed improvements across the store,
-website, marketing systems or digital experience.
-</p>
-</div><div class="step">
-<strong>05</strong>
-<h3>Optimize</h3>
-<p>
-Review performance, identify new opportunities and
-continue improving the system.
-</p>
-</div></div>
-</div>
-</section><!-- WHY --><section>
-<div class="container"><div class="label">WHY WORK WITH ME</div><h2>
-Practical thinking.
-<span>Real execution.</span>
-</h2><div class="why-grid"><div class="why-card">
-<strong>Business First</strong>
-<p>
-I focus on what the business needs to achieve, not just
-what looks impressive on a screen.
-</p>
-</div><div class="why-card">
-<strong>E-commerce Focused</strong>
-<p>
-Store structure, acquisition, conversion and retention
-are considered as parts of one customer journey.
-</p>
-</div><div class="why-card">
-<strong>Strategy Driven</strong>
-<p>
-Decisions are connected to business objectives,
-customer behavior and performance.
-</p>
-</div><div class="why-card">
-<strong>Multi-Channel</strong>
-<p>
-Shopify, Etsy, search, paid advertising, email,
-websites and digital systems.
-</p>
-</div><div class="why-card">
-<strong>Conversion Mindset</strong>
-<p>
-Getting visitors is only part of the equation. The
-experience must make taking action easier.
-</p>
-</div><div class="why-card">
-<strong>Continuous Improvement</strong>
-<p>
-Digital performance is not a one-time task. I look for
-opportunities to test, improve and strengthen the system.
-</p>
-</div></div>
-</div>
-</section><!-- CTA --><section class="cta">
-<div class="container"><div class="cta-box"><div><div class="label">HAVE A DIGITAL PROJECT?</div><h2>
-Let's make your
-<span>digital presence work harder.</span>
-</h2><p>
-Whether you need a stronger Shopify or Etsy store,
-better advertising, improved visibility, email marketing,
-a professional website or a complete digital strategy,
-let's discuss what your business needs.
-</p></div><div>
-<a class="button primary" href="#contact">
-Start a Conversation
-</a>
-</div></div>
-</div>
-</section><!-- CONTACT --><section id="contact" class="contact">
-<div class="container"><div class="label">GET IN TOUCH</div><h2>
-Ready to improve your
-<span>digital presence?</span>
-</h2><p>
-Tell me what you are working on, what is currently not working,
-or what you want to build. We can start from there.
-</p><div class="contact-buttons"><a
-class="button primary"
-href="https://wa.me/2348137343887"
-target="_blank"
-rel="noopener noreferrer">
-WhatsApp Me
-</a>
+            <div class="service">
+                <div class="service-number">07</div>
+                <h3>Conversion Rate Optimization</h3>
+                <p>
+                    Identifying friction across product pages, navigation,
+                    offers, calls to action and customer journeys.
+                </p>
+            </div>
 
-<a
-class="button secondary"
-href="mailto:ahmeedagunko@gmail.com">
-Send an Email
-</a>
+            <div class="service">
+                <div class="service-number">08</div>
+                <h3>Email Marketing &amp; Automation</h3>
+                <p>
+                    Campaigns, automated flows, abandoned-cart opportunities
+                    and customer lifecycle communication.
+                </p>
+            </div>
 
-</div><div class="contact-info"><a href="mailto:ahmeedagunko@gmail.com">
-ahmeedagunko@gmail.com
-</a><a
-href="https://www.bofowoagency.com/"
-target="_blank"
-rel="noopener noreferrer">
-Bofowo Agency
-</a>
+            <div class="service">
+                <div class="service-number">09</div>
+                <h3>Product &amp; Listing Optimization</h3>
+                <p>
+                    Improving titles, descriptions, positioning and product
+                    presentation so customers understand the offer.
+                </p>
+            </div>
 
-<a
-href="https://www.fiverr.com/smith_stephiene"
-target="_blank"
-rel="noopener noreferrer">
-Fiverr
-</a>
+            <div class="service">
+                <div class="service-number">10</div>
+                <h3>Analytics &amp; Performance</h3>
+                <p>
+                    Reviewing digital performance and customer behavior to
+                    identify practical opportunities for improvement.
+                </p>
+            </div>
 
-<a
-href="https://github.com/gunkowii248656-alt"
-target="_blank"
-rel="noopener noreferrer">
-GitHub
-</a>
+            <div class="service">
+                <div class="service-number">11</div>
+                <h3>Web Development</h3>
+                <p>
+                    Responsive websites and digital interfaces built around
+                    usability, performance and business objectives.
+                </p>
+            </div>
 
-</div></div>
-</section></main><footer>
-<div class="container"><p>
-© 2026
-<strong>GUNKOWII SABA</strong>.
-All rights reserved.
-</p></div>
-</footer><script src="main.js"></script></body>
+            <div class="service">
+                <div class="service-number">12</div>
+                <h3>Digital Strategy</h3>
+                <p>
+                    Connecting e-commerce, advertising, SEO, websites and
+                    retention into a clearer digital growth system.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================================
+     SELECTED WORK
+===================================================== -->
+
+<section id="projects" class="selected-work reveal">
+
+    <div class="container">
+
+        <div class="label">
+            SELECTED WORK
+        </div>
+
+        <h2>
+            Real stores.
+            <span>Real digital work.</span>
+        </h2>
+
+        <p class="selected-work-intro">
+            A selection of e-commerce projects, store analysis and software
+            development work representing the areas I operate across.
+        </p>
+
+        <div class="work-grid">
+
+            <article class="work-card">
+
+                <div>
+
+                    <div class="work-top">
+                        <div class="work-number">01 — E-COMMERCE</div>
+                        <div class="work-status">STORE PROJECT</div>
+                    </div>
+
+                    <h3>Teeology Clothing</h3>
+
+                    <p>
+                        An e-commerce clothing store built around streetwear,
+                        graphic apparel, accessories and product-led
+                        merchandising.
+                    </p>
+
+                    <div class="work-meta">
+                        <strong>Focus</strong>
+                        <span>
+                            Store presentation, product discovery,
+                            merchandising and customer journey.
+                        </span>
+                    </div>
+
+                </div>
+
+                <div>
+
+                    <div class="work-tags">
+                        <span>Shopify</span>
+                        <span>E-commerce</span>
+                        <span>UX</span>
+                        <span>Product Pages</span>
+                    </div>
+
+                    <a
+                        class="work-link"
+                        href="https://teeologyclothing.com/"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        VIEW STORE →
+                    </a>
+
+                </div>
+
+            </article>
+
+            <article class="work-card">
+
+                <div>
+
+                    <div class="work-top">
+                        <div class="work-number">02 — FITNESS</div>
+                        <div class="work-status">STORE PROJECT</div>
+                    </div>
+
+                    <h3>Iron Therapy</h3>
+
+                    <p>
+                        A fitness-focused digital store and brand ecosystem
+                        combining products with training, content and fitness
+                        resources.
+                    </p>
+
+                    <div class="work-meta">
+                        <strong>Focus</strong>
+                        <span>
+                            Product merchandising, customer experience,
+                            brand presentation and conversion.
+                        </span>
+                    </div>
+
+                </div>
+
+                <div>
+
+                    <div class="work-tags">
+                        <span>E-commerce</span>
+                        <span>Fitness</span>
+                        <span>UX</span>
+                        <span>CRO</span>
+                    </div>
+
+                    <a
+                        class="work-link"
+                        href="https://irontherapyfitness.net/"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        VIEW STORE →
+                    </a>
+
+                </div>
+
+            </article>
+
+            <article class="work-card">
+
+                <div>
+
+                    <div class="work-top">
+                        <div class="work-number">03 — BEAUTY</div>
+                        <div class="work-status">STORE PROJECT</div>
+                    </div>
+
+                    <h3>BeeYouti</h3>
+
+                    <p>
+                        A beauty-focused online store covering beauty
+                        essentials, hair care, makeup, nail products and
+                        skincare categories.
+                    </p>
+
+                    <div class="work-meta">
+                        <strong>Focus</strong>
+                        <span>
+                            Category structure, product discovery,
+                            navigation and customer experience.
+                        </span>
+                    </div>
+
+                </div>
+
+                <div>
+
+                    <div class="work-tags">
+                        <span>Beauty</span>
+                        <span>E-commerce</span>
+                        <span>Navigation</span>
+                        <span>UX</span>
+                    </div>
+
+                    <a
+                        class="work-link"
+                        href="https://beeyouti.com/"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        VIEW STORE →
+                    </a>
+
+                </div>
+
+            </article>
+
+            <article class="work-card">
+
+                <div>
+
+                    <div class="work-top">
+                        <div class="work-number">04 — E-COMMERCE</div>
+                        <div class="work-status">STORE PROJECT</div>
+                    </div>
+
+                    <h3>Look For It Here</h3>
+
+                    <p>
+                        A broad e-commerce storefront requiring clear product
+                        organization, collection structure and an accessible
+                        shopping experience.
+                    </p>
+
+                    <div class="work-meta">
+                        <strong>Focus</strong>
+                        <span>
+                            Product organization, discoverability,
+                            collections and shopping experience.
+                        </span>
+                    </div>
+
+                </div>
+
+                <div>
+
+                    <div class="work-tags">
+                        <span>E-commerce</span>
+                        <span>Collections</span>
+                        <span>Product Discovery</span>
+                        <span>UX</span>
+                    </div>
+
+                    <a
+                        class="work-link"
+                        href="https://www.lookforithere.com.ar/"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        VIEW STORE →
+                    </a>
+
+                </div>
+
+            </article>
+
+            <article class="work-card">
+
+                <div>
+
+                    <div class="work-top">
+                        <div class="work-number">05 — E-COMMERCE</div>
+                        <div class="work-status">AUDIT / ANALYSIS</div>
+                    </div>
+
+                    <h3>Aestevi</h3>
+
+                    <p>
+                        An e-commerce analysis focused on the relationship
+                        between store structure, targeted traffic, product
+                        presentation, customer confidence and conversion.
+                    </p>
+
+                    <div class="work-meta">
+                        <strong>Focus</strong>
+                        <span>
+                            SEO, CRO, UX, traffic strategy and conversion
+                            opportunities.
+                        </span>
+                    </div>
+
+                </div>
+
+                <div>
+
+                    <div class="work-tags">
+                        <span>SEO</span>
+                        <span>CRO</span>
+                        <span>UX Audit</span>
+                        <span>E-commerce</span>
+                    </div>
+
+                    <a
+                        class="work-link"
+                        href="https://aestevi.com/"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        VIEW STORE →
+                    </a>
+
+                </div>
+
+            </article>
+
+            <article class="work-card featured">
+
+                <div>
+
+                    <div class="work-top">
+                        <div class="work-number">
+                            06 — SOFTWARE DEVELOPMENT
+                        </div>
+
+                        <div class="work-status">
+                            IN DEVELOPMENT
+                        </div>
+                    </div>
+
+                    <h3>
+                        MANBAUL ANWAR Arabic School
+                        Management System
+                    </h3>
+
+                    <p>
+                        A school management platform being developed to bring
+                        administration, teachers, students and parents into
+                        one structured digital system using Flutter and
+                        Firebase.
+                    </p>
+
+                    <div class="work-meta">
+
+                        <strong>Focus</strong>
+
+                        <span>
+                            Application architecture, authentication,
+                            role-based access, academic records and
+                            digital school operations.
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <div>
+
+                    <div class="work-tags">
+                        <span>Flutter</span>
+                        <span>Firebase</span>
+                        <span>Firestore</span>
+                        <span>Authentication</span>
+                        <span>Role-Based Access</span>
+                    </div>
+
+                    <a
+                        class="work-link"
+                        href="https://github.com/gunkowii248656-alt"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        VIEW GITHUB →
+                    </a>
+
+                </div>
+
+            </article>
+
+        </div>
+
+        <div class="work-disclaimer">
+
+            <strong>Portfolio note:</strong>
+
+            Projects shown here represent e-commerce work, store analysis
+            and software development. Specific sales or revenue results are
+            not claimed unless independently verified.
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================================
+     CREDENTIALS
+===================================================== -->
+
+<section class="credentials reveal">
+
+    <div class="container">
+
+        <div class="label">
+            PROFESSIONAL PRESENCE
+        </div>
+
+        <h2>
+            Work backed by
+            <span>real-world platforms.</span>
+        </h2>
+
+        <p class="section-text">
+            I also maintain professional platforms where clients can learn
+            more about my services, previous work and freelance experience.
+        </p>
+
+        <div class="credential-grid">
+
+            <div class="credential">
+
+                <strong>
+                    AGENCY / DIGITAL SERVICES
+                </strong>
+
+                <h3>
+                    Bofowo Agency
+                </h3>
+
+                <p>
+                    Professional digital services and project work covering
+                    websites, e-commerce and digital solutions.
+                </p>
+
+                <a
+                    class="button primary"
+                    href="https://www.bofowoagency.com/"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    VISIT BOFOWO →
+                </a>
+
+            </div>
+
+            <div class="credential">
+
+                <strong>
+                    FREELANCE PROFILE
+                </strong>
+
+                <h3>
+                    Fiverr Profile
+                </h3>
+
+                <p>
+                    My freelance profile provides another place to review
+                    my professional services and marketplace presence.
+                </p>
+
+                <a
+                    class="button primary"
+                    href="https://www.fiverr.com/smith_stephiene"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    VIEW FIVERR →
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================================
+     PROCESS
+===================================================== -->
+
+<section class="process reveal">
+
+    <div class="container">
+
+        <div class="label">
+            MY PROCESS
+        </div>
+
+        <h2>
+            Strategy before
+            <span>execution.</span>
+        </h2>
+
+        <p class="section-text">
+            I don't start by changing things randomly. I first understand
+            the business, identify what is limiting performance and then
+            prioritize the improvements that matter most.
+        </p>
+
+        <div class="steps">
+
+            <div class="step">
+                <strong>01</strong>
+                <h3>Discover</h3>
+                <p>
+                    Understand the business, products, audience, current
+                    situation and goals.
+                </p>
+            </div>
+
+            <div class="step">
+                <strong>02</strong>
+                <h3>Audit</h3>
+                <p>
+                    Examine the store or website for SEO, usability,
+                    content, conversion and marketing opportunities.
+                </p>
+            </div>
+
+            <div class="step">
+                <strong>03</strong>
+                <h3>Strategize</h3>
+                <p>
+                    Turn findings into a clear action plan and prioritize
+                    high-impact improvements.
+                </p>
+            </div>
+
+            <div class="step">
+                <strong>04</strong>
+                <h3>Implement</h3>
+                <p>
+                    Apply the agreed improvements across the store,
+                    website, marketing systems or digital experience.
+                </p>
+            </div>
+
+            <div class="step">
+                <strong>05</strong>
+                <h3>Optimize</h3>
+                <p>
+                    Review performance, identify new opportunities and
+                    continue improving the system.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================================
+     WHY
+===================================================== -->
+
+<section class="reveal">
+
+    <div class="container">
+
+        <div class="label">
+            WHY WORK WITH ME
+        </div>
+
+        <h2>
+            Practical thinking.
+            <span>Real execution.</span>
+        </h2>
+
+        <div class="why-grid">
+
+            <div class="why-card">
+                <strong>Business First</strong>
+                <p>
+                    I focus on what the business needs to achieve, not just
+                    what looks impressive on a screen.
+                </p>
+            </div>
+
+            <div class="why-card">
+                <strong>E-commerce Focused</strong>
+                <p>
+                    Store structure, acquisition, conversion and retention
+                    are considered as parts of one customer journey.
+                </p>
+            </div>
+
+            <div class="why-card">
+                <strong>Strategy Driven</strong>
+                <p>
+                    Decisions are connected to business objectives,
+                    customer behavior and performance.
+                </p>
+            </div>
+
+            <div class="why-card">
+                <strong>Multi-Channel</strong>
+                <p>
+                    Shopify, Etsy, search, paid advertising, email,
+                    websites and digital systems.
+                </p>
+            </div>
+
+            <div class="why-card">
+                <strong>Conversion Mindset</strong>
+                <p>
+                    Getting visitors is only part of the equation. The
+                    experience must make taking action easier.
+                </p>
+            </div>
+
+            <div class="why-card">
+                <strong>Continuous Improvement</strong>
+                <p>
+                    Digital performance is not a one-time task. I look for
+                    opportunities to test, improve and strengthen the system.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================================
+     CTA
+===================================================== -->
+
+<section class="cta reveal">
+
+    <div class="container">
+
+        <div class="cta-box">
+
+            <div>
+
+                <div class="label">
+                    HAVE A DIGITAL PROJECT?
+                </div>
+
+                <h2>
+                    Let's make your
+                    <span>digital presence work harder.</span>
+                </h2>
+
+                <p>
+                    Whether you need a stronger Shopify or Etsy store,
+                    better advertising, improved visibility, email marketing,
+                    a professional website or a complete digital strategy,
+                    let's discuss what your business needs.
+                </p>
+
+            </div>
+
+            <div>
+
+                <a
+                    class="button primary"
+                    href="#contact">
+                    Start a Conversation
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================================
+     CONTACT
+===================================================== -->
+
+<section id="contact" class="contact reveal">
+
+    <div class="container">
+
+        <div class="label">
+            GET IN TOUCH
+        </div>
+
+        <h2>
+            Ready to improve your
+            <span>digital presence?</span>
+        </h2>
+
+        <p>
+            Tell me what you are working on, what is currently not working,
+            or what you want to build. We can start from there.
+        </p>
+
+        <div class="contact-buttons">
+
+            <a
+                class="button primary"
+                href="https://wa.me/2348137343887"
+                target="_blank"
+                rel="noopener noreferrer">
+                WhatsApp Me
+            </a>
+
+            <a
+                class="button secondary"
+                href="mailto:ahmeedagunko@gmail.com">
+                Send an Email
+            </a>
+
+        </div>
+
+        <div class="contact-info">
+
+            <a href="mailto:ahmeedagunko@gmail.com">
+                ahmeedagunko@gmail.com
+            </a>
+
+            <a
+                href="https://www.bofowoagency.com/"
+                target="_blank"
+                rel="noopener noreferrer">
+                Bofowo Agency
+            </a>
+
+            <a
+                href="https://www.fiverr.com/smith_stephiene"
+                target="_blank"
+                rel="noopener noreferrer">
+                Fiverr
+            </a>
+
+            <a
+                href="https://github.com/gunkowii248656-alt"
+                target="_blank"
+                rel="noopener noreferrer">
+                GitHub
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <div class="container">
+
+        <p>
+            © 2026
+            <strong>GUNKOWII SABA</strong>.
+            All rights reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+<!-- =====================================================
+     MAIN JAVASCRIPT
+===================================================== -->
+
+<script src="main.js"></script>
+
+<!-- =====================================================
+     MENU SAFETY SCRIPT
+     Handles ONLY the menu in this index.
+===================================================== -->
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    if (menuToggle && navLinks) {
+
+        menuToggle.addEventListener("click", function () {
+
+            navLinks.classList.toggle("open");
+
+            const isOpen =
+                navLinks.classList.contains("open");
+
+            menuToggle.setAttribute(
+                "aria-expanded",
+                isOpen ? "true" : "false"
+            );
+
+            menuToggle.innerHTML =
+                isOpen ? "✕" : "☰";
+
+        });
+
+        navLinks.querySelectorAll("a").forEach(function (link) {
+
+            link.addEventListener("click", function () {
+
+                navLinks.classList.remove("open");
+
+                menuToggle.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
+
+                menuToggle.innerHTML = "☰";
+
+            });
+
+        });
+
+    }
+
+    /* SCROLL REVEAL */
+
+    const revealElements =
+        document.querySelectorAll(".reveal");
+
+    const revealObserver =
+        new IntersectionObserver(
+            function (entries) {
+
+                entries.forEach(function (entry) {
+
+                    if (entry.isIntersecting) {
+
+                        entry.target.classList.add("active");
+
+                    }
+
+                });
+
+            },
+            {
+                threshold: 0.12
+            }
+        );
+
+    revealElements.forEach(function (element) {
+
+        revealObserver.observe(element);
+
+    });
+
+});
+
+</script>
+
+</body>
 </html>
