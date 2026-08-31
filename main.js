@@ -1,74 +1,162 @@
+/* =========================================================
+   GUNKOWII SABA PORTFOLIO
+   MAIN JAVASCRIPT
+   Scroll Reveal + Smooth Interactions
+========================================================= */
+
 document.addEventListener("DOMContentLoaded", () => {
 
-    /* =========================================================
-       MOBILE NAVIGATION
-    ========================================================= */
+    /* =======================================================
+       SCROLL REVEAL
+    ======================================================= */
 
-    const nav = document.querySelector("nav");
-    const navLinks = document.querySelector(".nav-links");
+    const revealElements = document.querySelectorAll(
+        "section, .service, .work-card, .case-study, .step, .why-card, .about-card, .cta-box"
+    );
 
-    if (nav && navLinks) {
+    /*
+       Add the reveal class through JavaScript so the page
+       remains fully visible if JavaScript is unavailable.
+    */
 
-        const menuButton = document.createElement("button");
+    revealElements.forEach((element, index) => {
+        element.classList.add("scroll-reveal");
 
-        menuButton.className = "mobile-menu-button";
-        menuButton.setAttribute("aria-label", "Open navigation");
-        menuButton.setAttribute("aria-expanded", "false");
-        menuButton.innerHTML = "☰";
+        /*
+           Small stagger effect for cards appearing in the
+           same section.
+        */
+        const parent = element.parentElement;
 
-        nav.insertBefore(menuButton, navLinks);
+        if (
+            parent &&
+            (
+                parent.classList.contains("services") ||
+                parent.classList.contains("work-grid") ||
+                parent.classList.contains("steps") ||
+                parent.classList.contains("why-grid")
+            )
+        ) {
+            const siblings = Array.from(parent.children);
+            const position = siblings.indexOf(element);
 
-        menuButton.addEventListener("click", () => {
-
-            const isOpen = navLinks.classList.toggle("mobile-open");
-
-            menuButton.setAttribute(
-                "aria-expanded",
-                isOpen ? "true" : "false"
+            element.style.setProperty(
+                "--reveal-delay",
+                `${Math.min(position * 70, 350)}ms`
             );
+        }
+    });
 
-            menuButton.innerHTML = isOpen ? "×" : "☰";
 
+    /* =======================================================
+       INJECT SCROLL REVEAL STYLES
+    ======================================================= */
+
+    const revealStyle = document.createElement("style");
+
+    revealStyle.textContent = `
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(35px);
+            transition:
+                opacity 0.75s ease,
+                transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+            transition-delay: var(--reveal-delay, 0ms);
+            will-change: opacity, transform;
+        }
+
+        .scroll-reveal.revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .scroll-reveal {
+                opacity: 1;
+                transform: none;
+                transition: none;
+            }
+        }
+    `;
+
+    document.head.appendChild(revealStyle);
+
+
+    /* =======================================================
+       INTERSECTION OBSERVER
+    ======================================================= */
+
+    const prefersReducedMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+    ).matches;
+
+
+    if (prefersReducedMotion) {
+
+        revealElements.forEach((element) => {
+            element.classList.add("revealed");
         });
 
-        navLinks.querySelectorAll("a").forEach(link => {
+    } else if ("IntersectionObserver" in window) {
 
-            link.addEventListener("click", () => {
+        const revealObserver = new IntersectionObserver(
+            (entries, observer) => {
 
-                navLinks.classList.remove("mobile-open");
+                entries.forEach((entry) => {
 
-                menuButton.setAttribute(
-                    "aria-expanded",
-                    "false"
-                );
+                    if (entry.isIntersecting) {
 
-                menuButton.innerHTML = "☰";
+                        entry.target.classList.add("revealed");
 
-            });
+                        /*
+                           Stop observing after the element has
+                           appeared so the animation does not
+                           repeatedly run while scrolling.
+                        */
 
+                        observer.unobserve(entry.target);
+                    }
+
+                });
+
+            },
+            {
+                root: null,
+                rootMargin: "0px 0px -70px 0px",
+                threshold: 0.08
+            }
+        );
+
+
+        revealElements.forEach((element) => {
+            revealObserver.observe(element);
+        });
+
+
+    } else {
+
+        /*
+           Fallback for older browsers.
+        */
+
+        revealElements.forEach((element) => {
+            element.classList.add("revealed");
         });
 
     }
 
 
-    /* =========================================================
-       CURRENT YEAR
-    ========================================================= */
+    /* =======================================================
+       SMOOTH NAVIGATION
+    ======================================================= */
 
-    const yearElements = document.querySelectorAll("[data-year]");
+    const navigationLinks = document.querySelectorAll(
+        'a[href^="#"]'
+    );
 
-    yearElements.forEach(element => {
-        element.textContent = new Date().getFullYear();
-    });
+    navigationLinks.forEach((link) => {
 
-
-    /* =========================================================
-       SMOOTH INTERNAL LINKS
-    ========================================================= */
-
-    document.querySelectorAll('a[href^="#"]').forEach(link => {
-
-        link.addEventListener("click", event => {
+        link.addEventListener("click", (event) => {
 
             const targetId = link.getAttribute("href");
 
@@ -84,9 +172,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
             event.preventDefault();
 
-            target.scrollIntoView({
-                behavior: "smooth",
-                block: "start"
+            const header = document.querySelector("header");
+
+            const headerHeight = header
+                ? header.offsetHeight
+                : 0;
+
+            const targetPosition =
+                target.getBoundingClientRect().top +
+                window.pageYOffset -
+                headerHeight;
+
+            window.scrollTo({
+                top: targetPosition,
+                behavior: prefersReducedMotion
+                    ? "auto"
+                    : "smooth"
             });
 
         });
@@ -94,91 +195,161 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 
-    /* =========================================================
-       REVEAL SECTIONS ON SCROLL
-    ========================================================= */
+    /* =======================================================
+       ACTIVE NAVIGATION
+    ======================================================= */
 
-    const revealItems = document.querySelectorAll(
-        ".service, .work-card, .case-study, .step, .why-card, .about-card"
+    const sections = document.querySelectorAll(
+        "main section[id]"
     );
 
-    if ("IntersectionObserver" in window) {
+    const navLinks = document.querySelectorAll(
+        '.nav-links a[href^="#"]'
+    );
 
-        const observer = new IntersectionObserver(
-            entries => {
 
-                entries.forEach(entry => {
+    if ("IntersectionObserver" in window && sections.length) {
 
-                    if (entry.isIntersecting) {
+        const sectionObserver = new IntersectionObserver(
+            (entries) => {
 
-                        entry.target.classList.add("is-visible");
+                entries.forEach((entry) => {
 
-                        observer.unobserve(entry.target);
-
+                    if (!entry.isIntersecting) {
+                        return;
                     }
+
+                    const id = entry.target.getAttribute("id");
+
+                    navLinks.forEach((link) => {
+
+                        link.classList.remove("active");
+
+                        if (
+                            link.getAttribute("href") === `#${id}`
+                        ) {
+                            link.classList.add("active");
+                        }
+
+                    });
 
                 });
 
             },
             {
-                threshold: 0.12
+                rootMargin: "-35% 0px -55% 0px",
+                threshold: 0
             }
         );
 
-        revealItems.forEach(item => {
-            item.classList.add("reveal");
-            observer.observe(item);
-        });
 
-    } else {
-
-        revealItems.forEach(item => {
-            item.classList.add("is-visible");
+        sections.forEach((section) => {
+            sectionObserver.observe(section);
         });
 
     }
 
 
-    /* =========================================================
-       EXTERNAL LINKS
-    ========================================================= */
+    /* =======================================================
+       ACTIVE NAVIGATION STYLE
+    ======================================================= */
 
-    document.querySelectorAll('a[target="_blank"]').forEach(link => {
+    const navStyle = document.createElement("style");
 
-        link.setAttribute("rel", "noopener noreferrer");
+    navStyle.textContent = `
+        .nav-links a.active {
+            color: #c29d4a;
+        }
+
+        .nav-links a {
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -7px;
+            width: 100%;
+            height: 1px;
+            background: #c29d4a;
+            transform: scaleX(0);
+            transform-origin: center;
+            transition: transform 0.25s ease;
+        }
+
+        .nav-links a.active::after,
+        .nav-links a:hover::after {
+            transform: scaleX(1);
+        }
+    `;
+
+    document.head.appendChild(navStyle);
+
+
+    /* =======================================================
+       BUTTON / LINK MICRO-INTERACTION
+    ======================================================= */
+
+    const buttons = document.querySelectorAll(
+        ".button, .work-link"
+    );
+
+    buttons.forEach((button) => {
+
+        button.addEventListener("mouseenter", () => {
+            button.style.transform = "translateY(-2px)";
+        });
+
+        button.addEventListener("mouseleave", () => {
+            button.style.transform = "";
+        });
 
     });
 
 
-    /* =========================================================
-       IMAGE FALLBACK
-    ========================================================= */
+    /* =======================================================
+       EXTERNAL LINKS
+       Open safely in a new tab where appropriate.
+    ======================================================= */
 
-    const portrait = document.querySelector(".portrait");
+    const externalLinks = document.querySelectorAll(
+        'a[href^="http"]'
+    );
 
-    if (portrait) {
+    externalLinks.forEach((link) => {
 
-        portrait.addEventListener("error", () => {
+        const currentHost = window.location.hostname;
 
-            portrait.style.display = "none";
+        try {
 
-            const frame = portrait.closest(".portrait-frame");
+            const linkURL = new URL(
+                link.href,
+                window.location.href
+            );
 
-            if (frame) {
-                frame.classList.add("image-missing");
+            if (
+                linkURL.hostname &&
+                linkURL.hostname !== currentHost
+            ) {
+                link.setAttribute("target", "_blank");
+                link.setAttribute(
+                    "rel",
+                    "noopener noreferrer"
+                );
             }
 
-        });
+        } catch (error) {
+            /* Ignore invalid URLs */
+        }
 
-    }
+    });
 
 
-    /* =========================================================
-       CONSOLE BRAND MESSAGE
-    ========================================================= */
+    /* =======================================================
+       PAGE READY
+    ======================================================= */
 
-    console.log(
-        "GUNKOWII SABA — E-commerce & Digital Solutions Specialist"
-    );
+    document.body.classList.add("js-ready");
 
 });
