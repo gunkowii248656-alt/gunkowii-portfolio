@@ -1,40 +1,23 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>GUNKOWII SABA | E-commerce & Digital Solutions Specialist</title>
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>GUNKOWII SABA | E-commerce & Digital Solutions Specialist</title>
-
-<meta
-    name="description"
-    content="GUNKOWII SABA — E-commerce, Shopify, Etsy, SEO, Google Ads, Google Shopping, Meta Ads, TikTok Ads, email marketing, web development and digital solutions."
->
+<meta name="description" content="GUNKOWII SABA helps businesses improve e-commerce stores, Shopify, Etsy, SEO, paid advertising, conversion rates, email marketing and digital systems.">
 
 <meta name="author" content="GUNKOWII SABA">
 
-<meta
-    name="keywords"
-    content="Gunkowii Saba, Shopify Expert, Etsy SEO, E-commerce Specialist, Google Ads, Google Shopping, Meta Ads, Instagram Ads, TikTok Ads, SEO, CRO, Email Marketing, Web Development, Flutter, Firebase"
->
+<meta name="keywords" content="Gunkowii Saba, Shopify Expert, E-commerce Specialist, Shopify SEO, Etsy SEO, Google Ads, Google Shopping, Meta Ads, TikTok Ads, CRO, Email Marketing, Web Development">
 
 <meta name="robots" content="index, follow">
 
 <meta property="og:title" content="GUNKOWII SABA | E-commerce & Digital Solutions Specialist">
-
-<meta
-    property="og:description"
-    content="E-commerce, digital marketing, Shopify, SEO, paid advertising, web development and digital solutions."
->
-
+<meta property="og:description" content="E-commerce strategy, Shopify optimization, digital marketing, SEO, conversion optimization and web solutions.">
 <meta property="og:type" content="website">
 
 <meta name="theme-color" content="#14251d">
 
-
 <style>
-
-    /* =========================================================
-       RESET & FOUNDATION
-    ========================================================= */
 
     * {
         margin: 0;
@@ -44,7 +27,6 @@
 
     html {
         scroll-behavior: smooth;
-        scroll-padding-top: 80px;
     }
 
     body {
@@ -52,7 +34,6 @@
         background: #f7f4ed;
         color: #14251d;
         line-height: 1.7;
-        overflow-x: hidden;
     }
 
     img {
@@ -60,11 +41,7 @@
     }
 
     a {
-        transition: all 0.25s ease;
-    }
-
-    button {
-        font: inherit;
+        transition: all .25s ease;
     }
 
     .container {
@@ -73,18 +50,15 @@
         margin: auto;
     }
 
-
-    /* =========================================================
-       NAVIGATION
-    ========================================================= */
+    /* NAVIGATION */
 
     header {
-        background: #14251d;
-        color: white;
         position: sticky;
         top: 0;
         z-index: 1000;
-        border-bottom: 1px solid rgba(255,255,255,0.08);
+        background: #14251d;
+        color: #fff;
+        border-bottom: 1px solid rgba(255,255,255,.08);
     }
 
     nav {
@@ -92,12 +66,11 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        position: relative;
     }
 
     .logo {
         font-family: Georgia, serif;
-        font-size: 1.25rem;
+        font-size: 1.2rem;
         font-weight: bold;
         letter-spacing: 2px;
     }
@@ -108,74 +81,30 @@
 
     .nav-links {
         display: flex;
-        gap: 28px;
-        align-items: center;
+        gap: 27px;
     }
 
     .nav-links a {
         color: #eef2ef;
         text-decoration: none;
-        font-size: 0.88rem;
-        position: relative;
-    }
-
-    .nav-links a::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: -7px;
-        width: 0;
-        height: 1px;
-        background: #c29d4a;
-        transition: width 0.25s ease;
+        font-size: .86rem;
     }
 
     .nav-links a:hover {
         color: #c29d4a;
     }
 
-    .nav-links a:hover::after {
-        width: 100%;
-    }
-
-    .mobile-menu-button {
-        display: none;
-        border: 1px solid rgba(194,157,74,0.55);
-        background: transparent;
-        color: white;
-        width: 42px;
-        height: 42px;
-        border-radius: 4px;
-        cursor: pointer;
-        font-size: 1.4rem;
-        line-height: 1;
-        align-items: center;
-        justify-content: center;
-    }
-
-
-    /* =========================================================
-       HERO
-    ========================================================= */
+    /* HERO */
 
     .hero {
         min-height: 88vh;
         display: flex;
         align-items: center;
-        position: relative;
         overflow: hidden;
-
+        position: relative;
         background:
-            radial-gradient(
-                circle at 90% 15%,
-                rgba(194,157,74,0.16),
-                transparent 30%
-            ),
-            linear-gradient(
-                135deg,
-                #f7f4ed,
-                #e9e2d4
-            );
+            radial-gradient(circle at 90% 15%, rgba(194,157,74,.16), transparent 30%),
+            linear-gradient(135deg,#f7f4ed,#e9e2d4);
     }
 
     .hero::after {
@@ -183,7 +112,7 @@
         position: absolute;
         width: 420px;
         height: 420px;
-        border: 1px solid rgba(146,112,44,0.18);
+        border: 1px solid rgba(146,112,44,.18);
         border-radius: 50%;
         right: -180px;
         bottom: -180px;
@@ -191,7 +120,7 @@
 
     .hero-grid {
         display: grid;
-        grid-template-columns: 1.15fr 0.85fr;
+        grid-template-columns: 1.15fr .85fr;
         align-items: center;
         gap: 60px;
         position: relative;
@@ -202,26 +131,29 @@
         padding: 90px 0;
     }
 
-    .eyebrow {
+    .eyebrow,
+    .label {
         color: #92702c;
-        font-size: 0.78rem;
+        font-size: .75rem;
         font-weight: bold;
-        letter-spacing: 3px;
+        letter-spacing: 2.5px;
+    }
+
+    .eyebrow {
         margin-bottom: 20px;
     }
 
     .hero-subtitle {
-        font-size: 0.88rem;
+        font-size: .88rem;
         font-weight: bold;
-        color: #14251d;
         letter-spacing: 1.5px;
         margin-bottom: 18px;
     }
 
     .hero h1 {
         font-family: Georgia, serif;
-        font-size: clamp(3rem, 6vw, 5.8rem);
-        line-height: 0.98;
+        font-size: clamp(3rem,6vw,5.8rem);
+        line-height: .98;
         letter-spacing: -2px;
         margin-bottom: 28px;
     }
@@ -238,21 +170,52 @@
         margin-bottom: 32px;
     }
 
+    /* BUTTONS */
 
-    /* =========================================================
-       PROFILE IMAGE
-    ========================================================= */
+    .buttons {
+        display: flex;
+        gap: 14px;
+        flex-wrap: wrap;
+    }
+
+    .button {
+        display: inline-block;
+        padding: 14px 25px;
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 4px;
+    }
+
+    .primary {
+        background: #14251d;
+        color: #fff;
+    }
+
+    .primary:hover {
+        background: #92702c;
+    }
+
+    .secondary {
+        border: 1px solid #14251d;
+        color: #14251d;
+    }
+
+    .secondary:hover {
+        background: #14251d;
+        color: #fff;
+    }
+
+    /* PORTRAIT */
 
     .hero-image {
         display: flex;
         justify-content: center;
         align-items: center;
-        position: relative;
     }
 
     .portrait-frame {
-        width: min(430px, 100%);
-        aspect-ratio: 4 / 5;
+        width: min(430px,100%);
+        aspect-ratio: 4/5;
         padding: 10px;
         background: #c29d4a;
         box-shadow: 25px 25px 0 #14251d;
@@ -263,7 +226,7 @@
         content: "";
         position: absolute;
         inset: 22px;
-        border: 1px solid rgba(255,255,255,0.65);
+        border: 1px solid rgba(255,255,255,.65);
         z-index: 2;
         pointer-events: none;
     }
@@ -290,78 +253,27 @@
 
     .profile-caption strong {
         display: block;
-        font-family: Georgia, serif;
-        font-size: 1rem;
+        font-family: Georgia,serif;
     }
 
     .profile-caption span {
         color: #c29d4a;
-        font-size: 0.72rem;
+        font-size: .7rem;
         letter-spacing: 1px;
     }
 
-
-    /* =========================================================
-       BUTTONS
-    ========================================================= */
-
-    .buttons {
-        display: flex;
-        gap: 14px;
-        flex-wrap: wrap;
-    }
-
-    .button {
-        display: inline-block;
-        padding: 14px 25px;
-        text-decoration: none;
-        font-weight: bold;
-        border-radius: 4px;
-        cursor: pointer;
-    }
-
-    .primary {
-        background: #14251d;
-        color: white;
-    }
-
-    .primary:hover {
-        background: #92702c;
-    }
-
-    .secondary {
-        border: 1px solid #14251d;
-        color: #14251d;
-    }
-
-    .secondary:hover {
-        background: #14251d;
-        color: white;
-    }
-
-
-    /* =========================================================
-       GENERAL SECTIONS
-    ========================================================= */
+    /* GENERAL */
 
     section {
         padding: 105px 0;
     }
 
-    .label {
-        color: #92702c;
-        font-size: 0.76rem;
-        font-weight: bold;
-        letter-spacing: 2.5px;
-        margin-bottom: 16px;
-    }
-
     h2 {
-        font-family: Georgia, serif;
-        font-size: clamp(2.4rem, 5vw, 4.2rem);
+        font-family: Georgia,serif;
+        font-size: clamp(2.4rem,5vw,4.2rem);
         line-height: 1.08;
         letter-spacing: -1px;
-        margin-bottom: 28px;
+        margin: 16px 0 28px;
     }
 
     h2 span {
@@ -372,47 +284,38 @@
         max-width: 780px;
         color: #59645e;
         margin-bottom: 18px;
-        font-size: 1rem;
     }
 
-
-    /* =========================================================
-       ABOUT
-    ========================================================= */
+    /* ABOUT */
 
     .about-grid {
         display: grid;
-        grid-template-columns: 1.4fr 0.6fr;
+        grid-template-columns: 1.4fr .6fr;
         gap: 60px;
-        align-items: start;
     }
 
     .about-card {
-        background: white;
+        background: #fff;
         border: 1px solid #ded8cb;
         padding: 32px;
     }
 
     .about-card strong {
         display: block;
-        font-family: Georgia, serif;
+        font-family: Georgia,serif;
         font-size: 1.5rem;
         margin-bottom: 8px;
     }
 
     .about-card p {
         color: #59645e;
-        font-size: 0.92rem;
     }
 
-
-    /* =========================================================
-       SERVICES
-    ========================================================= */
+    /* SERVICES */
 
     .dark-section {
         background: #14251d;
-        color: white;
+        color: #fff;
     }
 
     .dark-section .label {
@@ -425,7 +328,7 @@
 
     .services {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2,1fr);
         gap: 18px;
         margin-top: 48px;
     }
@@ -434,7 +337,6 @@
         padding: 34px;
         border: 1px solid #39483f;
         background: #1b3026;
-        transition: all 0.25s ease;
     }
 
     .service:hover {
@@ -445,25 +347,22 @@
     .service-number {
         color: #c29d4a;
         font-weight: bold;
-        font-size: 0.82rem;
+        font-size: .82rem;
         margin-bottom: 16px;
     }
 
     .service h3 {
-        font-family: Georgia, serif;
+        font-family: Georgia,serif;
         font-size: 1.5rem;
         margin-bottom: 10px;
     }
 
     .service p {
         color: #bdc7c0;
-        font-size: 0.93rem;
+        font-size: .93rem;
     }
 
-
-    /* =========================================================
-       SELECTED WORK
-    ========================================================= */
+    /* SELECTED WORK */
 
     .selected-work {
         background: #f7f4ed;
@@ -472,148 +371,31 @@
     .selected-work-intro {
         max-width: 760px;
         color: #59645e;
-        font-size: 1rem;
-        line-height: 1.8;
         margin-bottom: 48px;
     }
 
     .work-grid {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2,1fr);
         gap: 22px;
     }
 
     .work-card {
-        position: relative;
-        background: #ffffff;
+        background: #fff;
         border: 1px solid #ded8cb;
         padding: 34px;
         min-height: 410px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        overflow: hidden;
-        transition: all 0.3s ease;
-    }
-
-    .work-card::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 4px;
-        background: #c29d4a;
-        transform: scaleX(0);
-        transform-origin: left;
-        transition: transform 0.3s ease;
+        transition: .3s ease;
     }
 
     .work-card:hover {
         transform: translateY(-6px);
         border-color: #c29d4a;
-        box-shadow: 0 18px 40px rgba(20,37,29,0.09);
+        box-shadow: 0 18px 40px rgba(20,37,29,.09);
     }
-
-    .work-card:hover::before {
-        transform: scaleX(1);
-    }
-
-    .work-top {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        gap: 20px;
-        margin-bottom: 28px;
-    }
-
-    .work-number {
-        color: #92702c;
-        font-size: 0.72rem;
-        font-weight: bold;
-        letter-spacing: 2px;
-    }
-
-    .work-status {
-        display: inline-block;
-        padding: 6px 10px;
-        border: 1px solid #ded8cb;
-        color: #59645e;
-        font-size: 0.67rem;
-        font-weight: bold;
-        letter-spacing: 0.8px;
-        text-transform: uppercase;
-    }
-
-    .work-card h3 {
-        font-family: Georgia, serif;
-        font-size: clamp(1.7rem, 3vw, 2.35rem);
-        line-height: 1.12;
-        margin-bottom: 15px;
-        color: #14251d;
-    }
-
-    .work-card p {
-        color: #59645e;
-        font-size: 0.91rem;
-        line-height: 1.8;
-        margin-bottom: 22px;
-    }
-
-    .work-meta {
-        margin-bottom: 24px;
-    }
-
-    .work-meta strong {
-        display: block;
-        color: #92702c;
-        font-size: 0.7rem;
-        letter-spacing: 1.5px;
-        text-transform: uppercase;
-        margin-bottom: 7px;
-    }
-
-    .work-meta span {
-        color: #59645e;
-        font-size: 0.82rem;
-    }
-
-    .work-tags {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 7px;
-        margin-top: auto;
-    }
-
-    .work-tags span {
-        background: #eee8dc;
-        border: 1px solid #ded8cb;
-        color: #14251d;
-        padding: 6px 10px;
-        font-size: 0.68rem;
-        font-weight: bold;
-    }
-
-    .work-link {
-        display: inline-flex;
-        align-items: center;
-        gap: 7px;
-        margin-top: 25px;
-        color: #92702c;
-        font-size: 0.78rem;
-        font-weight: bold;
-        letter-spacing: 0.7px;
-        text-decoration: none;
-    }
-
-    .work-link:hover {
-        color: #14251d;
-    }
-
-
-    /* =========================================================
-       FEATURED PROJECT
-    ========================================================= */
 
     .work-card.featured {
         grid-column: span 2;
@@ -627,37 +409,109 @@
         color: white;
     }
 
-    .work-card.featured p {
-        color: #bdc7c0;
-    }
-
-    .work-card.featured .work-status {
-        border-color: #56655c;
-        color: #bdc7c0;
-    }
-
+    .work-card.featured p,
     .work-card.featured .work-meta span {
         color: #bdc7c0;
     }
 
-    .work-card.featured .work-tags span {
+    .work-top {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        margin-bottom: 28px;
+    }
+
+    .work-number {
+        color: #92702c;
+        font-size: .72rem;
+        font-weight: bold;
+        letter-spacing: 2px;
+    }
+
+    .work-status {
+        border: 1px solid #ded8cb;
+        padding: 6px 10px;
+        color: #59645e;
+        font-size: .65rem;
+        font-weight: bold;
+        letter-spacing: .8px;
+    }
+
+    .featured .work-status {
+        border-color: #56655c;
+        color: #bdc7c0;
+    }
+
+    .work-card h3 {
+        font-family: Georgia,serif;
+        font-size: clamp(1.7rem,3vw,2.35rem);
+        line-height: 1.12;
+        margin-bottom: 15px;
+    }
+
+    .work-card p {
+        color: #59645e;
+        font-size: .91rem;
+        line-height: 1.8;
+        margin-bottom: 22px;
+    }
+
+    .work-meta {
+        margin-bottom: 24px;
+    }
+
+    .work-meta strong {
+        display: block;
+        color: #92702c;
+        font-size: .7rem;
+        letter-spacing: 1.5px;
+        margin-bottom: 7px;
+        text-transform: uppercase;
+    }
+
+    .work-meta span {
+        color: #59645e;
+        font-size: .82rem;
+    }
+
+    .work-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 7px;
+    }
+
+    .work-tags span {
+        background: #eee8dc;
+        border: 1px solid #ded8cb;
+        color: #14251d;
+        padding: 6px 10px;
+        font-size: .68rem;
+        font-weight: bold;
+    }
+
+    .featured .work-tags span {
         background: #1b3026;
         border-color: #39483f;
         color: #eef2ef;
     }
 
-    .work-card.featured .work-link {
-        color: #c29d4a;
+    .work-link {
+        display: inline-flex;
+        margin-top: 25px;
+        color: #92702c;
+        font-size: .78rem;
+        font-weight: bold;
+        letter-spacing: .7px;
+        text-decoration: none;
     }
 
-    .work-card.featured .work-link:hover {
+    .work-link:hover {
+        color: #14251d;
+    }
+
+    .featured .work-link:hover {
         color: white;
     }
-
-
-    /* =========================================================
-       PORTFOLIO NOTE
-    ========================================================= */
 
     .work-disclaimer {
         margin-top: 32px;
@@ -665,134 +519,49 @@
         border-left: 3px solid #c29d4a;
         background: #eee8dc;
         color: #59645e;
-        font-size: 0.78rem;
-        line-height: 1.7;
+        font-size: .78rem;
     }
 
+    /* CREDENTIALS */
 
-    /* =========================================================
-       CASE STUDIES
-    ========================================================= */
-
-    .case-studies {
-        background: #14251d;
-        color: white;
+    .credentials {
+        background: #fff;
     }
 
-    .case-studies .label {
-        color: #c29d4a;
+    .credential-grid {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 22px;
+        margin-top: 45px;
     }
 
-    .case-studies h2 span {
-        color: #c29d4a;
+    .credential {
+        border: 1px solid #ded8cb;
+        padding: 32px;
+        background: #f7f4ed;
     }
 
-    .case-intro {
-        max-width: 760px;
-        color: #bdc7c0;
-        margin-bottom: 48px;
-    }
-
-    .case-study {
-        background: #1b3026;
-        border: 1px solid #39483f;
-        padding: 42px;
-        margin-top: 20px;
-        transition: all 0.25s ease;
-    }
-
-    .case-study:hover {
-        border-color: #c29d4a;
-        transform: translateY(-3px);
-        box-shadow: 0 12px 30px rgba(0,0,0,0.16);
-    }
-
-    .case-study-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        gap: 30px;
-        margin-bottom: 28px;
-    }
-
-    .case-study-number {
-        color: #c29d4a;
-        font-size: 0.78rem;
-        font-weight: bold;
+    .credential strong {
+        display: block;
+        color: #92702c;
+        font-size: .75rem;
         letter-spacing: 2px;
         margin-bottom: 10px;
     }
 
-    .case-study h3 {
-        font-family: Georgia, serif;
-        font-size: clamp(1.8rem, 4vw, 2.7rem);
-        line-height: 1.15;
-    }
-
-    .case-study-type {
-        color: #c29d4a;
-        border: 1px solid #56655c;
-        padding: 7px 12px;
-        font-size: 0.72rem;
-        font-weight: bold;
-        white-space: nowrap;
-    }
-
-    .case-study-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 18px;
-    }
-
-    .case-study-block {
-        border-top: 1px solid #39483f;
-        padding-top: 20px;
-    }
-
-    .case-study-block strong {
-        display: block;
-        color: #c29d4a;
-        font-size: 0.75rem;
-        letter-spacing: 1.5px;
+    .credential h3 {
+        font-family: Georgia,serif;
+        font-size: 1.6rem;
         margin-bottom: 10px;
-        text-transform: uppercase;
     }
 
-    .case-study-block p {
-        color: #bdc7c0;
-        font-size: 0.9rem;
-        line-height: 1.75;
+    .credential p {
+        color: #59645e;
+        font-size: .9rem;
+        margin-bottom: 18px;
     }
 
-    .case-tools {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 8px;
-        margin-top: 28px;
-    }
-
-    .case-tools span {
-        background: #14251d;
-        border: 1px solid #39483f;
-        color: #eef2ef;
-        padding: 6px 11px;
-        font-size: 0.72rem;
-        font-weight: bold;
-    }
-
-    .case-note {
-        margin-top: 24px;
-        padding: 16px 18px;
-        border-left: 3px solid #c29d4a;
-        background: rgba(194,157,74,0.07);
-        color: #bdc7c0;
-        font-size: 0.82rem;
-    }
-
-
-    /* =========================================================
-       PROCESS
-    ========================================================= */
+    /* PROCESS */
 
     .process {
         background: #eee8dc;
@@ -800,81 +569,61 @@
 
     .steps {
         display: grid;
-        grid-template-columns: repeat(5, 1fr);
+        grid-template-columns: repeat(5,1fr);
         gap: 14px;
         margin-top: 45px;
     }
 
     .step {
-        background: white;
+        background: #fff;
         border: 1px solid #ded8cb;
         padding: 28px 22px;
         min-height: 240px;
-        transition: all 0.25s ease;
-    }
-
-    .step:hover {
-        transform: translateY(-3px);
-        border-color: #c29d4a;
     }
 
     .step > strong {
         color: #92702c;
-        font-size: 0.85rem;
-        letter-spacing: 1px;
     }
 
     .step h3 {
-        font-family: Georgia, serif;
+        font-family: Georgia,serif;
         font-size: 1.35rem;
         margin: 12px 0 10px;
     }
 
     .step p {
         color: #59645e;
-        font-size: 0.88rem;
+        font-size: .88rem;
     }
 
-
-    /* =========================================================
-       WHY WORK WITH ME
-    ========================================================= */
+    /* WHY */
 
     .why-grid {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3,1fr);
         gap: 18px;
         margin-top: 45px;
     }
 
     .why-card {
-        background: white;
+        background: #fff;
         border: 1px solid #ded8cb;
         padding: 30px;
-        transition: all 0.25s ease;
-    }
-
-    .why-card:hover {
-        border-color: #c29d4a;
-        transform: translateY(-3px);
     }
 
     .why-card strong {
         display: block;
-        font-family: Georgia, serif;
+        font-family: Georgia,serif;
         font-size: 1.3rem;
         margin-bottom: 10px;
     }
 
     .why-card p {
         color: #59645e;
-        font-size: 0.9rem;
+        font-size: .9rem;
     }
 
-
-    /* =========================================================
-       CTA
-    ========================================================= */
+    /* CTA */
 
     .cta {
         background: white;
@@ -894,10 +643,7 @@
         color: #59645e;
     }
 
-
-    /* =========================================================
-       CONTACT
-    ========================================================= */
+    /* CONTACT */
 
     .contact {
         background: #14251d;
@@ -951,7 +697,6 @@
         justify-content: center;
         gap: 25px;
         flex-wrap: wrap;
-        font-size: 0.88rem;
     }
 
     .contact-info a {
@@ -963,66 +708,26 @@
         color: #c29d4a;
     }
 
-
-    /* =========================================================
-       FOOTER
-    ========================================================= */
+    /* FOOTER */
 
     footer {
         background: #0c1712;
         color: #9daaa2;
         padding: 28px 0;
         text-align: center;
-        font-size: 0.82rem;
+        font-size: .82rem;
     }
 
     footer strong {
         color: white;
     }
 
+    /* TABLET */
 
-    /* =========================================================
-       JAVASCRIPT REVEAL ANIMATION
-    ========================================================= */
-
-    .reveal {
-        opacity: 0;
-        transform: translateY(24px);
-        transition:
-            opacity 0.65s ease,
-            transform 0.65s ease;
-    }
-
-    .reveal.is-visible {
-        opacity: 1;
-        transform: translateY(0);
-    }
-
-    .image-missing {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        min-height: 300px;
-        background: #1b3026;
-    }
-
-    .image-missing::after {
-        content: "GUNKOWII SABA";
-        color: #c29d4a;
-        font-family: Georgia, serif;
-        font-size: 1.3rem;
-    }
-
-
-    /* =========================================================
-       TABLET
-    ========================================================= */
-
-    @media (max-width: 1000px) {
+    @media(max-width:1000px) {
 
         .hero-grid {
             grid-template-columns: 1fr;
-            gap: 20px;
         }
 
         .hero-content {
@@ -1034,84 +739,30 @@
         }
 
         .portrait-frame {
-            width: min(360px, 90%);
+            width: min(360px,90%);
         }
 
         .about-grid {
             grid-template-columns: 1fr;
-            gap: 25px;
-        }
-
-        .services {
-            grid-template-columns: 1fr 1fr;
         }
 
         .steps {
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(2,1fr);
         }
 
         .why-grid {
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr;
         }
 
         .cta-box {
             flex-direction: column;
             align-items: flex-start;
         }
-
-        .nav-links {
-            gap: 18px;
-        }
     }
 
+    /* MOBILE */
 
-    /* =========================================================
-       CASE STUDIES + WORK TABLET
-    ========================================================= */
-
-    @media (max-width: 800px) {
-
-        .case-study {
-            padding: 30px 24px;
-        }
-
-        .case-study-header {
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        .case-study-grid {
-            grid-template-columns: 1fr;
-            gap: 24px;
-        }
-
-        .work-grid {
-            grid-template-columns: 1fr;
-            gap: 18px;
-        }
-
-        .work-card,
-        .work-card.featured {
-            grid-column: span 1;
-            min-height: auto;
-            padding: 28px 23px;
-        }
-
-        .work-card h3 {
-            font-size: 1.85rem;
-        }
-
-        .work-top {
-            margin-bottom: 22px;
-        }
-    }
-
-
-    /* =========================================================
-       MOBILE
-    ========================================================= */
-
-    @media (max-width: 600px) {
+    @media(max-width:700px) {
 
         .container {
             width: 92%;
@@ -1122,46 +773,23 @@
         }
 
         .logo {
-            font-size: 1rem;
-            letter-spacing: 1px;
-        }
-
-        .mobile-menu-button {
-            display: flex;
+            font-size: .95rem;
         }
 
         .nav-links {
-            position: absolute;
-            top: 68px;
-            left: 0;
-            right: 0;
-            display: none;
-            flex-direction: column;
-            align-items: stretch;
-            gap: 0;
-            background: #14251d;
-            border-top: 1px solid #39483f;
-            border-bottom: 1px solid #39483f;
-            padding: 8px 0;
-            box-shadow: 0 15px 30px rgba(0,0,0,0.18);
-        }
-
-        .nav-links.mobile-open {
-            display: flex;
+            gap: 10px;
         }
 
         .nav-links a {
-            display: block;
-            padding: 13px 20px;
-            font-size: 0.82rem;
+            font-size: .7rem;
         }
 
-        .nav-links a::after {
+        .nav-links a:nth-child(3) {
             display: none;
         }
 
-        .nav-links a:hover {
-            background: #1b3026;
+        section {
+            padding: 75px 0;
         }
 
         .hero {
@@ -1172,77 +800,35 @@
             padding-top: 60px;
         }
 
-        .eyebrow {
-            font-size: 0.68rem;
-            letter-spacing: 2px;
-        }
-
-        .hero-subtitle {
-            font-size: 0.75rem;
-            line-height: 1.5;
-        }
-
         .hero h1 {
-            font-size: clamp(2.8rem, 15vw, 4.2rem);
+            font-size: clamp(2.8rem,15vw,4.2rem);
         }
 
         .hero p {
-            font-size: 0.95rem;
+            font-size: .95rem;
         }
 
-        .buttons {
-            width: 100%;
-        }
-
-        .buttons .button {
-            width: 100%;
-            text-align: center;
-        }
-
-        section {
-            padding: 75px 0;
-        }
-
-        h2 {
-            font-size: clamp(2.2rem, 11vw, 3.3rem);
-        }
-
-        .services {
+        .services,
+        .work-grid,
+        .credential-grid {
             grid-template-columns: 1fr;
         }
 
-        .service {
-            padding: 28px 23px;
-        }
-
-        .selected-work-intro {
-            font-size: 0.92rem;
-            margin-bottom: 32px;
+        .work-card.featured {
+            grid-column: span 1;
         }
 
         .work-card {
-            padding: 25px 20px;
-        }
-
-        .work-card h3 {
-            font-size: 1.75rem;
-        }
-
-        .work-card p {
-            font-size: 0.88rem;
+            min-height: auto;
+            padding: 27px 21px;
         }
 
         .work-top {
             flex-direction: column;
-            gap: 12px;
         }
 
         .work-status {
             align-self: flex-start;
-        }
-
-        .work-disclaimer {
-            font-size: 0.75rem;
         }
 
         .steps {
@@ -1253,107 +839,36 @@
             min-height: auto;
         }
 
-        .why-grid {
-            grid-template-columns: 1fr;
-        }
-
         .profile-caption {
             left: 0;
             bottom: 15px;
-        }
-
-        .portrait-frame {
-            box-shadow: 12px 12px 0 #14251d;
         }
 
         .contact-info {
             flex-direction: column;
             gap: 12px;
         }
-
-        .contact-buttons .button {
-            width: 100%;
-        }
-
-        .case-study {
-            padding: 26px 20px;
-        }
-
-        .case-study h3 {
-            font-size: 1.85rem;
-        }
-
-        .case-study-type {
-            white-space: normal;
-        }
-
-        .cta-box h2 {
-            font-size: 2.2rem;
-        }
-
-    }
-
-
-    /* =========================================================
-       REDUCED MOTION ACCESSIBILITY
-    ========================================================= */
-
-    @media (prefers-reduced-motion: reduce) {
-
-        html {
-            scroll-behavior: auto;
-        }
-
-        *,
-        *::before,
-        *::after {
-            transition-duration: 0.01ms !important;
-            animation-duration: 0.01ms !important;
-            animation-iteration-count: 1 !important;
-        }
-
-        .reveal {
-            opacity: 1;
-            transform: none;
-        }
-
     }
 
 </style>
 
-</head><body><!-- =========================================================
-     NAVIGATION
-========================================================= --><header><div class="container">
-
-    <nav>
-
-        <div class="logo">
-            GUNKOWII <span>SABA</span>
-        </div>
-
-        <div class="nav-links">
-
+</head><body><header>
+    <div class="container">
+        <nav>
+            <div class="logo">
+                GUNKOWII <span>SABA</span>
+            </div>        <div class="nav-links">
             <a href="#about">About</a>
-
             <a href="#services">Services</a>
-
             <a href="#projects">Work</a>
-
             <a href="#contact">Contact</a>
-
         </div>
-
     </nav>
-
 </div>
 
-</header><main><!-- =========================================================
-     HERO
-========================================================= --><section class="hero"><div class="container">
-
-    <div class="hero-grid">
-
-        <div class="hero-content">
+</header><main><!-- HERO --><section class="hero">
+    <div class="container">
+        <div class="hero-grid">        <div class="hero-content">
 
             <div class="eyebrow">
                 E-COMMERCE • DIGITAL • TECHNOLOGY
@@ -1369,13 +884,12 @@
             </h1>
 
             <p>
-                I help businesses build stronger digital foundations,
-                improve their online stores, attract the right customers,
-                and turn more visitors into paying customers.
+                I help businesses strengthen their digital presence,
+                improve online stores, attract relevant customers and
+                build clearer paths from traffic to conversion.
             </p>
 
             <div class="buttons">
-
                 <a class="button primary" href="#contact">
                     Work With Me
                 </a>
@@ -1383,11 +897,9 @@
                 <a class="button secondary" href="#projects">
                     View My Work
                 </a>
-
             </div>
 
         </div>
-
 
         <div class="hero-image">
 
@@ -1400,15 +912,8 @@
                 >
 
                 <div class="profile-caption">
-
-                    <strong>
-                        GUNKOWII SABA
-                    </strong>
-
-                    <span>
-                        DIGITAL SOLUTIONS SPECIALIST
-                    </span>
-
+                    <strong>GUNKOWII SABA</strong>
+                    <span>DIGITAL SOLUTIONS SPECIALIST</span>
                 </div>
 
             </div>
@@ -1416,20 +921,14 @@
         </div>
 
     </div>
-
 </div>
 
-</section><!-- =========================================================
-     ABOUT
-========================================================= --><section id="about"><div class="container">
-
-    <div class="about-grid">
+</section><!-- ABOUT --><section id="about">
+    <div class="container">    <div class="about-grid">
 
         <div>
 
-            <div class="label">
-                ABOUT ME
-            </div>
+            <div class="label">ABOUT ME</div>
 
             <h2>
                 Digital solutions built around
@@ -1439,25 +938,22 @@
             <p class="section-text">
                 I work with businesses and online store owners who want
                 more than a website that simply looks good. My focus is
-                on building practical digital systems that support
-                visibility, customer experience, conversions and growth.
+                on practical digital improvements that support visibility,
+                customer experience, conversions and sustainable growth.
             </p>
 
             <p class="section-text">
-                My work combines e-commerce strategy, Shopify and Etsy
-                optimization, paid advertising, SEO, email marketing,
-                conversion optimization, website development and
+                My work covers e-commerce strategy, Shopify and Etsy
+                optimization, SEO, paid advertising, conversion
+                optimization, email marketing, website development and
                 digital problem-solving.
             </p>
 
         </div>
 
-
         <div class="about-card">
 
-            <strong>
-                What I Focus On
-            </strong>
+            <strong>What I Focus On</strong>
 
             <p>
                 Understanding the business first, identifying what is
@@ -1472,239 +968,133 @@
 
 </div>
 
-</section><!-- =========================================================
-     SERVICES
-========================================================= --><section id="services" class="dark-section"><div class="container">
+</section><!-- SERVICES --><section id="services" class="dark-section"><div class="container">
 
-    <div class="label">
-        SERVICES
-    </div>
+    <div class="label">SERVICES</div>
 
     <h2>
         E-commerce, marketing &
         <span>digital solutions.</span>
     </h2>
 
-
     <div class="services">
 
         <div class="service">
-
             <div class="service-number">01</div>
-
-            <h3>
-                Shopify &amp; E-commerce
-            </h3>
-
+            <h3>Shopify &amp; E-commerce</h3>
             <p>
-                Shopify store optimization, product presentation,
-                navigation, customer journey improvements, conversion
-                optimization and practical strategies designed around
-                the store's goals.
+                Store optimization, product presentation, navigation,
+                customer journey improvements and conversion-focused
+                e-commerce strategy.
             </p>
-
         </div>
 
-
         <div class="service">
-
             <div class="service-number">02</div>
-
-            <h3>
-                Etsy SEO &amp; Store Growth
-            </h3>
-
+            <h3>Etsy SEO &amp; Store Growth</h3>
             <p>
-                Etsy listing optimization, keyword strategy, product
-                presentation, search visibility, conversion improvements
-                and support for growing an Etsy shop.
+                Listing optimization, keyword strategy, product
+                presentation, search visibility and conversion support.
             </p>
-
         </div>
 
-
         <div class="service">
-
             <div class="service-number">03</div>
-
-            <h3>
-                Google Ads &amp; Google Shopping
-            </h3>
-
+            <h3>Google Ads &amp; Shopping</h3>
             <p>
-                Paid search and Shopping campaign strategy focused on
-                reaching relevant buyers, improving product visibility,
-                controlling advertising spend and supporting profitable
-                e-commerce growth.
+                Search and Shopping campaign strategy focused on relevant
+                buyers, product visibility and efficient acquisition.
             </p>
-
         </div>
 
-
         <div class="service">
-
             <div class="service-number">04</div>
-
-            <h3>
-                Meta &amp; Instagram Advertising
-            </h3>
-
+            <h3>Meta &amp; Instagram Ads</h3>
             <p>
-                Facebook and Instagram advertising strategy, campaign
-                structure, audience targeting, creative direction and
-                optimization for e-commerce customer acquisition.
+                Campaign structure, audience targeting, creative direction
+                and e-commerce customer acquisition.
             </p>
-
         </div>
 
-
         <div class="service">
-
             <div class="service-number">05</div>
-
-            <h3>
-                TikTok Ads &amp; Social Growth
-            </h3>
-
+            <h3>TikTok Ads &amp; Social Growth</h3>
             <p>
-                TikTok advertising support and social-commerce strategies
-                designed to connect products with relevant audiences and
-                create stronger opportunities for discovery and sales.
+                Social-commerce strategies designed to connect products
+                with relevant audiences and increase discovery.
             </p>
-
         </div>
 
-
         <div class="service">
-
             <div class="service-number">06</div>
-
-            <h3>
-                SEO &amp; Organic Visibility
-            </h3>
-
+            <h3>SEO &amp; Organic Visibility</h3>
             <p>
-                Search-focused optimization for websites, Shopify stores
-                and product pages to improve discoverability, relevance,
-                technical foundations and organic traffic opportunities.
+                Search-focused optimization for websites, stores,
+                product pages and digital content.
             </p>
-
         </div>
 
-
         <div class="service">
-
             <div class="service-number">07</div>
-
-            <h3>
-                Conversion Rate Optimization
-            </h3>
-
+            <h3>Conversion Rate Optimization</h3>
             <p>
                 Identifying friction across product pages, navigation,
-                offers, checkout journeys and calls to action so more
-                qualified visitors have a clear path toward purchase.
+                offers, calls to action and customer journeys.
             </p>
-
         </div>
 
-
         <div class="service">
-
             <div class="service-number">08</div>
-
-            <h3>
-                Email Marketing &amp; Automation
-            </h3>
-
+            <h3>Email Marketing &amp; Automation</h3>
             <p>
-                Email campaigns, customer retention, automated flows,
-                abandoned-cart opportunities and lifecycle communication
-                designed to increase customer value over time.
+                Campaigns, automated flows, abandoned-cart opportunities
+                and customer lifecycle communication.
             </p>
-
         </div>
 
-
         <div class="service">
-
             <div class="service-number">09</div>
-
-            <h3>
-                Product &amp; Listing Optimization
-            </h3>
-
+            <h3>Product &amp; Listing Optimization</h3>
             <p>
-                Improving product titles, descriptions, positioning,
-                presentation and supporting content so customers can
-                understand the offer and make purchasing decisions more
-                confidently.
+                Improving titles, descriptions, positioning and product
+                presentation so customers understand the offer.
             </p>
-
         </div>
 
-
         <div class="service">
-
             <div class="service-number">10</div>
-
-            <h3>
-                Analytics &amp; Performance
-            </h3>
-
+            <h3>Analytics &amp; Performance</h3>
             <p>
-                Reviewing digital performance, customer behavior,
-                campaign activity and conversion opportunities to support
-                better decisions and continuous optimization.
+                Reviewing digital performance and customer behavior to
+                identify practical opportunities for improvement.
             </p>
-
         </div>
 
-
         <div class="service">
-
             <div class="service-number">11</div>
-
-            <h3>
-                Web Development
-            </h3>
-
+            <h3>Web Development</h3>
             <p>
-                Responsive websites and digital interfaces built with
-                clean structure, usability, performance and business
-                objectives in mind.
+                Responsive websites and digital interfaces built around
+                usability, performance and business objectives.
             </p>
-
         </div>
 
-
         <div class="service">
-
             <div class="service-number">12</div>
-
-            <h3>
-                Digital Strategy
-            </h3>
-
+            <h3>Digital Strategy</h3>
             <p>
-                Connecting e-commerce, advertising, SEO, websites,
-                email marketing and customer acquisition into a clearer
-                digital growth system.
+                Connecting e-commerce, advertising, SEO, websites and
+                retention into a clearer digital growth system.
             </p>
-
         </div>
 
     </div>
 
 </div>
 
-</section><!-- =========================================================
-     SELECTED WORK
-========================================================= --><section id="projects" class="selected-work"><div class="container">
+</section><!-- SELECTED WORK --><section id="projects" class="selected-work"><div class="container">
 
-    <div class="label">
-        SELECTED WORK
-    </div>
+    <div class="label">SELECTED WORK</div>
 
     <h2>
         Real stores.
@@ -1712,78 +1102,53 @@
     </h2>
 
     <p class="selected-work-intro">
-        A selection of e-commerce stores, digital projects and
-        portfolio work representing the areas I work across —
-        Shopify, store optimization, customer experience, digital
-        strategy and software development.
+        A selection of e-commerce projects, store analysis and software
+        development work representing the areas I operate across.
     </p>
 
-
     <div class="work-grid">
-
 
         <article class="work-card">
 
             <div>
 
                 <div class="work-top">
-
-                    <div class="work-number">
-                        01 — E-COMMERCE
-                    </div>
-
-                    <div class="work-status">
-                        STORE PROJECT
-                    </div>
-
+                    <div class="work-number">01 — E-COMMERCE</div>
+                    <div class="work-status">STORE PROJECT</div>
                 </div>
 
-                <h3>
-                    Teeology Clothing
-                </h3>
+                <h3>Teeology Clothing</h3>
 
                 <p>
-                    An e-commerce store built around original
-                    streetwear, bold graphics and product-led
-                    merchandising. The storefront presents
-                    dedicated collections for streetwear,
-                    hoodies, hats, accessories and new drops.
+                    An e-commerce clothing store built around streetwear,
+                    graphic apparel, accessories and product-led
+                    merchandising.
                 </p>
 
                 <div class="work-meta">
-
-                    <strong>
-                        Focus
-                    </strong>
-
+                    <strong>Focus</strong>
                     <span>
                         Store presentation, product discovery,
                         merchandising and customer journey.
                     </span>
-
                 </div>
 
             </div>
 
-
             <div>
 
                 <div class="work-tags">
-
                     <span>Shopify</span>
                     <span>E-commerce</span>
                     <span>UX</span>
                     <span>Product Pages</span>
-                    <span>Merchandising</span>
-
                 </div>
 
                 <a
                     class="work-link"
                     href="https://teeologyclothing.com/"
                     target="_blank"
-                    rel="noopener noreferrer"
-                >
+                    rel="noopener noreferrer">
                     VIEW STORE →
                 </a>
 
@@ -1791,68 +1156,47 @@
 
         </article>
 
-
         <article class="work-card">
 
             <div>
 
                 <div class="work-top">
-
-                    <div class="work-number">
-                        02 — E-COMMERCE
-                    </div>
-
-                    <div class="work-status">
-                        STORE PROJECT
-                    </div>
-
+                    <div class="work-number">02 — FITNESS</div>
+                    <div class="work-status">STORE PROJECT</div>
                 </div>
 
-                <h3>
-                    Iron Therapy
-                </h3>
+                <h3>Iron Therapy</h3>
 
                 <p>
-                    A fitness and activewear e-commerce experience
-                    combining apparel merchandising with a broader
-                    fitness brand ecosystem that includes training
-                    content, a podcast and educational content.
+                    A fitness-focused digital store and brand ecosystem
+                    combining products with training, content and fitness
+                    resources.
                 </p>
 
                 <div class="work-meta">
-
-                    <strong>
-                        Focus
-                    </strong>
-
+                    <strong>Focus</strong>
                     <span>
-                        Product merchandising, collections,
-                        trust elements and conversion experience.
+                        Product merchandising, customer experience,
+                        brand presentation and conversion.
                     </span>
-
                 </div>
 
             </div>
 
-
             <div>
 
                 <div class="work-tags">
-
-                    <span>Shopify</span>
-                    <span>Fitness E-commerce</span>
-                    <span>Product UX</span>
+                    <span>E-commerce</span>
+                    <span>Fitness</span>
+                    <span>UX</span>
                     <span>CRO</span>
-                    <span>Brand Experience</span>
-
                 </div>
 
                 <a
                     class="work-link"
                     href="https://irontherapyfitness.net/"
                     target="_blank"
-                    rel="noopener noreferrer"
-                >
+                    rel="noopener noreferrer">
                     VIEW STORE →
                 </a>
 
@@ -1860,137 +1204,95 @@
 
         </article>
 
-
         <article class="work-card">
 
             <div>
 
                 <div class="work-top">
-
-                    <div class="work-number">
-                        03 — BEAUTY E-COMMERCE
-                    </div>
-
-                    <div class="work-status">
-                        STORE PROJECT
-                    </div>
-
+                    <div class="work-number">03 — BEAUTY</div>
+                    <div class="work-status">STORE PROJECT</div>
                 </div>
 
-                <h3>
-                    BeeYouti
-                </h3>
+                <h3>BeeYouti</h3>
 
                 <p>
-                    A beauty-focused online store structured around
-                    beauty essentials, hair care, health care,
-                    makeup, nail art and skincare, with international
-                    shopping support and product-focused navigation.
+                    A beauty-focused online store covering beauty
+                    essentials, hair care, makeup, nail products and
+                    skincare categories.
                 </p>
 
                 <div class="work-meta">
-
-                    <strong>
-                        Focus
-                    </strong>
-
+                    <strong>Focus</strong>
                     <span>
                         Category structure, product discovery,
                         navigation and customer experience.
                     </span>
-
                 </div>
 
             </div>
 
-
             <div>
 
                 <div class="work-tags">
-
-                    <span>Shopify</span>
-                    <span>Beauty E-commerce</span>
+                    <span>Beauty</span>
+                    <span>E-commerce</span>
                     <span>Navigation</span>
-                    <span>Product Discovery</span>
                     <span>UX</span>
-
                 </div>
 
                 <a
                     class="work-link"
                     href="https://beeyouti.com/"
                     target="_blank"
-                    rel="noopener noreferrer"
-                >
+                    rel="noopener noreferrer">
                     VIEW STORE →
                 </a>
 
             </div>
 
         </article>
-
 
         <article class="work-card">
 
             <div>
 
                 <div class="work-top">
-
-                    <div class="work-number">
-                        04 — E-COMMERCE
-                    </div>
-
-                    <div class="work-status">
-                        STORE PROJECT
-                    </div>
-
+                    <div class="work-number">04 — E-COMMERCE</div>
+                    <div class="work-status">STORE PROJECT</div>
                 </div>
 
-                <h3>
-                    Look For It Here
-                </h3>
+                <h3>Look For It Here</h3>
 
                 <p>
-                    A multi-category e-commerce storefront requiring
-                    clear product organization, collection structure
-                    and an experience capable of supporting a broad
-                    range of products and customer needs.
+                    A broad e-commerce storefront requiring clear product
+                    organization, collection structure and an accessible
+                    shopping experience.
                 </p>
 
                 <div class="work-meta">
-
-                    <strong>
-                        Focus
-                    </strong>
-
+                    <strong>Focus</strong>
                     <span>
-                        Product organization, collections,
-                        discoverability and shopping experience.
+                        Product organization, discoverability,
+                        collections and shopping experience.
                     </span>
-
                 </div>
 
             </div>
 
-
             <div>
 
                 <div class="work-tags">
-
-                    <span>Shopify</span>
                     <span>E-commerce</span>
                     <span>Collections</span>
                     <span>Product Discovery</span>
                     <span>UX</span>
-
                 </div>
 
                 <a
                     class="work-link"
                     href="https://www.lookforithere.com.ar/"
                     target="_blank"
-                    rel="noopener noreferrer"
-                >
+                    rel="noopener noreferrer">
                     VIEW STORE →
                 </a>
 
@@ -1998,21 +1300,61 @@
 
         </article>
 
+        <article class="work-card">
+
+            <div>
+
+                <div class="work-top">
+                    <div class="work-number">05 — E-COMMERCE</div>
+                    <div class="work-status">AUDIT / ANALYSIS</div>
+                </div>
+
+                <h3>Aestevi</h3>
+
+                <p>
+                    An e-commerce analysis focused on the relationship
+                    between store structure, targeted traffic, product
+                    presentation, customer confidence and conversion.
+                </p>
+
+                <div class="work-meta">
+                    <strong>Focus</strong>
+                    <span>
+                        SEO, CRO, UX, traffic strategy and conversion
+                        opportunities.
+                    </span>
+                </div>
+
+            </div>
+
+            <div>
+
+                <div class="work-tags">
+                    <span>SEO</span>
+                    <span>CRO</span>
+                    <span>UX Audit</span>
+                    <span>E-commerce</span>
+                </div>
+
+                <a
+                    class="work-link"
+                    href="https://aestevi.com/"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    VIEW STORE →
+                </a>
+
+            </div>
+
+        </article>
 
         <article class="work-card featured">
 
             <div>
 
                 <div class="work-top">
-
-                    <div class="work-number">
-                        05 — SOFTWARE DEVELOPMENT
-                    </div>
-
-                    <div class="work-status">
-                        IN DEVELOPMENT
-                    </div>
-
+                    <div class="work-number">06 — SOFTWARE DEVELOPMENT</div>
+                    <div class="work-status">IN DEVELOPMENT</div>
                 </div>
 
                 <h3>
@@ -2021,49 +1363,38 @@
                 </h3>
 
                 <p>
-                    A digital school management platform being
-                    developed to bring school administration,
-                    teachers, students and parents into one
-                    structured system. The project is being built
-                    around Flutter and Firebase with role-based
-                    access and a scalable application architecture.
+                    A school management platform being developed to bring
+                    administration, teachers, students and parents into
+                    one structured digital system using Flutter and
+                    Firebase.
                 </p>
 
                 <div class="work-meta">
-
-                    <strong>
-                        Focus
-                    </strong>
-
+                    <strong>Focus</strong>
                     <span>
                         Application architecture, authentication,
-                        role-based access, student management,
-                        academic records and digital school operations.
+                        role-based access, academic records and
+                        digital school operations.
                     </span>
-
                 </div>
 
             </div>
 
-
             <div>
 
                 <div class="work-tags">
-
                     <span>Flutter</span>
                     <span>Firebase</span>
                     <span>Firestore</span>
                     <span>Authentication</span>
                     <span>Role-Based Access</span>
-
                 </div>
 
                 <a
                     class="work-link"
                     href="https://github.com/gunkowii248656-alt"
                     target="_blank"
-                    rel="noopener noreferrer"
-                >
+                    rel="noopener noreferrer">
                     VIEW GITHUB →
                 </a>
 
@@ -2071,373 +1402,82 @@
 
         </article>
 
-
-        <article class="work-card">
-
-            <div>
-
-                <div class="work-top">
-
-                    <div class="work-number">
-                        06 — E-COMMERCE ANALYSIS
-                    </div>
-
-                    <div class="work-status">
-                        AUDIT / ANALYSIS
-                    </div>
-
-                </div>
-
-                <h3>
-                    Aestevi Store Audit
-                </h3>
-
-                <p>
-                    An e-commerce review focused on the areas that
-                    influence targeted traffic, product discovery,
-                    customer confidence and conversion. The analysis
-                    looks beyond visual design to the relationship
-                    between acquisition, store structure and sales.
-                </p>
-
-                <div class="work-meta">
-
-                    <strong>
-                        Focus
-                    </strong>
-
-                    <span>
-                        SEO, CRO, UX, traffic strategy,
-                        product presentation and conversion gaps.
-                    </span>
-
-                </div>
-
-            </div>
-
-
-            <div>
-
-                <div class="work-tags">
-
-                    <span>SEO</span>
-                    <span>CRO</span>
-                    <span>UX Audit</span>
-                    <span>Traffic Strategy</span>
-                    <span>E-commerce</span>
-
-                </div>
-
-                <a
-                    class="work-link"
-                    href="https://aestevi.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    VIEW STORE →
-                </a>
-
-            </div>
-
-        </article>
-
     </div>
-
 
     <div class="work-disclaimer">
-
         <strong>Portfolio note:</strong>
         Projects shown here represent e-commerce work, store analysis
-        and software development. Where a project is presented as an
-        audit, demonstration or work sample, it is not presented as a
-        claim of specific sales or revenue results unless those results
-        can be independently verified.
-
+        and software development. Specific sales or revenue results are
+        not claimed unless independently verified.
     </div>
 
 </div>
 
-</section><!-- =========================================================
-     E-COMMERCE APPROACH
-========================================================= --><section class="case-studies"><div class="container">
+</section><!-- CREDENTIALS --><section class="credentials"><div class="container">
 
-    <div class="label">
-        HOW I APPROACH E-COMMERCE
-    </div>
+    <div class="label">PROFESSIONAL PRESENCE</div>
 
     <h2>
-        From traffic to
-        <span>conversion.</span>
+        Work backed by
+        <span>real-world platforms.</span>
     </h2>
 
-    <p class="case-intro">
-        Successful e-commerce is rarely about one isolated activity.
-        Store structure, traffic acquisition, product presentation,
-        customer experience and retention all need to work together.
+    <p class="section-text">
+        I also maintain professional platforms where clients can learn
+        more about my services, previous work and freelance experience.
     </p>
 
+    <div class="credential-grid">
 
-    <div class="case-study">
+        <div class="credential">
 
-        <div class="case-study-header">
+            <strong>AGENCY / DIGITAL SERVICES</strong>
 
-            <div>
+            <h3>Bofowo Agency</h3>
 
-                <div class="case-study-number">
-                    01 — STORE
-                </div>
+            <p>
+                Professional digital services and project work covering
+                websites, e-commerce and digital solutions.
+            </p>
 
-                <h3>
-                    Build a stronger foundation
-                </h3>
-
-            </div>
-
-            <div class="case-study-type">
-                E-COMMERCE
-            </div>
-
-        </div>
-
-
-        <div class="case-study-grid">
-
-            <div class="case-study-block">
-
-                <strong>
-                    Focus
-                </strong>
-
-                <p>
-                    Store structure, product pages, navigation,
-                    trust elements and customer experience.
-                </p>
-
-            </div>
-
-
-            <div class="case-study-block">
-
-                <strong>
-                    Goal
-                </strong>
-
-                <p>
-                    Make it easier for visitors to understand the
-                    offer and move toward purchase.
-                </p>
-
-            </div>
-
-
-            <div class="case-study-block">
-
-                <strong>
-                    Approach
-                </strong>
-
-                <p>
-                    Audit the customer journey, identify friction and
-                    prioritize high-impact improvements.
-                </p>
-
-            </div>
+            <a
+                class="button primary"
+                href="https://www.bofowoagency.com/"
+                target="_blank"
+                rel="noopener noreferrer">
+                VISIT BOFOWO →
+            </a>
 
         </div>
 
+        <div class="credential">
 
-        <div class="case-tools">
+            <strong>FREELANCE PROFILE</strong>
 
-            <span>Shopify</span>
-            <span>CRO</span>
-            <span>UX</span>
-            <span>SEO</span>
+            <h3>Fiverr Profile</h3>
 
-        </div>
+            <p>
+                My freelance profile provides another place to review
+                my professional services and marketplace presence.
+            </p>
 
-    </div>
-
-
-    <div class="case-study">
-
-        <div class="case-study-header">
-
-            <div>
-
-                <div class="case-study-number">
-                    02 — ACQUISITION
-                </div>
-
-                <h3>
-                    Bring the right traffic
-                </h3>
-
-            </div>
-
-            <div class="case-study-type">
-                PAID MEDIA
-            </div>
+            <a
+                class="button primary"
+                href="https://www.fiverr.com/smith_stephiene"
+                target="_blank"
+                rel="noopener noreferrer">
+                VIEW FIVERR →
+            </a>
 
         </div>
-
-
-        <div class="case-study-grid">
-
-            <div class="case-study-block">
-
-                <strong>
-                    Channels
-                </strong>
-
-                <p>
-                    Google Ads, Google Shopping, Meta, Instagram
-                    and TikTok.
-                </p>
-
-            </div>
-
-
-            <div class="case-study-block">
-
-                <strong>
-                    Goal
-                </strong>
-
-                <p>
-                    Connect products with relevant audiences and
-                    create stronger acquisition opportunities.
-                </p>
-
-            </div>
-
-
-            <div class="case-study-block">
-
-                <strong>
-                    Approach
-                </strong>
-
-                <p>
-                    Align targeting, creative, product positioning,
-                    landing experience and conversion tracking.
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <div class="case-tools">
-
-            <span>Google Ads</span>
-            <span>Google Shopping</span>
-            <span>Meta Ads</span>
-            <span>Instagram</span>
-            <span>TikTok</span>
-
-        </div>
-
-    </div>
-
-
-    <div class="case-study">
-
-        <div class="case-study-header">
-
-            <div>
-
-                <div class="case-study-number">
-                    03 — RETENTION
-                </div>
-
-                <h3>
-                    Turn customers into long-term value
-                </h3>
-
-            </div>
-
-            <div class="case-study-type">
-                RETENTION
-            </div>
-
-        </div>
-
-
-        <div class="case-study-grid">
-
-            <div class="case-study-block">
-
-                <strong>
-                    Focus
-                </strong>
-
-                <p>
-                    Email campaigns, automation, customer follow-up
-                    and repeat-purchase opportunities.
-                </p>
-
-            </div>
-
-
-            <div class="case-study-block">
-
-                <strong>
-                    Goal
-                </strong>
-
-                <p>
-                    Increase customer engagement and make better use
-                    of existing traffic and customers.
-                </p>
-
-            </div>
-
-
-            <div class="case-study-block">
-
-                <strong>
-                    Approach
-                </strong>
-
-                <p>
-                    Build communication around the customer lifecycle
-                    rather than relying only on new traffic.
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <div class="case-tools">
-
-            <span>Email Marketing</span>
-            <span>Automation</span>
-            <span>Retention</span>
-            <span>Customer Lifecycle</span>
-
-        </div>
-
-    </div>
-
-
-    <div class="case-note">
-
-        Every project is approached according to the business,
-        audience, product and current digital situation. Strategy
-        comes before implementation.
 
     </div>
 
 </div>
 
-</section><!-- =========================================================
-     PROCESS
-========================================================= --><section class="process"><div class="container">
+</section><!-- PROCESS --><section class="process"><div class="container">
 
-    <div class="label">
-        MY PROCESS
-    </div>
+    <div class="label">MY PROCESS</div>
 
     <h2>
         Strategy before
@@ -2445,217 +1485,132 @@
     </h2>
 
     <p class="section-text">
-        I don't start by changing things at random. I first understand
-        the business, identify what is limiting performance, then focus
-        on the improvements that can make the biggest difference.
+        I don't start by changing things randomly. I first understand
+        the business, identify what is limiting performance and then
+        prioritize the improvements that matter most.
     </p>
-
 
     <div class="steps">
 
         <div class="step">
-
             <strong>01</strong>
-
-            <h3>
-                Discover
-            </h3>
-
+            <h3>Discover</h3>
             <p>
-                Understand the business, products, target audience,
-                current performance and the goals behind the project.
+                Understand the business, products, audience, current
+                situation and goals.
             </p>
-
         </div>
 
-
         <div class="step">
-
             <strong>02</strong>
-
-            <h3>
-                Audit
-            </h3>
-
+            <h3>Audit</h3>
             <p>
                 Examine the store or website for SEO, usability,
-                content, conversion, advertising and customer-journey
-                opportunities.
+                content, conversion and marketing opportunities.
             </p>
-
         </div>
 
-
         <div class="step">
-
             <strong>03</strong>
-
-            <h3>
-                Strategize
-            </h3>
-
+            <h3>Strategize</h3>
             <p>
-                Turn the findings into a clear action plan and
-                prioritize the improvements that matter most to the
-                business.
+                Turn findings into a clear action plan and prioritize
+                high-impact improvements.
             </p>
-
         </div>
 
-
         <div class="step">
-
             <strong>04</strong>
-
-            <h3>
-                Implement
-            </h3>
-
+            <h3>Implement</h3>
             <p>
                 Apply the agreed improvements across the store,
-                listings, website, advertising, marketing systems
-                or digital experience.
+                website, marketing systems or digital experience.
             </p>
-
         </div>
 
-
         <div class="step">
-
             <strong>05</strong>
-
-            <h3>
-                Optimize
-            </h3>
-
+            <h3>Optimize</h3>
             <p>
                 Review performance, identify new opportunities and
-                continue improving the parts of the digital experience
-                that influence growth.
+                continue improving the system.
             </p>
-
         </div>
 
     </div>
 
 </div>
 
-</section><!-- =========================================================
-     WHY WORK WITH ME
-========================================================= --><section><div class="container">
+</section><!-- WHY --><section><div class="container">
 
-    <div class="label">
-        WHY WORK WITH ME
-    </div>
+    <div class="label">WHY WORK WITH ME</div>
 
     <h2>
         Practical thinking.
         <span>Real execution.</span>
     </h2>
 
-
     <div class="why-grid">
 
         <div class="why-card">
-
-            <strong>
-                Business First
-            </strong>
-
+            <strong>Business First</strong>
             <p>
-                I focus on what the business needs to achieve,
-                not just what looks impressive on a screen.
+                I focus on what the business needs to achieve, not just
+                what looks impressive on a screen.
             </p>
-
         </div>
 
-
         <div class="why-card">
-
-            <strong>
-                E-commerce Focused
-            </strong>
-
+            <strong>E-commerce Focused</strong>
             <p>
-                Store structure, traffic acquisition, conversion
-                and retention are considered as parts of one
-                customer journey.
+                Store structure, acquisition, conversion and retention
+                are considered as parts of one customer journey.
             </p>
-
         </div>
 
-
         <div class="why-card">
-
-            <strong>
-                Data &amp; Strategy
-            </strong>
-
+            <strong>Strategy Driven</strong>
             <p>
-                Decisions should be connected to business objectives,
-                customer behavior and performance rather than guesswork.
+                Decisions are connected to business objectives,
+                customer behavior and performance.
             </p>
-
         </div>
 
-
         <div class="why-card">
-
-            <strong>
-                Multi-Channel
-            </strong>
-
+            <strong>Multi-Channel</strong>
             <p>
-                I work across Shopify, Etsy, search, paid advertising,
-                email marketing, websites and digital systems.
+                Shopify, Etsy, search, paid advertising, email,
+                websites and digital systems.
             </p>
-
         </div>
 
-
         <div class="why-card">
-
-            <strong>
-                Conversion Mindset
-            </strong>
-
+            <strong>Conversion Mindset</strong>
             <p>
                 Getting visitors is only part of the equation. The
-                experience must give qualified customers a clear reason
-                and path to take action.
+                experience must make taking action easier.
             </p>
-
         </div>
 
-
         <div class="why-card">
-
-            <strong>
-                Continuous Improvement
-            </strong>
-
+            <strong>Continuous Improvement</strong>
             <p>
                 Digital performance is not a one-time task. I look for
                 opportunities to test, improve and strengthen the system.
             </p>
-
         </div>
 
     </div>
 
 </div>
 
-</section><!-- =========================================================
-     CTA
-========================================================= --><section class="cta"><div class="container">
+</section><!-- CTA --><section class="cta"><div class="container">
 
     <div class="cta-box">
 
         <div>
 
-            <div class="label">
-                HAVE A DIGITAL PROJECT?
-            </div>
+            <div class="label">HAVE A DIGITAL PROJECT?</div>
 
             <h2>
                 Let's make your
@@ -2671,26 +1626,19 @@
 
         </div>
 
-
         <div>
-
             <a class="button primary" href="#contact">
                 Start a Conversation
             </a>
-
         </div>
 
     </div>
 
 </div>
 
-</section><!-- =========================================================
-     CONTACT
-========================================================= --><section id="contact" class="contact"><div class="container">
+</section><!-- CONTACT --><section id="contact" class="contact"><div class="container">
 
-    <div class="label">
-        GET IN TOUCH
-    </div>
+    <div class="label">GET IN TOUCH</div>
 
     <h2>
         Ready to improve your
@@ -2702,28 +1650,23 @@
         or what you want to build. We can start from there.
     </p>
 
-
     <div class="contact-buttons">
 
         <a
             class="button primary"
             href="https://wa.me/2348137343887"
             target="_blank"
-            rel="noopener noreferrer"
-        >
+            rel="noopener noreferrer">
             WhatsApp Me
         </a>
 
-
         <a
             class="button secondary"
-            href="mailto:ahmeedagunko@gmail.com"
-        >
+            href="mailto:ahmeedagunko@gmail.com">
             Send an Email
         </a>
 
     </div>
-
 
     <div class="contact-info">
 
@@ -2731,21 +1674,24 @@
             ahmeedagunko@gmail.com
         </a>
 
-
         <a
-            href="https://www.linkedin.com/"
+            href="https://www.bofowoagency.com/"
             target="_blank"
-            rel="noopener noreferrer"
-        >
-            LinkedIn
+            rel="noopener noreferrer">
+            Bofowo Agency
         </a>
 
+        <a
+            href="https://www.fiverr.com/smith_stephiene"
+            target="_blank"
+            rel="noopener noreferrer">
+            Fiverr
+        </a>
 
         <a
             href="https://github.com/gunkowii248656-alt"
             target="_blank"
-            rel="noopener noreferrer"
-        >
+            rel="noopener noreferrer">
             GitHub
         </a>
 
@@ -2753,18 +1699,19 @@
 
 </div>
 
-</section></main><!-- =========================================================
-     FOOTER
-========================================================= --><footer><div class="container">
+</section></main><footer><div class="container">
 
     <p>
-        © <span data-year>2026</span>
+        © 2026
         <strong>GUNKOWII SABA</strong>.
         All rights reserved.
     </p>
 
 </div>
 
-</footer><!-- =========================================================
-     JAVASCRIPT
-========================================================= --><script src="main.js"></script></body></html>
+</footer>
+
+<script src="main.js"></script>
+
+</body>
+</html>
