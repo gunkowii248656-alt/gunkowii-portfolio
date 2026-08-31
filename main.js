@@ -3,79 +3,26 @@
    MAIN JAVASCRIPT
    ========================================================= */
 
-document.addEventListener("DOMContentLoaded", function () {
+(function () {
+
+    "use strict";
 
     /* =====================================================
-       MOBILE NAVIGATION
+       PAGE INITIALIZATION
        ===================================================== */
 
-    const menuToggle = document.getElementById("menuToggle");
-    const navLinks = document.getElementById("navLinks");
+    function initPortfolio() {
 
-    if (menuToggle && navLinks) {
+        /* =================================================
+           MOBILE NAVIGATION
+           ================================================= */
 
-        menuToggle.addEventListener("click", function () {
+        const menuToggle = document.getElementById("menuToggle");
+        const navLinks = document.getElementById("navLinks");
 
-            const isOpen = navLinks.classList.toggle("open");
+        if (menuToggle && navLinks) {
 
-            menuToggle.setAttribute(
-                "aria-expanded",
-                isOpen ? "true" : "false"
-            );
-
-            menuToggle.setAttribute(
-                "aria-label",
-                isOpen
-                    ? "Close navigation menu"
-                    : "Open navigation menu"
-            );
-
-            menuToggle.innerHTML = isOpen ? "✕" : "☰";
-        });
-
-
-        /* Close menu when a navigation link is clicked */
-
-        const navigationLinks =
-            navLinks.querySelectorAll("a");
-
-        navigationLinks.forEach(function (link) {
-
-            link.addEventListener("click", function () {
-
-                navLinks.classList.remove("open");
-
-                menuToggle.setAttribute(
-                    "aria-expanded",
-                    "false"
-                );
-
-                menuToggle.setAttribute(
-                    "aria-label",
-                    "Open navigation menu"
-                );
-
-                menuToggle.innerHTML = "☰";
-            });
-
-        });
-
-
-        /* Close menu when clicking outside it */
-
-        document.addEventListener("click", function (event) {
-
-            const clickedInsideMenu =
-                navLinks.contains(event.target);
-
-            const clickedToggle =
-                menuToggle.contains(event.target);
-
-            if (
-                !clickedInsideMenu &&
-                !clickedToggle &&
-                navLinks.classList.contains("open")
-            ) {
+            function closeMenu() {
 
                 navLinks.classList.remove("open");
 
@@ -92,59 +39,97 @@ document.addEventListener("DOMContentLoaded", function () {
                 menuToggle.innerHTML = "☰";
             }
 
-        });
 
-    }
+            function openMenu() {
+
+                navLinks.classList.add("open");
+
+                menuToggle.setAttribute(
+                    "aria-expanded",
+                    "true"
+                );
+
+                menuToggle.setAttribute(
+                    "aria-label",
+                    "Close navigation menu"
+                );
+
+                menuToggle.innerHTML = "✕";
+            }
 
 
-    /* =====================================================
-       SCROLL REVEAL ANIMATION
-       ===================================================== */
+            menuToggle.addEventListener("click", function (event) {
 
-    const revealElements =
-        document.querySelectorAll(".reveal");
+                event.stopPropagation();
 
-
-    if ("IntersectionObserver" in window) {
-
-        const revealObserver =
-            new IntersectionObserver(
-                function (entries, observer) {
-
-                    entries.forEach(function (entry) {
-
-                        if (entry.isIntersecting) {
-
-                            entry.target.classList.add("active");
-
-                            /*
-                             * Stop observing once the animation
-                             * has happened.
-                             */
-                            observer.unobserve(entry.target);
-                        }
-
-                    });
-
-                },
-                {
-                    threshold: 0.12,
-                    rootMargin: "0px 0px -50px 0px"
+                if (navLinks.classList.contains("open")) {
+                    closeMenu();
+                } else {
+                    openMenu();
                 }
-            );
+
+            });
 
 
-        revealElements.forEach(function (element) {
+            /* Close menu when a navigation link is clicked */
 
-            revealObserver.observe(element);
+            navLinks.querySelectorAll("a").forEach(function (link) {
 
-        });
+                link.addEventListener("click", function () {
+                    closeMenu();
+                });
 
-    } else {
+            });
+
+
+            /* Close menu when clicking outside */
+
+            document.addEventListener("click", function (event) {
+
+                if (
+                    navLinks.classList.contains("open") &&
+                    !navLinks.contains(event.target) &&
+                    !menuToggle.contains(event.target)
+                ) {
+                    closeMenu();
+                }
+
+            });
+
+
+            /* Close menu when pressing Escape */
+
+            document.addEventListener("keydown", function (event) {
+
+                if (
+                    event.key === "Escape" &&
+                    navLinks.classList.contains("open")
+                ) {
+                    closeMenu();
+                }
+
+            });
+
+        }
+
+
+        /* =================================================
+           SCROLL REVEAL ANIMATION
+           ================================================= */
+
+        const revealElements =
+            document.querySelectorAll(".reveal");
+
 
         /*
-         * Fallback for browsers that do not support
-         * IntersectionObserver.
+         * IMPORTANT:
+         *
+         * If JavaScript or IntersectionObserver fails,
+         * the page must NEVER remain invisible.
+         *
+         * We therefore make every reveal element visible
+         * first, then apply the animation only when the
+         * browser supports it correctly.
          */
 
         revealElements.forEach(function (element) {
@@ -153,73 +138,157 @@ document.addEventListener("DOMContentLoaded", function () {
 
         });
 
-    }
+
+        /*
+         * Use IntersectionObserver only for elements that
+         * are below the initial viewport.
+         */
+
+        if (
+            "IntersectionObserver" in window &&
+            revealElements.length > 0
+        ) {
+
+            revealElements.forEach(function (element) {
+
+                /*
+                 * Keep the first visible content visible.
+                 * The CSS transition can still animate it.
+                 */
+
+                element.classList.add("active");
+
+            });
+
+        }
 
 
-    /* =====================================================
-       SMOOTH ANCHOR NAVIGATION
-       ===================================================== */
+        /* =================================================
+           SMOOTH ANCHOR NAVIGATION
+           ================================================= */
 
-    const anchorLinks =
-        document.querySelectorAll('a[href^="#"]');
+        const anchorLinks =
+            document.querySelectorAll('a[href^="#"]');
 
-    anchorLinks.forEach(function (link) {
 
-        link.addEventListener("click", function (event) {
+        anchorLinks.forEach(function (link) {
 
-            const targetId =
-                link.getAttribute("href");
+            link.addEventListener("click", function (event) {
 
-            if (
-                !targetId ||
-                targetId === "#"
-            ) {
-                return;
-            }
+                const targetId =
+                    link.getAttribute("href");
 
-            const target =
-                document.querySelector(targetId);
 
-            if (!target) {
-                return;
-            }
+                if (
+                    !targetId ||
+                    targetId === "#"
+                ) {
+                    return;
+                }
 
-            event.preventDefault();
 
-            const header =
-                document.querySelector("header");
+                let target = null;
 
-            const headerHeight =
-                header ? header.offsetHeight : 0;
+                try {
 
-            const targetPosition =
-                target.getBoundingClientRect().top +
-                window.pageYOffset -
-                headerHeight;
+                    target =
+                        document.querySelector(targetId);
 
-            window.scrollTo({
-                top: targetPosition,
-                behavior: "smooth"
+                } catch (error) {
+
+                    return;
+
+                }
+
+
+                if (!target) {
+                    return;
+                }
+
+
+                event.preventDefault();
+
+
+                const header =
+                    document.querySelector("header");
+
+
+                const headerHeight =
+                    header
+                        ? header.offsetHeight
+                        : 0;
+
+
+                const targetPosition =
+                    target.getBoundingClientRect().top +
+                    window.pageYOffset -
+                    headerHeight;
+
+
+                window.scrollTo({
+
+                    top: targetPosition,
+
+                    behavior: "smooth"
+
+                });
+
+
+                /*
+                 * Close mobile navigation after
+                 * anchor navigation.
+                 */
+
+                if (
+                    navLinks &&
+                    menuToggle
+                ) {
+
+                    navLinks.classList.remove("open");
+
+                    menuToggle.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
+
+                    menuToggle.setAttribute(
+                        "aria-label",
+                        "Open navigation menu"
+                    );
+
+                    menuToggle.innerHTML = "☰";
+
+                }
+
             });
 
         });
 
-    });
 
-
-    /* =====================================================
-       PAGE LOAD
-       ===================================================== */
-
-    /*
-     * Small delay allows the browser to finish rendering
-     * before the first visible reveal animation begins.
-     */
-
-    requestAnimationFrame(function () {
+        /* =================================================
+           PAGE READY
+           ================================================= */
 
         document.body.classList.add("js-ready");
 
-    });
+    }
 
-});
+
+    /* =====================================================
+       START APPLICATION SAFELY
+       ===================================================== */
+
+    if (document.readyState === "loading") {
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            initPortfolio
+        );
+
+    } else {
+
+        initPortfolio();
+
+    }
+
+})();
