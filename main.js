@@ -8,6 +8,14 @@
         var menuToggle = document.getElementById("menuToggle");
         var navLinks = document.getElementById("navLinks");
 
+        // Fallback: if IDs aren't present in the markup, try class selectors
+        if (!menuToggle) {
+            menuToggle = document.querySelector('.menu-toggle');
+        }
+        if (!navLinks) {
+            navLinks = document.querySelector('.nav-links');
+        }
+
         if (menuToggle && navLinks) {
 
             menuToggle.addEventListener("click", function (event) {
@@ -75,58 +83,62 @@
 
         /* SCROLL REVEAL */
 
-        var revealElements =
-            document.querySelectorAll(".reveal");
+        // Ensure sections are marked for reveal so animation runs even if
+        // markup didn't include the .reveal class.
+        document.querySelectorAll('section').forEach(function (sec) {
+            if (!sec.classList.contains('reveal')) {
+                sec.classList.add('reveal');
+            }
+        });
 
-        if (revealElements.length === 0) {
-            return;
-        }
+        var revealElements = document.querySelectorAll(".reveal");
 
-        /* Show the first section immediately */
+        // Only run reveal logic if we have reveal elements — do not exit the function
+        if (revealElements.length > 0) {
 
-        if (revealElements[0]) {
-            revealElements[0].classList.add("active");
-        }
+            /* Show the first section immediately */
+            if (revealElements[0]) {
+                revealElements[0].classList.add("active");
+            }
 
+            /* Animate other sections when they appear */
+            if ("IntersectionObserver" in window) {
 
-        /* Animate other sections when they appear */
+                var observer = new IntersectionObserver(
+                    function (entries) {
 
-        if ("IntersectionObserver" in window) {
+                        entries.forEach(function (entry) {
 
-            var observer = new IntersectionObserver(
-                function (entries) {
+                            if (entry.isIntersecting) {
 
-                    entries.forEach(function (entry) {
+                                entry.target.classList.add("active");
 
-                        if (entry.isIntersecting) {
+                                observer.unobserve(entry.target);
+                            }
 
-                            entry.target.classList.add("active");
+                        });
 
-                            observer.unobserve(entry.target);
-                        }
+                    },
+                    {
+                        threshold: 0.1
+                    }
+                );
 
-                    });
+                revealElements.forEach(function (element, index) {
 
-                },
-                {
-                    threshold: 0.1
-                }
-            );
+                    if (index > 0) {
+                        observer.observe(element);
+                    }
 
-            revealElements.forEach(function (element, index) {
+                });
 
-                if (index > 0) {
-                    observer.observe(element);
-                }
+            } else {
 
-            });
+                revealElements.forEach(function (element) {
+                    element.classList.add("active");
+                });
 
-        } else {
-
-            revealElements.forEach(function (element) {
-                element.classList.add("active");
-            });
-
+            }
         }
 
 
@@ -152,8 +164,7 @@
 
                 var header = document.querySelector("header");
 
-                var headerHeight =
-                    header ? header.offsetHeight : 0;
+                var headerHeight = header ? header.offsetHeight : 0;
 
                 var position =
                     target.getBoundingClientRect().top +
