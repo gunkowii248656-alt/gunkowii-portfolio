@@ -4,18 +4,13 @@
    ========================================================= */
 
 (function () {
-
     "use strict";
-
-    /* =====================================================
-       PAGE INITIALIZATION
-       ===================================================== */
 
     function initPortfolio() {
 
-        /* =================================================
+        /* =====================================================
            MOBILE NAVIGATION
-           ================================================= */
+           ===================================================== */
 
         const menuToggle = document.getElementById("menuToggle");
         const navLinks = document.getElementById("navLinks");
@@ -23,7 +18,6 @@
         if (menuToggle && navLinks) {
 
             function closeMenu() {
-
                 navLinks.classList.remove("open");
 
                 menuToggle.setAttribute(
@@ -36,12 +30,10 @@
                     "Open navigation menu"
                 );
 
-                menuToggle.innerHTML = "☰";
+                menuToggle.textContent = "☰";
             }
 
-
             function openMenu() {
-
                 navLinks.classList.add("open");
 
                 menuToggle.setAttribute(
@@ -54,9 +46,8 @@
                     "Close navigation menu"
                 );
 
-                menuToggle.innerHTML = "✕";
+                menuToggle.textContent = "✕";
             }
-
 
             menuToggle.addEventListener("click", function (event) {
 
@@ -70,9 +61,6 @@
 
             });
 
-
-            /* Close menu when a navigation link is clicked */
-
             navLinks.querySelectorAll("a").forEach(function (link) {
 
                 link.addEventListener("click", function () {
@@ -80,9 +68,6 @@
                 });
 
             });
-
-
-            /* Close menu when clicking outside */
 
             document.addEventListener("click", function (event) {
 
@@ -95,9 +80,6 @@
                 }
 
             });
-
-
-            /* Close menu when pressing Escape */
 
             document.addEventListener("keydown", function (event) {
 
@@ -113,63 +95,89 @@
         }
 
 
-        /* =================================================
+        /* =====================================================
            SCROLL REVEAL ANIMATION
-           ================================================= */
+           ===================================================== */
 
         const revealElements =
             document.querySelectorAll(".reveal");
 
+        if (revealElements.length > 0) {
 
-        /*
-         * IMPORTANT:
-         *
-         * If JavaScript or IntersectionObserver fails,
-         * the page must NEVER remain invisible.
-         *
-         * We therefore make every reveal element visible
-         * first, then apply the animation only when the
-         * browser supports it correctly.
-         */
+            /* 
+               First section is visible immediately.
+               This prevents the page from appearing blank.
+            */
 
-        revealElements.forEach(function (element) {
-
-            element.classList.add("active");
-
-        });
+            if (revealElements[0]) {
+                revealElements[0].classList.add("active");
+            }
 
 
-        /*
-         * Use IntersectionObserver only for elements that
-         * are below the initial viewport.
-         */
+            /*
+               Animate the remaining sections when they
+               enter the viewport.
+            */
 
-        if (
-            "IntersectionObserver" in window &&
-            revealElements.length > 0
-        ) {
+            if ("IntersectionObserver" in window) {
 
-            revealElements.forEach(function (element) {
+                const revealObserver =
+                    new IntersectionObserver(
+                        function (entries, observer) {
+
+                            entries.forEach(function (entry) {
+
+                                if (entry.isIntersecting) {
+
+                                    entry.target.classList.add("active");
+
+                                    observer.unobserve(
+                                        entry.target
+                                    );
+
+                                }
+
+                            });
+
+                        },
+                        {
+                            threshold: 0.12,
+                            rootMargin: "0px 0px -50px 0px"
+                        }
+                    );
+
+
+                revealElements.forEach(function (element, index) {
+
+                    if (index !== 0) {
+                        revealObserver.observe(element);
+                    }
+
+                });
+
+            } else {
 
                 /*
-                 * Keep the first visible content visible.
-                 * The CSS transition can still animate it.
-                 */
+                   Browser fallback.
+                   If IntersectionObserver is unavailable,
+                   show everything normally.
+                */
 
-                element.classList.add("active");
+                revealElements.forEach(function (element) {
+                    element.classList.add("active");
+                });
 
-            });
+            }
 
         }
 
 
-        /* =================================================
+        /* =====================================================
            SMOOTH ANCHOR NAVIGATION
-           ================================================= */
+           ===================================================== */
 
         const anchorLinks =
             document.querySelectorAll('a[href^="#"]');
-
 
         anchorLinks.forEach(function (link) {
 
@@ -178,7 +186,6 @@
                 const targetId =
                     link.getAttribute("href");
 
-
                 if (
                     !targetId ||
                     targetId === "#"
@@ -186,63 +193,45 @@
                     return;
                 }
 
-
-                let target = null;
+                let target;
 
                 try {
-
                     target =
                         document.querySelector(targetId);
-
                 } catch (error) {
-
                     return;
-
                 }
-
 
                 if (!target) {
                     return;
                 }
 
-
                 event.preventDefault();
-
 
                 const header =
                     document.querySelector("header");
-
 
                 const headerHeight =
                     header
                         ? header.offsetHeight
                         : 0;
 
-
                 const targetPosition =
                     target.getBoundingClientRect().top +
                     window.pageYOffset -
                     headerHeight;
 
-
                 window.scrollTo({
-
                     top: targetPosition,
-
                     behavior: "smooth"
-
                 });
 
-
                 /*
-                 * Close mobile navigation after
-                 * anchor navigation.
-                 */
+                   Close mobile navigation after
+                   clicking an anchor link.
+                */
 
-                if (
-                    navLinks &&
-                    menuToggle
-                ) {
+                if (navLinks && menuToggle) {
 
                     navLinks.classList.remove("open");
 
@@ -256,27 +245,26 @@
                         "Open navigation menu"
                     );
 
-                    menuToggle.innerHTML = "☰";
-
+                    menuToggle.textContent = "☰";
                 }
 
             });
 
-        });
+        }
 
 
-        /* =================================================
+        /* =====================================================
            PAGE READY
-           ================================================= */
+           ===================================================== */
 
         document.body.classList.add("js-ready");
 
     }
 
 
-    /* =====================================================
-       START APPLICATION SAFELY
-       ===================================================== */
+    /* =========================================================
+       START SAFELY
+       ========================================================= */
 
     if (document.readyState === "loading") {
 
