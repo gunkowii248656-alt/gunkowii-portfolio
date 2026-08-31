@@ -1,81 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GUNKOWII SABA | E-commerce & Digital Solutions Specialist</title>
 
-    <title>GUNKOWII SABA | E-commerce & Digital Solutions Specialist</title>
+  <meta name="description" content="GUNKOWII SABA helps businesses improve e-commerce stores, Shopify, Etsy, SEO, paid advertising, conversion rates, email marketing and digital systems.">
+  <meta name="author" content="GUNKOWII SABA">
+  <meta name="keywords" content="Gunkowii Saba, Shopify Expert, E-commerce Specialist, Shopify SEO, Etsy SEO, Google Ads, Google Shopping, Meta Ads, TikTok Ads, CRO, Email Marketing, Web Development">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="GUNKOWII SABA | E-commerce & Digital Solutions Specialist">
+  <meta property="og:description" content="E-commerce strategy, Shopify optimization, digital marketing, SEO, conversion optimization and web solutions.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#14251d">
 
-    <meta
-        name="description"
-        content="GUNKOWII SABA helps businesses improve e-commerce stores, Shopify, Etsy, SEO, paid advertising, conversion rates, email marketing and digital systems."
-    >
+  <!-- Ensure assets load correctly on GitHub Pages for repo named gunkowii-portfolio -->
+  <base href="/gunkowii-portfolio/">
 
-    <meta name="author" content="GUNKOWII SABA">
+  <style>
+    :root{
+      --bg:#0f1724;
+      --card:#0b1220;
+      --muted:#9aa4b2;
+      --accent:#c29d4a;
+      --white:#f8fafc;
+      --container:1100px;
+      --radius:10px;
+      --gap:18px;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
 
-    <meta
-        name="keywords"
-        content="Gunkowii Saba, Shopify Expert, E-commerce Specialist, Shopify SEO, Etsy SEO, Google Ads, Google Shopping, Meta Ads, TikTok Ads, CRO, Email Marketing, Web Development"
-    >
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:linear-gradient(180deg,#071028 0%, #071a2a 100%);
+      color:var(--white);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.5;
+      font-size:16px;
+    }
 
-    <meta name="robots" content="index, follow">
+    .container{
+      max-width:var(--container);
+      margin:0 auto;
+      padding:28px;
+    }
 
-    <meta
-        property="og:title"
-        content="GUNKOWII SABA | E-commerce & Digital Solutions Specialist"
-    >
+    header.site-header{
+      padding:12px 0;
+      position:sticky;
+      top:0;
+      background:linear-gradient(180deg, rgba(7,10,20,0.6), rgba(7,10,20,0.3));
+      backdrop-filter: blur(6px);
+      z-index:10;
+    }
+    .brand{display:inline-block;margin:0;font-size:18px;font-weight:700;color:var(--white)}
+    nav.nav{float:right}
+    nav.nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-weight:600}
+    nav.nav a:hover{color:var(--white)}
 
-    <meta
-        property="og:description"
-        content="E-commerce strategy, Shopify optimization, digital marketing, SEO, conversion optimization and web solutions."
-    >
+    .hero{
+      padding:48px 0;
+    }
+    .hero .container{display:flex;gap:24px;align-items:center}
+    .avatar{
+      width:140px;height:140px;border-radius:14px;object-fit:cover;border:3px solid rgba(255,255,255,0.06)
+    }
+    .hero-text h2{margin:0 0 8px 0;font-size:28px}
+    .hero-text p{margin:0;color:var(--muted)}
+    .cta{
+      display:inline-block;margin-top:12px;padding:10px 16px;background:var(--accent);color:#14251d;border-radius:8px;text-decoration:none;font-weight:700
+    }
 
-    <meta property="og:type" content="website">
+    section{padding:28px 0}
+    h3.section-title{margin:0 0 12px 0;font-size:20px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:12px}
+    .card{background:var(--card);padding:16px;border-radius:12px}
+    .card h4{margin:0 0 8px 0}
+    .card a{color:var(--accent);text-decoration:none}
 
-    <meta name="theme-color" content="#14251d">
+    .contact .label{color:var(--muted);font-weight:700;margin-bottom:6px}
+    .contact h2{margin:6px 0 8px 0;font-size:26px}
+    .contact h2 span{color:var(--accent)}
+    .section-text{color:var(--muted);max-width:760px}
 
-    <style>
-    /* (existing styles unchanged) */
-    </style>
+    .contact-form{display:grid;gap:10px;max-width:760px}
+    .contact-form input, .contact-form textarea{
+      width:100%;padding:12px;border-radius:6px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:var(--white)
+    }
+    .contact-form button{
+      width:max-content;padding:10px 14px;border-radius:6px;background:var(--accent);border:0;color:#14251d;cursor:pointer;font-weight:700
+    }
+
+    .site-footer{padding:18px 0;border-top:1px solid rgba(255,255,255,0.03);margin-top:28px;text-align:center;color:var(--muted)}
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+    @media(max-width:720px){
+      .hero .container{flex-direction:column;align-items:flex-start}
+      nav.nav{float:none;margin-top:12px}
+    }
+  </style>
 </head>
 
 <body>
-
-<!-- (existing body content unchanged up to the contact section) -->
-
-<section id="contact" class="contact">
-  <div class="container">
-    <div class="label">Get in touch</div>
-    <h2>Let's <span>work</span> together</h2>
-    <p class="section-text">I help stores grow revenue—reach out and tell me about your goals.</p>
-
-    <!-- Static contact form (accessible) -->
-    <div id="contact-form-wrapper" style="max-width:760px;margin:28px auto 0;background:rgba(255,255,255,.02);padding:18px;border-radius:8px">
-      <form id="contactForm" method="POST" action="https://formsubmit.co/ahmeedagunko@gmail.com">
-        <div style="display:flex;gap:12px;flex-wrap:wrap">
-          <label class="sr-only" for="c-name">Name</label>
-          <input id="c-name" name="name" placeholder="Your name" required style="flex:1;padding:12px;border-radius:6px;border:1px solid rgba(0,0,0,.08)">
-          <label class="sr-only" for="c-email">Email</label>
-          <input id="c-email" name="email" type="email" placeholder="Email address" required style="flex:1;padding:12px;border-radius:6px;border:1px solid rgba(0,0,0,.08)">
-        </div>
-        <div style="margin-top:12px">
-          <label class="sr-only" for="c-message">Message</label>
-          <textarea id="c-message" name="message" rows="6" placeholder="Tell me about your store & goals" required style="width:100%;padding:12px;border-radius:6px;border:1px solid rgba(0,0,0,.08)"></textarea>
-        </div>
-        <div style="margin-top:12px;display:flex;gap:10px;align-items:center;justify-content:flex-start">
-          <button id="contactSubmit" type="submit" class="primary" style="background:#c29d4a;color:#14251d;padding:10px 16px;border-radius:6px;border:none;font-weight:700;cursor:pointer">Send message</button>
-          <small style="color:var(--muted)">Or email directly: <a href="mailto:ahmeedagunko@gmail.com">ahmeedagunko@gmail.com</a></small>
-        </div>
-        <div id="contactFormMessage" aria-live="polite" style="margin-top:10px;color:var(--muted)"></div>
-      </form>
-      <noscript><div style="margin-top:10px;color:var(--muted)">JavaScript is required for inline submission. Use <a href="mailto:ahmeedagunko@gmail.com">email</a> to contact.</div></noscript>
+  <header class="site-header" role="banner">
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:12px">
+      <div style="display:flex;align-items:center;gap:12px">
+        <div class="brand">GUNKOWII SABA</div>
+        <div style="color:var(--muted);font-size:13px">E-commerce & Digital Solutions</div>
+      </div>
+      <nav class="nav" role="navigation" aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </div>
+  </header>
 
-  </div>
-</section>
+  <main>
+    <section id="home" class="hero" aria-labelledby="home-heading">
+      <div class="container">
+        <img class="avatar" src="images/profile.jpg" alt="Gunkowii profile image" onerror="this.style.display='none'">
+        <div class="hero-text">
+          <h2 id="home-heading">Hi, I'm GUNKOWII SABA</h2>
+          <p>I help stores grow revenue—Shopify, Etsy, SEO, paid ads, CRO, email marketing and web systems.</p>
+          <a class="cta" href="#projects">See my work</a>
+        </div>
+      </div>
+    </section>
 
-<!-- Ensure main.js is loaded -->
-<script src="main.js"></script>
+    <section id="projects" class="container" aria-labelledby="projects-heading">
+      <h3 id="projects-heading" class="section-title">Projects</h3>
+      <div class="grid" role="list">
+        <article class="card" role="listitem">
+          <h4>Example Project One</h4>
+          <p style="color:var(--muted)">Short description of project one. Replace with your real project details and links.</p>
+          <a href="https://github.com/gunkowii248656-alt" target="_blank" rel="noopener">View repo</a>
+        </article>
+
+        <article class="card" role="listitem">
+          <h4>Example Project Two</h4>
+          <p style="color:var(--muted)">Short description of project two. Replace with your real project details and links.</p>
+          <a href="https://github.com/gunkowii248656-alt" target="_blank" rel="noopener">View repo</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" class="container" aria-labelledby="about-heading">
+      <h3 id="about-heading" class="section-title">About</h3>
+      <p style="color:var(--muted)">I build user interfaces and small web apps focused on performance, conversion and accessibility. I help merchants scale stores with technical SEO, paid acquisition, and conversion optimization.</p>
+    </section>
+
+    <section id="contact" class="contact" aria-labelledby="contact-heading">
+      <div class="container">
+        <div class="label">Get in touch</div>
+        <h2 id="contact-heading">Let's <span>work</span> together</h2>
+        <p class="section-text">I help stores grow revenue—reach out and tell me about your goals.</p>
+
+        <!-- Contact form wrapper -->
+        <div id="contact-form-wrapper" style="max-width:760px;margin:28px auto 0;background:rgba(255,255,255,.02);padding:18px;border-radius:8px">
+          <form id="contactForm" method="POST" action="https://formsubmit.co/ahmeedagunko@gmail.com" class="contact-form" novalidate>
+            <!-- Hidden input to disable FormSubmit captcha if using formsubmit.co -->
+            <input type="hidden" name="_captcha" value="false">
+
+            <div style="display:flex;gap:12px;flex-wrap:wrap">
+              <label class="sr-only" for="c-name">Name</label>
+              <input id="c-name" name="name" placeholder="Your name" required style="flex:1;padding:12px;border-radius:6px;border:1px solid rgba(0,0,0,.08)">
+
+              <label class="sr-only" for="c-email">Email</label>
+              <input id="c-email" name="email" type="email" placeholder="Email address" required style="flex:1;padding:12px;border-radius:6px;border:1px solid rgba(0,0,0,.08)">
+            </div>
+
+            <div style="margin-top:12px">
+              <label class="sr-only" for="c-message">Message</label>
+              <textarea id="c-message" name="message" rows="6" placeholder="Tell me about your store & goals" required style="width:100%;padding:12px;border-radius:6px;border:1px solid rgba(0,0,0,.08)"></textarea>
+            </div>
+
+            <div style="margin-top:12px;display:flex;gap:10px;align-items:center;justify-content:flex-start">
+              <button id="contactSubmit" type="submit" class="primary" style="background:var(--accent);color:#14251d;padding:10px 16px;border-radius:6px;border:none;font-weight:700;cursor:pointer">Send message</button>
+              <small style="color:var(--muted)">Or email directly: <a href="mailto:ahmeedagunko@gmail.com" style="color:var(--muted)">ahmeedagunko@gmail.com</a></small>
+            </div>
+
+            <div id="contactFormMessage" aria-live="polite" style="margin-top:10px;color:var(--muted)"></div>
+          </form>
+
+          <noscript>
+            <div style="margin-top:10px;color:var(--muted)">JavaScript is required for inline submission. Use <a href="mailto:ahmeedagunko@gmail.com">email</a> to contact.</div>
+          </noscript>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <p>&copy; <span id="year"></span> GUNKOWII SABA</p>
+    </div>
+  </footer>
+
+  <!-- Link to external JS file (create or replace main.js at repo root) -->
+  <script src="main.js"></script>
 </body>
 </html>
