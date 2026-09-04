@@ -9,7 +9,7 @@
 
   <meta
     name="description"
-    content="GUNKOWII SABA is an E-commerce & Digital Marketing Expert with 4–6 years of practical experience in Shopify, Etsy, SEO, CRO, paid advertising, email marketing and web development."
+    content="GUNKOWII SABA is an E-commerce & Digital Marketing Expert specializing in Shopify, Etsy, SEO, CRO, paid advertising, email marketing and web development."
   >
 
   <meta name="author" content="GUNKOWII SABA">
@@ -23,21 +23,27 @@
 
   <meta name="theme-color" content="#14251d">
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="GUNKOWII SABA | E-commerce & Digital Marketing Expert">
+  <meta
+    property="og:title"
+    content="GUNKOWII SABA | E-commerce & Digital Marketing Expert"
+  >
+
   <meta
     property="og:description"
-    content="Helping e-commerce businesses improve visibility, customer experience and conversion opportunities through Shopify, Etsy, SEO, CRO and digital marketing."
+    content="E-commerce, Shopify, Etsy, SEO, CRO, digital marketing and web development."
   >
+
   <meta property="og:type" content="website">
 
   <style>
+
     :root {
       --green: #14251d;
       --green-2: #1b3026;
       --green-3: #263d31;
 
       --gold: #c29d4a;
+      --gold-light: #d7b86a;
       --gold-dark: #92702c;
 
       --cream: #f7f4ed;
@@ -56,15 +62,18 @@
       --max-width: 1180px;
     }
 
+
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
 
+
     html {
       scroll-behavior: smooth;
     }
+
 
     body {
       font-family: Arial, Helvetica, sans-serif;
@@ -74,15 +83,18 @@
       overflow-x: hidden;
     }
 
+
     img {
       max-width: 100%;
       display: block;
     }
 
+
     a {
       color: inherit;
       text-decoration: none;
     }
+
 
     button,
     input,
@@ -90,10 +102,12 @@
       font: inherit;
     }
 
+
     .container {
       width: min(92%, var(--max-width));
       margin: 0 auto;
     }
+
 
     /* =========================
        HEADER
@@ -103,86 +117,131 @@
       position: sticky;
       top: 0;
       z-index: 1000;
+
       background: rgba(20, 37, 29, 0.97);
-      border-bottom: 1px solid rgba(194, 157, 74, 0.18);
+
+      border-bottom:
+        1px solid rgba(194, 157, 74, 0.18);
+
       backdrop-filter: blur(12px);
     }
 
+
     nav {
       min-height: 82px;
+
       display: flex;
       align-items: center;
       justify-content: space-between;
+
       gap: 30px;
     }
+
 
     .brand {
       display: flex;
       align-items: center;
+
       gap: 12px;
+
       min-width: 190px;
     }
+
 
     .brand img {
       width: 150px;
       max-height: 58px;
+
       object-fit: contain;
+
       border-radius: 6px;
     }
 
+
     .brand-fallback {
       display: none;
-      font-family: Georgia, "Times New Roman", serif;
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
       font-size: 20px;
       font-weight: 700;
+
       letter-spacing: 1px;
+
       color: var(--white);
     }
+
 
     .brand-fallback span {
       color: var(--gold);
     }
 
+
     .nav-links {
       display: flex;
       align-items: center;
       justify-content: flex-end;
+
       gap: 22px;
     }
 
+
     .nav-links a {
       color: #f7f4ed;
+
       font-size: 13px;
       font-weight: 600;
+
       transition: 0.25s ease;
+
       white-space: nowrap;
     }
+
 
     .nav-links a:hover {
       color: var(--gold);
     }
 
+
     .nav-links .nav-cta {
       padding: 11px 18px;
-      border: 1px solid var(--gold);
+
+      border:
+        1px solid var(--gold);
+
       color: var(--gold);
+
       border-radius: 3px;
     }
+
 
     .nav-links .nav-cta:hover {
       background: var(--gold);
+
       color: var(--green);
     }
 
+
     .menu-toggle {
       display: none;
-      border: 1px solid rgba(194, 157, 74, 0.5);
+
+      border:
+        1px solid rgba(194, 157, 74, 0.5);
+
       background: transparent;
+
       color: var(--white);
+
       padding: 8px 12px;
+
       border-radius: 3px;
+
       cursor: pointer;
     }
+
 
     /* =========================
        HERO
@@ -190,285 +249,495 @@
 
     .hero {
       background:
-        radial-gradient(circle at 85% 20%, rgba(194, 157, 74, 0.12), transparent 30%),
-        linear-gradient(135deg, var(--green), var(--green-2));
+        radial-gradient(
+          circle at 85% 20%,
+          rgba(194, 157, 74, 0.13),
+          transparent 30%
+        ),
+        linear-gradient(
+          135deg,
+          var(--green),
+          var(--green-2)
+        );
 
       color: var(--white);
-      min-height: 680px;
+
+      min-height: 700px;
+
       display: flex;
       align-items: center;
+
       padding: 90px 0;
     }
 
+
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
+
+      grid-template-columns:
+        1.05fr 0.95fr;
+
       align-items: center;
-      gap: 80px;
+
+      gap: 70px;
     }
+
 
     .eyebrow {
       display: inline-flex;
       align-items: center;
+
       gap: 10px;
+
       color: var(--gold);
+
       font-size: 12px;
+
       letter-spacing: 2px;
+
       font-weight: 700;
+
       text-transform: uppercase;
+
       margin-bottom: 20px;
     }
 
+
     .eyebrow::before {
       content: "";
+
       width: 34px;
       height: 1px;
+
       background: var(--gold);
     }
 
+
     .hero h1 {
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(46px, 6vw, 78px);
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size:
+        clamp(46px, 6vw, 78px);
+
       line-height: 0.98;
+
       font-weight: 700;
+
       letter-spacing: -2px;
-      margin-bottom: 24px;
+
+      margin-bottom: 20px;
     }
+
 
     .hero h1 span {
       color: var(--gold);
     }
 
+
     .hero-kicker {
-      color: #e5ded0;
-      font-size: 18px;
+      color: #eee7da;
+
+      font-size: 19px;
+
       font-weight: 700;
-      letter-spacing: 0.4px;
+
+      letter-spacing: 0.5px;
+
       margin-bottom: 18px;
     }
 
+
+    .hero-specialties {
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 8px;
+
+      margin-bottom: 22px;
+    }
+
+
+    .hero-specialties span {
+      border:
+        1px solid rgba(194, 157, 74, 0.4);
+
+      background:
+        rgba(255, 255, 255, 0.035);
+
+      color: #e8e1d5;
+
+      padding: 7px 10px;
+
+      font-size: 11px;
+
+      font-weight: 700;
+
+      letter-spacing: 0.4px;
+    }
+
+
     .hero-description {
-      max-width: 680px;
+      max-width: 650px;
+
       color: #d5ddd7;
+
       font-size: 17px;
+
       line-height: 1.8;
+
       margin-bottom: 32px;
     }
 
+
     .hero-buttons {
       display: flex;
+
       flex-wrap: wrap;
+
       gap: 14px;
     }
 
+
     .btn {
       display: inline-flex;
+
       align-items: center;
+
       justify-content: center;
+
       min-height: 50px;
+
       padding: 13px 24px;
+
       border-radius: 3px;
+
       font-size: 14px;
+
       font-weight: 700;
+
       transition: 0.25s ease;
+
       cursor: pointer;
     }
 
+
     .btn-primary {
       background: var(--gold);
+
       color: var(--green);
     }
 
+
     .btn-primary:hover {
-      background: #d2b160;
+      background: var(--gold-light);
+
       transform: translateY(-2px);
     }
 
+
     .btn-outline {
-      border: 1px solid rgba(247, 244, 237, 0.4);
+      border:
+        1px solid rgba(247, 244, 237, 0.4);
+
       color: var(--white);
     }
 
+
     .btn-outline:hover {
       border-color: var(--gold);
+
       color: var(--gold);
+
       transform: translateY(-2px);
     }
+
 
     .hero-visual {
       position: relative;
     }
 
+
     .portrait-frame {
       position: relative;
-      width: min(100%, 420px);
+
+      width: min(100%, 450px);
+
       margin-left: auto;
+
       padding: 12px;
-      background: linear-gradient(
-        145deg,
-        rgba(194, 157, 74, 0.85),
-        rgba(194, 157, 74, 0.15)
-      );
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(194, 157, 74, 0.9),
+          rgba(194, 157, 74, 0.12)
+        );
     }
+
 
     .portrait-frame::before {
       content: "";
+
       position: absolute;
-      inset: 22px -18px -18px 22px;
-      border: 1px solid rgba(194, 157, 74, 0.35);
+
+      inset:
+        22px -18px -18px 22px;
+
+      border:
+        1px solid rgba(194, 157, 74, 0.35);
+
       z-index: 0;
     }
 
+
     .portrait-frame img {
       position: relative;
+
       z-index: 1;
+
       width: 100%;
-      height: 510px;
+
+      height: 535px;
+
       object-fit: cover;
+
       object-position: center;
+
       background: var(--green-3);
     }
 
+
     .portrait-caption {
       position: relative;
+
       z-index: 2;
+
       background: var(--white);
+
       color: var(--green);
-      padding: 13px 17px;
+
+      padding: 14px 17px;
+
       font-size: 10px;
+
       font-weight: 700;
+
       letter-spacing: 1.6px;
+
       margin-top: -44px;
+
       margin-left: 20px;
+
       margin-right: 20px;
     }
 
+
     /* =========================
-       CREDIBILITY STRIP
+       CREDIBILITY
     ========================== */
 
     .credibility {
       background: var(--white);
-      border-bottom: 1px solid var(--line);
+
+      border-bottom:
+        1px solid var(--line);
     }
+
 
     .credibility-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+
+      grid-template-columns:
+        repeat(4, 1fr);
     }
+
 
     .credibility-item {
       padding: 25px 22px;
-      border-right: 1px solid var(--line);
+
+      border-right:
+        1px solid var(--line);
     }
+
 
     .credibility-item:last-child {
       border-right: none;
     }
 
+
     .credibility-number {
       display: block;
+
       color: var(--gold-dark);
-      font-family: Georgia, "Times New Roman", serif;
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
       font-size: 24px;
+
       font-weight: 700;
+
       margin-bottom: 4px;
     }
 
+
     .credibility-label {
       color: var(--muted);
+
       font-size: 12px;
+
       font-weight: 700;
+
       text-transform: uppercase;
+
       letter-spacing: 0.7px;
     }
 
+
     /* =========================
-       SECTION BASICS
+       GENERAL SECTIONS
     ========================== */
 
     section {
       padding: 100px 0;
     }
 
+
     .section-header {
       max-width: 720px;
+
       margin-bottom: 52px;
     }
 
+
     .section-label {
       color: var(--gold-dark);
+
       font-size: 12px;
+
       letter-spacing: 2px;
+
       text-transform: uppercase;
+
       font-weight: 800;
+
       margin-bottom: 13px;
     }
 
+
     .section-title {
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(34px, 4vw, 52px);
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size:
+        clamp(34px, 4vw, 52px);
+
       line-height: 1.15;
+
       color: var(--green);
+
       margin-bottom: 18px;
     }
+
 
     .section-title span {
       color: var(--gold-dark);
     }
 
+
     .section-intro {
       color: var(--muted);
+
       font-size: 16px;
+
       line-height: 1.8;
     }
 
+
     /* =========================
-       WHAT I HELP WITH
+       EXPERTISE
     ========================== */
 
     .expertise {
       background: var(--cream);
     }
 
+
     .expertise-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
       gap: 1px;
+
       background: var(--line);
-      border: 1px solid var(--line);
+
+      border:
+        1px solid var(--line);
     }
+
 
     .expertise-card {
       background: var(--cream);
+
       padding: 34px 30px;
+
       transition: 0.25s ease;
     }
 
+
     .expertise-card:hover {
       background: var(--white);
+
       transform: translateY(-3px);
     }
 
+
     .card-number {
       color: var(--gold-dark);
-      font-family: Georgia, "Times New Roman", serif;
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
       font-size: 17px;
+
       margin-bottom: 22px;
     }
 
+
     .expertise-card h3 {
-      font-family: Georgia, "Times New Roman", serif;
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
       font-size: 23px;
+
       color: var(--green);
+
       margin-bottom: 12px;
     }
 
+
     .expertise-card p {
       color: var(--muted);
+
       font-size: 14px;
+
       line-height: 1.8;
     }
+
 
     /* =========================
        POSITIONING
@@ -476,59 +745,92 @@
 
     .positioning {
       background: var(--green);
+
       color: var(--white);
     }
 
+
     .positioning-grid {
       display: grid;
-      grid-template-columns: 0.9fr 1.1fr;
+
+      grid-template-columns:
+        0.9fr 1.1fr;
+
       gap: 80px;
+
       align-items: center;
     }
+
 
     .positioning .section-label {
       color: var(--gold);
     }
 
+
     .positioning .section-title {
       color: var(--white);
     }
+
 
     .positioning .section-title span {
       color: var(--gold);
     }
 
+
     .positioning-text {
       color: #d7dfd9;
+
       font-size: 16px;
+
       line-height: 1.9;
     }
 
+
     .principles {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+
+      grid-template-columns:
+        repeat(2, 1fr);
+
       gap: 18px;
     }
 
+
     .principle {
       padding: 24px;
-      border: 1px solid rgba(194, 157, 74, 0.28);
-      background: rgba(255, 255, 255, 0.025);
+
+      border:
+        1px solid rgba(194, 157, 74, 0.28);
+
+      background:
+        rgba(255, 255, 255, 0.025);
     }
+
 
     .principle strong {
       display: block;
+
       color: var(--gold);
-      font-family: Georgia, "Times New Roman", serif;
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
       font-size: 20px;
+
       margin-bottom: 8px;
     }
 
+
     .principle p {
       color: #c9d2cc;
+
       font-size: 13px;
+
       line-height: 1.7;
     }
+
 
     /* =========================
        SELECTED WORK
@@ -538,183 +840,404 @@
       background: var(--white);
     }
 
+
     .work-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+
+      grid-template-columns:
+        repeat(2, 1fr);
+
       gap: 25px;
     }
 
+
     .work-card {
-      border: 1px solid var(--line);
+      border:
+        1px solid var(--line);
+
       background: var(--cream);
+
       overflow: hidden;
+
       transition: 0.25s ease;
     }
 
+
     .work-card:hover {
       transform: translateY(-4px);
-      box-shadow: 0 15px 35px var(--shadow);
+
+      box-shadow:
+        0 15px 35px var(--shadow);
     }
+
 
     .work-placeholder {
       min-height: 210px;
+
       display: flex;
+
       align-items: flex-end;
+
       padding: 24px;
+
       background:
         linear-gradient(
           135deg,
           rgba(20, 37, 29, 0.98),
           rgba(38, 61, 49, 0.92)
         );
+
       color: var(--white);
     }
 
+
     .work-placeholder span {
       color: var(--gold);
+
       font-size: 11px;
+
       font-weight: 800;
+
       letter-spacing: 1.4px;
+
       text-transform: uppercase;
     }
+
 
     .work-content {
       padding: 27px;
     }
 
+
     .work-content h3 {
-      font-family: Georgia, "Times New Roman", serif;
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
       font-size: 25px;
+
       color: var(--green);
+
       margin-bottom: 7px;
     }
 
+
     .work-type {
       color: var(--gold-dark);
+
       font-size: 12px;
+
       font-weight: 800;
+
       text-transform: uppercase;
+
       letter-spacing: 0.8px;
+
       margin-bottom: 13px;
     }
 
+
     .work-content p {
       color: var(--muted);
+
       font-size: 14px;
+
       line-height: 1.75;
+
       margin-bottom: 15px;
     }
 
+
     .contribution {
       display: inline-block;
+
       padding: 6px 10px;
+
       background: var(--cream-2);
+
       color: var(--green);
+
       font-size: 11px;
+
       font-weight: 700;
+
       margin-bottom: 18px;
     }
 
+
     .work-link {
       display: inline-flex;
+
       color: var(--green);
+
       font-size: 13px;
+
       font-weight: 800;
-      border-bottom: 1px solid var(--gold);
+
+      border-bottom:
+        1px solid var(--gold);
+
       padding-bottom: 3px;
     }
+
 
     .work-link:hover {
       color: var(--gold-dark);
     }
 
+
     .center-action {
       text-align: center;
+
       margin-top: 42px;
     }
+
+
+    /* =========================
+       ABOUT PREVIEW
+    ========================== */
+
+    .about-preview {
+      background: var(--cream-2);
+    }
+
+
+    .about-preview-grid {
+      display: grid;
+
+      grid-template-columns:
+        0.85fr 1.15fr;
+
+      gap: 75px;
+
+      align-items: center;
+    }
+
+
+    .about-image {
+      position: relative;
+
+      max-width: 450px;
+    }
+
+
+    .about-image::before {
+      content: "";
+
+      position: absolute;
+
+      inset:
+        18px -18px -18px 18px;
+
+      border:
+        1px solid rgba(194, 157, 74, 0.55);
+
+      z-index: 0;
+    }
+
+
+    .about-image img {
+      position: relative;
+
+      z-index: 1;
+
+      width: 100%;
+
+      height: 500px;
+
+      object-fit: cover;
+
+      object-position: center;
+
+      background: var(--green);
+    }
+
+
+    .about-copy {
+      max-width: 650px;
+    }
+
+
+    .about-copy p {
+      color: var(--muted);
+
+      font-size: 16px;
+
+      line-height: 1.9;
+
+      margin-bottom: 18px;
+    }
+
+
+    .about-points {
+      display: grid;
+
+      grid-template-columns:
+        repeat(2, 1fr);
+
+      gap: 12px 25px;
+
+      margin: 28px 0 32px;
+    }
+
+
+    .about-point {
+      display: flex;
+
+      align-items: center;
+
+      gap: 9px;
+
+      color: var(--green);
+
+      font-size: 13px;
+
+      font-weight: 700;
+    }
+
+
+    .about-point::before {
+      content: "✓";
+
+      color: var(--gold-dark);
+
+      font-weight: 900;
+    }
+
 
     /* =========================
        PROOF
     ========================== */
 
     .proof {
-      background: var(--cream-2);
+      background: var(--white);
     }
+
 
     .proof-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
       gap: 22px;
     }
 
+
     .proof-card {
-      background: var(--white);
-      border: 1px solid var(--line);
+      background: var(--cream);
+
+      border:
+        1px solid var(--line);
+
       padding: 30px;
     }
 
+
     .proof-card h3 {
       color: var(--green);
-      font-family: Georgia, "Times New Roman", serif;
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
       font-size: 22px;
+
       margin-bottom: 10px;
     }
 
+
     .proof-card p {
       color: var(--muted);
+
       font-size: 14px;
+
       line-height: 1.8;
+
       margin-bottom: 18px;
     }
 
+
     .proof-card a {
       color: var(--gold-dark);
+
       font-size: 13px;
+
       font-weight: 800;
     }
 
+
     /* =========================
-       PROCESS PREVIEW
+       PROCESS
     ========================== */
 
     .process {
-      background: var(--white);
+      background: var(--cream);
     }
+
 
     .process-grid {
       display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      border: 1px solid var(--line);
+
+      grid-template-columns:
+        repeat(5, 1fr);
+
+      border:
+        1px solid var(--line);
     }
+
 
     .process-step {
       padding: 28px 20px;
-      border-right: 1px solid var(--line);
+
+      border-right:
+        1px solid var(--line);
     }
+
 
     .process-step:last-child {
       border-right: none;
     }
 
+
     .process-step-number {
       color: var(--gold-dark);
-      font-family: Georgia, "Times New Roman", serif;
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
       font-size: 14px;
+
       margin-bottom: 18px;
     }
 
+
     .process-step h3 {
       color: var(--green);
-      font-family: Georgia, "Times New Roman", serif;
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
       font-size: 20px;
+
       margin-bottom: 9px;
     }
 
+
     .process-step p {
       color: var(--muted);
+
       font-size: 12px;
+
       line-height: 1.7;
     }
+
 
     /* =========================
        CTA
@@ -727,36 +1250,60 @@
           var(--green),
           var(--green-2)
         );
+
       color: var(--white);
+
       text-align: center;
     }
+
 
     .cta .section-label {
       color: var(--gold);
     }
 
+
     .cta h2 {
       max-width: 760px;
-      margin: 0 auto 18px;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(36px, 5vw, 58px);
+
+      margin:
+        0 auto 18px;
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size:
+        clamp(36px, 5vw, 58px);
+
       line-height: 1.15;
     }
 
+
     .cta p {
       max-width: 680px;
-      margin: 0 auto 30px;
+
+      margin:
+        0 auto 30px;
+
       color: #d3ddd6;
+
       font-size: 16px;
+
       line-height: 1.8;
     }
 
+
     .cta-buttons {
       display: flex;
+
       justify-content: center;
+
       flex-wrap: wrap;
+
       gap: 14px;
     }
+
 
     /* =========================
        FOOTER
@@ -764,65 +1311,105 @@
 
     footer {
       background: #0e1b15;
+
       color: #d3dbd5;
+
       padding: 65px 0 25px;
     }
 
+
     .footer-grid {
       display: grid;
-      grid-template-columns: 1.4fr 1fr 1fr 1fr;
+
+      grid-template-columns:
+        1.4fr 1fr 1fr 1fr;
+
       gap: 50px;
+
       padding-bottom: 45px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+      border-bottom:
+        1px solid rgba(255, 255, 255, 0.1);
     }
+
 
     .footer-brand h3 {
       color: var(--white);
-      font-family: Georgia, "Times New Roman", serif;
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
       font-size: 25px;
+
       margin-bottom: 13px;
     }
+
 
     .footer-brand h3 span {
       color: var(--gold);
     }
 
+
     .footer-brand p {
       max-width: 330px;
+
       color: #aebbb2;
+
       font-size: 13px;
+
       line-height: 1.8;
     }
 
+
     .footer-column h4 {
       color: var(--gold);
+
       font-size: 12px;
+
       text-transform: uppercase;
+
       letter-spacing: 1.5px;
+
       margin-bottom: 18px;
     }
 
+
     .footer-column a {
       display: block;
+
       color: #bfc9c2;
+
       font-size: 13px;
+
       margin-bottom: 9px;
+
       transition: 0.2s ease;
     }
+
 
     .footer-column a:hover {
       color: var(--gold);
     }
 
+
     .footer-bottom {
       padding-top: 23px;
+
       display: flex;
+
       justify-content: space-between;
+
       gap: 20px;
+
       flex-wrap: wrap;
+
       color: #87948b;
+
       font-size: 11px;
     }
+
 
     /* =========================
        REVEAL
@@ -830,14 +1417,21 @@
 
     .reveal {
       opacity: 0;
+
       transform: translateY(20px);
-      transition: opacity 0.7s ease, transform 0.7s ease;
+
+      transition:
+        opacity 0.7s ease,
+        transform 0.7s ease;
     }
+
 
     .reveal.visible {
       opacity: 1;
+
       transform: translateY(0);
     }
+
 
     /* =========================
        RESPONSIVE
@@ -849,30 +1443,40 @@
         gap: 13px;
       }
 
+
       .nav-links a {
         font-size: 12px;
       }
+
 
       .hero-grid {
         gap: 45px;
       }
 
+
       .process-grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns:
+          repeat(3, 1fr);
       }
+
 
       .process-step:nth-child(3) {
         border-right: none;
       }
 
+
       .process-step:nth-child(-n + 3) {
-        border-bottom: 1px solid var(--line);
+        border-bottom:
+          1px solid var(--line);
       }
 
+
       .footer-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns:
+          repeat(2, 1fr);
       }
     }
+
 
     @media (max-width: 850px) {
 
@@ -880,93 +1484,136 @@
         min-height: 72px;
       }
 
+
       .menu-toggle {
         display: block;
       }
 
+
       .nav-links {
         display: none;
+
         position: absolute;
+
         top: 72px;
+
         left: 0;
+
         width: 100%;
+
         background: var(--green);
+
         padding: 20px;
+
         flex-direction: column;
+
         align-items: stretch;
-        border-top: 1px solid rgba(194, 157, 74, 0.2);
+
+        border-top:
+          1px solid rgba(194, 157, 74, 0.2);
       }
+
 
       .nav-links.open {
         display: flex;
       }
 
+
       .nav-links a {
         padding: 11px 4%;
       }
+
 
       .nav-links .nav-cta {
         text-align: center;
       }
 
+
       .hero {
         padding: 70px 0;
       }
+
 
       .hero-grid {
         grid-template-columns: 1fr;
       }
 
+
       .hero-visual {
         order: -1;
       }
+
 
       .portrait-frame {
         margin: 0 auto;
       }
 
+
       .credibility-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns:
+          repeat(2, 1fr);
       }
+
 
       .credibility-item:nth-child(2) {
         border-right: none;
       }
 
+
       .credibility-item:nth-child(-n + 2) {
-        border-bottom: 1px solid var(--line);
+        border-bottom:
+          1px solid var(--line);
       }
+
 
       .expertise-grid,
       .proof-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns:
+          repeat(2, 1fr);
       }
 
-      .positioning-grid {
+
+      .positioning-grid,
+      .about-preview-grid {
         grid-template-columns: 1fr;
+
         gap: 45px;
       }
+
+
+      .about-image {
+        margin: 0 auto;
+      }
+
 
       .work-grid {
         grid-template-columns: 1fr;
       }
 
+
       .process-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns:
+          repeat(2, 1fr);
       }
 
+
       .process-step:nth-child(3) {
-        border-right: 1px solid var(--line);
+        border-right:
+          1px solid var(--line);
       }
+
 
       .process-step:nth-child(2n) {
         border-right: none;
       }
 
+
       .process-step:nth-child(-n + 4) {
-        border-bottom: 1px solid var(--line);
+        border-bottom:
+          1px solid var(--line);
       }
     }
+
 
     @media (max-width: 600px) {
 
@@ -974,83 +1621,118 @@
         padding: 75px 0;
       }
 
+
       .container {
         width: min(91%, var(--max-width));
       }
+
 
       .brand img {
         width: 135px;
       }
 
+
       .hero h1 {
         font-size: 48px;
       }
+
 
       .hero-kicker {
         font-size: 15px;
       }
 
+
       .hero-description {
         font-size: 15px;
       }
 
+
       .portrait-frame img {
-        height: 430px;
+        height: 450px;
       }
+
 
       .credibility-grid,
       .expertise-grid,
       .proof-grid,
       .principles,
       .process-grid,
-      .footer-grid {
+      .footer-grid,
+      .about-points {
         grid-template-columns: 1fr;
       }
 
+
       .credibility-item {
         border-right: none !important;
-        border-bottom: 1px solid var(--line);
+
+        border-bottom:
+          1px solid var(--line);
       }
+
 
       .credibility-item:last-child {
         border-bottom: none;
       }
 
+
       .expertise-card {
-        border-bottom: 1px solid var(--line);
+        border-bottom:
+          1px solid var(--line);
       }
+
 
       .process-step {
         border-right: none !important;
-        border-bottom: 1px solid var(--line);
+
+        border-bottom:
+          1px solid var(--line);
       }
+
 
       .process-step:last-child {
         border-bottom: none;
       }
 
+
+      .about-image img {
+        height: 430px;
+      }
+
+
       .footer-grid {
         gap: 32px;
       }
+
 
       .footer-bottom {
         flex-direction: column;
       }
     }
+
   </style>
 </head>
 
+
 <body>
+
 
   <!-- =========================
        HEADER
   ========================== -->
 
   <header>
+
     <div class="container">
+
       <nav>
 
-        <a href="index.html" class="brand" aria-label="GUNKOWII SABA Home">
+        <a
+          href="index.html"
+          class="brand"
+          aria-label="GUNKOWII SABA Home"
+        >
+
           <img
             src="gunkowii-saba-logo.png"
             alt="GUNKOWII SABA"
@@ -1060,7 +1742,9 @@
           <span class="brand-fallback">
             GUNKOWII <span>SABA</span>
           </span>
+
         </a>
+
 
         <button
           class="menu-toggle"
@@ -1071,7 +1755,11 @@
           ☰
         </button>
 
-        <div class="nav-links" id="navLinks">
+
+        <div
+          class="nav-links"
+          id="navLinks"
+        >
 
           <a href="index.html">Home</a>
 
@@ -1091,22 +1779,28 @@
 
           <a href="certificates.html">Certificates</a>
 
-          <a href="contact.html" class="nav-cta">
+          <a
+            href="contact.html"
+            class="nav-cta"
+          >
             Let's Talk
           </a>
 
         </div>
 
       </nav>
+
     </div>
+
   </header>
 
 
-  <!-- =========================
-       HERO
-  ========================== -->
-
   <main>
+
+
+    <!-- =========================
+         HERO
+    ========================== -->
 
     <section class="hero">
 
@@ -1114,35 +1808,69 @@
 
         <div class="hero-grid">
 
+
           <div class="hero-content reveal">
 
             <div class="eyebrow">
               E-commerce • Marketing • Growth
             </div>
 
+
             <div class="hero-kicker">
               E-COMMERCE & DIGITAL MARKETING EXPERT
             </div>
+
 
             <h1>
               GUNKOWII
               <span>SABA</span>
             </h1>
 
+
+            <div class="hero-specialties">
+
+              <span>Shopify</span>
+
+              <span>Etsy</span>
+
+              <span>SEO</span>
+
+              <span>CRO</span>
+
+              <span>Paid Advertising</span>
+
+              <span>Email Marketing</span>
+
+            </div>
+
+
             <p class="hero-description">
-              I help e-commerce businesses improve their online presence,
-              attract more relevant traffic, create better customer
-              experiences and turn more visitors into customers.
+
+              I help e-commerce businesses improve visibility,
+              customer experience and conversion opportunities
+              through practical Shopify, Etsy, SEO, CRO and
+              digital marketing strategies.
+
             </p>
+
 
             <div class="hero-buttons">
 
-              <a href="contact.html" class="btn btn-primary">
-                Work With Me
+              <a
+                href="portfolio.html"
+                class="btn btn-primary"
+              >
+                View My Work
               </a>
 
-              <a href="portfolio.html" class="btn btn-outline">
-                Explore My Work
+
+              <a
+                href="https://wa.me/message/V26H2754ROXUB1"
+                target="_blank"
+                rel="noopener"
+                class="btn btn-outline"
+              >
+                Message Me on WhatsApp
               </a>
 
             </div>
@@ -1155,17 +1883,21 @@
             <div class="portrait-frame">
 
               <img
-                src="IMG-20260805-WA0080(1).jpg"
-                alt="GUNKOWII SABA - E-commerce and Digital Marketing Expert"
+                src="Screenshot_2026-09-04-12-55-24-480_com.openai.chatgpt-edit.jpg"
+                alt="GUNKOWII SABA working at a laptop in a professional office"
               >
 
+
               <div class="portrait-caption">
+
                 GUNKOWII SABA / E-COMMERCE & DIGITAL MARKETING
+
               </div>
 
             </div>
 
           </div>
+
 
         </div>
 
@@ -1184,33 +1916,58 @@
 
         <div class="credibility-grid reveal">
 
+
           <div class="credibility-item">
-            <span class="credibility-number">4–6 Years</span>
+
+            <span class="credibility-number">
+              4–6 Years
+            </span>
+
             <span class="credibility-label">
               Practical Experience
             </span>
+
           </div>
 
+
           <div class="credibility-item">
-            <span class="credibility-number">Shopify + Etsy</span>
+
+            <span class="credibility-number">
+              Shopify + Etsy
+            </span>
+
             <span class="credibility-label">
               E-commerce Platforms
             </span>
+
           </div>
 
+
           <div class="credibility-item">
-            <span class="credibility-number">SEO + CRO</span>
-            <span class="credibility-label">
-              Growth & Conversion
+
+            <span class="credibility-number">
+              SEO + CRO
             </span>
+
+            <span class="credibility-label">
+              Visibility & Conversion
+            </span>
+
           </div>
 
+
           <div class="credibility-item">
-            <span class="credibility-number">Multi-Channel</span>
+
+            <span class="credibility-number">
+              Multi-Channel
+            </span>
+
             <span class="credibility-label">
               Digital Marketing
             </span>
+
           </div>
+
 
         </div>
 
@@ -1227,21 +1984,29 @@
 
       <div class="container">
 
+
         <div class="section-header reveal">
 
           <div class="section-label">
-            WHAT I DO
+            CORE EXPERTISE
           </div>
 
+
           <h2 class="section-title">
+
             Helping businesses solve the problems
             <span>behind the screen.</span>
+
           </h2>
 
+
           <p class="section-intro">
-            A store can look good and still struggle with visibility,
-            traffic, trust or conversions. My work focuses on the complete
-            customer journey—not just how the website looks.
+
+            A store can look good and still struggle with
+            visibility, traffic, trust or conversions. My work
+            focuses on the complete customer journey—not just
+            how the website looks.
+
           </p>
 
         </div>
@@ -1249,77 +2014,120 @@
 
         <div class="expertise-grid">
 
-          <article class="expertise-card reveal">
-            <div class="card-number">01</div>
 
-            <h3>Shopify & E-commerce</h3>
+          <article class="expertise-card reveal">
+
+            <div class="card-number">
+              01
+            </div>
+
+            <h3>
+              Shopify & E-commerce
+            </h3>
 
             <p>
               Store optimization, product pages, navigation,
-              merchandising, customer experience and e-commerce strategy.
+              merchandising, customer experience and
+              e-commerce strategy.
             </p>
+
           </article>
 
 
           <article class="expertise-card reveal">
-            <div class="card-number">02</div>
 
-            <h3>Etsy Growth</h3>
+            <div class="card-number">
+              02
+            </div>
+
+            <h3>
+              Etsy Growth
+            </h3>
 
             <p>
               Etsy SEO, listing optimization, product positioning,
-              marketplace visibility and conversion-focused improvements.
+              marketplace visibility and conversion-focused
+              improvements.
             </p>
+
           </article>
 
 
           <article class="expertise-card reveal">
-            <div class="card-number">03</div>
 
-            <h3>SEO & Visibility</h3>
+            <div class="card-number">
+              03
+            </div>
+
+            <h3>
+              SEO & Search Visibility
+            </h3>
 
             <p>
-              Search-focused optimization designed to help businesses
-              become more visible to people actively looking for what
-              they sell.
+              Search-focused optimization designed to improve
+              visibility for people actively looking for relevant
+              products and services.
             </p>
+
           </article>
 
 
           <article class="expertise-card reveal">
-            <div class="card-number">04</div>
 
-            <h3>CRO & Customer Experience</h3>
+            <div class="card-number">
+              04
+            </div>
+
+            <h3>
+              CRO & Customer Experience
+            </h3>
 
             <p>
-              Identifying friction, trust gaps, weak calls-to-action and
-              other reasons visitors fail to move toward purchase.
+              Identifying friction, trust gaps, weak calls-to-action
+              and other barriers that can prevent visitors from
+              moving toward purchase.
             </p>
+
           </article>
 
 
           <article class="expertise-card reveal">
-            <div class="card-number">05</div>
 
-            <h3>Digital Marketing</h3>
+            <div class="card-number">
+              05
+            </div>
+
+            <h3>
+              Paid Advertising
+            </h3>
 
             <p>
-              Google, Meta, Instagram and TikTok advertising strategies
-              focused on reaching relevant audiences and supporting growth.
+              Google, Meta, Instagram and TikTok advertising
+              strategies designed around relevant audiences,
+              offers and business objectives.
             </p>
+
           </article>
 
 
           <article class="expertise-card reveal">
-            <div class="card-number">06</div>
 
-            <h3>Email & Web</h3>
+            <div class="card-number">
+              06
+            </div>
+
+            <h3>
+              Email & Web Development
+            </h3>
 
             <p>
-              Email marketing, automation, website development and digital
-              systems that support the wider business strategy.
+              Email marketing, automation, website development
+              and digital systems that support wider business
+              and customer-growth strategies.
             </p>
+
           </article>
+
 
         </div>
 
@@ -1338,22 +2146,29 @@
 
         <div class="positioning-grid">
 
+
           <div class="reveal">
 
             <div class="section-label">
               MY APPROACH
             </div>
 
+
             <h2 class="section-title">
+
               Strategy before
               <span>random changes.</span>
+
             </h2>
 
+
             <p class="positioning-text">
+
               I don't believe every store needs the same solution.
               Before recommending changes, I look at the business,
               customer journey, traffic sources, offer, product
               presentation and conversion barriers.
+
             </p>
 
           </div>
@@ -1361,44 +2176,62 @@
 
           <div class="principles">
 
+
             <div class="principle reveal">
-              <strong>Business First</strong>
+
+              <strong>
+                Business First
+              </strong>
 
               <p>
-                Every recommendation should connect to a real business
-                objective.
+                Every recommendation should connect to a real
+                business objective.
               </p>
+
             </div>
 
 
             <div class="principle reveal">
-              <strong>Customer Focused</strong>
+
+              <strong>
+                Customer Focused
+              </strong>
 
               <p>
-                The customer journey matters more than simply adding
-                more features.
+                The customer journey matters more than simply
+                adding more features.
               </p>
+
             </div>
 
 
             <div class="principle reveal">
-              <strong>Evidence Based</strong>
+
+              <strong>
+                Evidence Based
+              </strong>
 
               <p>
-                I focus on observable problems, opportunities and
-                measurable improvements.
+                I focus on observable problems, opportunities
+                and measurable improvements.
               </p>
+
             </div>
 
 
             <div class="principle reveal">
-              <strong>Practical Execution</strong>
+
+              <strong>
+                Practical Execution
+              </strong>
 
               <p>
-                Strategy only matters when it can actually be implemented
-                and improved over time.
+                Strategy only matters when it can actually be
+                implemented and improved over time.
               </p>
+
             </div>
+
 
           </div>
 
@@ -1417,21 +2250,28 @@
 
       <div class="container">
 
+
         <div class="section-header reveal">
 
           <div class="section-label">
             SELECTED WORK
           </div>
 
+
           <h2 class="section-title">
+
             Real stores. Real projects.
             <span>Practical work.</span>
+
           </h2>
 
+
           <p class="section-intro">
-            A selection of e-commerce projects and store work across
-            fashion, fitness, beauty, product discovery and e-commerce
-            growth.
+
+            A selection of e-commerce projects and store work
+            across fashion, fitness, beauty, product discovery
+            and digital development.
+
           </p>
 
         </div>
@@ -1439,32 +2279,42 @@
 
         <div class="work-grid">
 
-          <!-- TEEOLOGY -->
 
           <article class="work-card reveal">
 
             <div class="work-placeholder">
-              <span>Shopify • E-commerce • UX</span>
+
+              <span>
+                Shopify • E-commerce • UX
+              </span>
+
             </div>
+
 
             <div class="work-content">
 
-              <h3>Teeology Clothing</h3>
+              <h3>
+                Teeology Clothing
+              </h3>
+
 
               <div class="work-type">
                 Shopify / E-commerce
               </div>
+
 
               <p>
                 E-commerce work focused on product presentation,
                 customer experience, navigation and store structure.
               </p>
 
+
               <span class="contribution">
                 Team Project — 60–75% Contribution
               </span>
 
               <br>
+
 
               <a
                 href="https://teeologyclothing.com/"
@@ -1480,32 +2330,42 @@
           </article>
 
 
-          <!-- IRON THERAPY -->
-
           <article class="work-card reveal">
 
             <div class="work-placeholder">
-              <span>E-commerce • Fitness • CRO</span>
+
+              <span>
+                E-commerce • Fitness • CRO
+              </span>
+
             </div>
+
 
             <div class="work-content">
 
-              <h3>Iron Therapy Fitness</h3>
+              <h3>
+                Iron Therapy Fitness
+              </h3>
+
 
               <div class="work-type">
                 E-commerce / Fitness
               </div>
 
+
               <p>
                 Store work involving e-commerce presentation,
-                customer experience and conversion-focused improvements.
+                customer experience and conversion-focused
+                improvements.
               </p>
+
 
               <span class="contribution">
                 Team Project — 60–75% Contribution
               </span>
 
               <br>
+
 
               <a
                 href="https://irontherapyfitness.net/"
@@ -1521,32 +2381,41 @@
           </article>
 
 
-          <!-- BEEYOUTI -->
-
           <article class="work-card reveal">
 
             <div class="work-placeholder">
-              <span>Beauty • E-commerce • UX</span>
+
+              <span>
+                Beauty • E-commerce • UX
+              </span>
+
             </div>
+
 
             <div class="work-content">
 
-              <h3>BeeYouti</h3>
+              <h3>
+                BeeYouti
+              </h3>
+
 
               <div class="work-type">
                 Beauty / E-commerce
               </div>
+
 
               <p>
                 Work focused on product organization, navigation,
                 customer experience and e-commerce presentation.
               </p>
 
+
               <span class="contribution">
                 Team Project — 60–75% Contribution
               </span>
 
               <br>
+
 
               <a
                 href="https://beeyouti.com/"
@@ -1562,32 +2431,42 @@
           </article>
 
 
-          <!-- LOOK FOR IT HERE -->
-
           <article class="work-card reveal">
 
             <div class="work-placeholder">
-              <span>E-commerce • Discovery • UX</span>
+
+              <span>
+                E-commerce • Discovery • UX
+              </span>
+
             </div>
+
 
             <div class="work-content">
 
-              <h3>Look For It Here</h3>
+              <h3>
+                Look For It Here
+              </h3>
+
 
               <div class="work-type">
                 E-commerce / Product Discovery
               </div>
 
+
               <p>
-                E-commerce work involving collections, product discovery,
-                navigation and customer experience.
+                E-commerce work involving collections,
+                product discovery, navigation and customer
+                experience.
               </p>
+
 
               <span class="contribution">
                 Team Project — 60–75% Contribution
               </span>
 
               <br>
+
 
               <a
                 href="https://www.lookforithere.com.ar/"
@@ -1603,33 +2482,42 @@
           </article>
 
 
-          <!-- AESTEVI -->
-
           <article class="work-card reveal">
 
             <div class="work-placeholder">
-              <span>Audit • SEO • CRO • UX</span>
+
+              <span>
+                Audit • SEO • CRO • UX
+              </span>
+
             </div>
+
 
             <div class="work-content">
 
-              <h3>Aestevi</h3>
+              <h3>
+                Aestevi
+              </h3>
+
 
               <div class="work-type">
                 E-commerce Audit
               </div>
 
+
               <p>
                 Store analysis focused on visibility, positioning,
-                customer experience, conversion opportunities and
-                e-commerce growth.
+                customer experience, conversion opportunities
+                and e-commerce growth.
               </p>
+
 
               <span class="contribution">
                 Audit / Analysis
               </span>
 
               <br>
+
 
               <a
                 href="https://aestevi.com/"
@@ -1645,33 +2533,42 @@
           </article>
 
 
-          <!-- SCHOOL MANAGEMENT SYSTEM -->
-
           <article class="work-card reveal">
 
             <div class="work-placeholder">
-              <span>Flutter • Firebase • Web & App</span>
+
+              <span>
+                Flutter • Firebase • Web & App
+              </span>
+
             </div>
+
 
             <div class="work-content">
 
-              <h3>MANBAUL ANWAR Arabic School Management System</h3>
+              <h3>
+                MANBAUL ANWAR Arabic School Management System
+              </h3>
+
 
               <div class="work-type">
                 Web & Application Development
               </div>
 
+
               <p>
-                A developing digital management system built around
-                education, authentication, database management and
-                role-based functionality.
+                A developing digital management system built
+                around education, authentication, database
+                management and role-based functionality.
               </p>
+
 
               <span class="contribution">
                 Development Project
               </span>
 
               <br>
+
 
               <a
                 href="https://github.com/gunkowii248656-alt"
@@ -1686,14 +2583,119 @@
 
           </article>
 
+
         </div>
 
 
         <div class="center-action reveal">
 
-          <a href="portfolio.html" class="btn btn-primary">
+          <a
+            href="portfolio.html"
+            class="btn btn-primary"
+          >
             View Full Portfolio
           </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         ABOUT PREVIEW
+    ========================== -->
+
+    <section class="about-preview">
+
+      <div class="container">
+
+        <div class="about-preview-grid">
+
+
+          <div class="about-image reveal">
+
+            <img
+              src="Screenshot_2026-09-04-12-53-39-223_com.openai.chatgpt-edit.jpg"
+              alt="GUNKOWII SABA standing in a professional office workspace"
+            >
+
+          </div>
+
+
+          <div class="about-copy reveal">
+
+            <div class="section-label">
+              MEET GUNKOWII SABA
+            </div>
+
+
+            <h2 class="section-title">
+
+              The person behind
+              <span>the work.</span>
+
+            </h2>
+
+
+            <p>
+
+              I am Gunkowii Saba, an E-commerce & Digital Marketing
+              Expert focused on helping businesses improve their
+              online presence, visibility, customer experience and
+              conversion opportunities.
+
+            </p>
+
+
+            <p>
+
+              My work combines e-commerce strategy with practical
+              implementation across Shopify, Etsy, SEO, CRO,
+              digital marketing, email marketing and web development.
+
+            </p>
+
+
+            <div class="about-points">
+
+              <div class="about-point">
+                Shopify & E-commerce
+              </div>
+
+              <div class="about-point">
+                Etsy & Marketplace Growth
+              </div>
+
+              <div class="about-point">
+                SEO & Search Visibility
+              </div>
+
+              <div class="about-point">
+                CRO & Customer Experience
+              </div>
+
+              <div class="about-point">
+                Paid Advertising
+              </div>
+
+              <div class="about-point">
+                Email Marketing
+              </div>
+
+            </div>
+
+
+            <a
+              href="about.html"
+              class="btn btn-primary"
+            >
+              More About Me
+            </a>
+
+          </div>
+
 
         </div>
 
@@ -1710,21 +2712,28 @@
 
       <div class="container">
 
+
         <div class="section-header reveal">
 
           <div class="section-label">
             PROFESSIONAL PRESENCE
           </div>
 
+
           <h2 class="section-title">
+
             More than a claim.
             <span>Build the proof.</span>
+
           </h2>
 
+
           <p class="section-intro">
+
             My portfolio is being built around actual projects,
             documented work, professional profiles and credentials
             rather than unsupported claims.
+
           </p>
 
         </div>
@@ -1732,14 +2741,19 @@
 
         <div class="proof-grid">
 
+
           <article class="proof-card reveal">
 
-            <h3>Professional Profile</h3>
+            <h3>
+              Professional Profile
+            </h3>
+
 
             <p>
-              Explore my professional presence and examples of services
-              offered to clients.
+              Explore my professional presence and examples of
+              services offered to clients.
             </p>
+
 
             <a
               href="https://www.fiverr.com/smith_stephiene"
@@ -1754,12 +2768,16 @@
 
           <article class="proof-card reveal">
 
-            <h3>Agency Experience</h3>
+            <h3>
+              Professional Reference
+            </h3>
+
 
             <p>
-              Bofowo Agency is part of the professional environment and
-              experience represented within my portfolio.
+              Explore the agency environment and professional
+              e-commerce work that informs the wider portfolio.
             </p>
+
 
             <a
               href="https://www.bofowoagency.com/"
@@ -1774,18 +2792,24 @@
 
           <article class="proof-card reveal">
 
-            <h3>Credentials</h3>
+            <h3>
+              Credentials
+            </h3>
+
 
             <p>
-              View certificates and relevant professional credentials
-              supporting my experience and technical development.
+              View certificates and relevant professional
+              credentials supporting my experience and technical
+              development.
             </p>
+
 
             <a href="certificates.html">
               View Certificates →
             </a>
 
           </article>
+
 
         </div>
 
@@ -1802,21 +2826,28 @@
 
       <div class="container">
 
+
         <div class="section-header reveal">
 
           <div class="section-label">
             HOW I WORK
           </div>
 
+
           <h2 class="section-title">
+
             From identifying the problem
             <span>to improving the result.</span>
+
           </h2>
 
+
           <p class="section-intro">
-            The exact strategy depends on the business, but the process
-            starts with understanding the problem before recommending
-            the solution.
+
+            The exact strategy depends on the business, but
+            the process starts with understanding the problem
+            before recommending the solution.
+
           </p>
 
         </div>
@@ -1824,16 +2855,20 @@
 
         <div class="process-grid">
 
+
           <div class="process-step reveal">
 
             <div class="process-step-number">
               01
             </div>
 
-            <h3>Discover</h3>
+            <h3>
+              Discover
+            </h3>
 
             <p>
-              Understand the business, offer, audience and objectives.
+              Understand the business, offer, audience and
+              objectives.
             </p>
 
           </div>
@@ -1845,10 +2880,13 @@
               02
             </div>
 
-            <h3>Audit</h3>
+            <h3>
+              Audit
+            </h3>
 
             <p>
-              Identify visibility, UX, traffic and conversion gaps.
+              Identify visibility, UX, traffic and conversion
+              gaps.
             </p>
 
           </div>
@@ -1860,11 +2898,13 @@
               03
             </div>
 
-            <h3>Strategize</h3>
+            <h3>
+              Strategize
+            </h3>
 
             <p>
-              Prioritize the improvements that can have the greatest
-              business impact.
+              Prioritize the improvements that can have the
+              greatest business impact.
             </p>
 
           </div>
@@ -1876,10 +2916,13 @@
               04
             </div>
 
-            <h3>Implement</h3>
+            <h3>
+              Implement
+            </h3>
 
             <p>
-              Put the agreed improvements and systems into practice.
+              Put the agreed improvements and systems into
+              practice.
             </p>
 
           </div>
@@ -1891,20 +2934,27 @@
               05
             </div>
 
-            <h3>Optimize</h3>
+            <h3>
+              Optimize
+            </h3>
 
             <p>
-              Review performance and continue improving where needed.
+              Review performance and continue improving where
+              needed.
             </p>
 
           </div>
+
 
         </div>
 
 
         <div class="center-action reveal">
 
-          <a href="process.html" class="btn btn-outline">
+          <a
+            href="process.html"
+            class="btn btn-primary"
+          >
             Explore My Process
           </a>
 
@@ -1916,7 +2966,7 @@
 
 
     <!-- =========================
-         CTA
+         FINAL CTA
     ========================== -->
 
     <section class="cta">
@@ -1925,22 +2975,30 @@
 
         <div class="reveal">
 
+
           <div class="section-label">
             READY TO IMPROVE YOUR STORE?
           </div>
 
+
           <h2>
-            Let's find what is holding your e-commerce business back.
+            Let's find what is holding your e-commerce
+            business back.
           </h2>
 
+
           <p>
+
             Whether you need better Shopify or Etsy performance,
-            stronger visibility, improved conversion, better marketing
-            or a clearer digital strategy, let's start with the actual
-            problem.
+            stronger visibility, improved conversion, better
+            marketing or a clearer digital strategy, let's start
+            with the actual problem.
+
           </p>
 
+
           <div class="cta-buttons">
+
 
             <a
               href="https://wa.me/message/V26H2754ROXUB1"
@@ -1951,9 +3009,14 @@
               Message Gunkowii Elite Pro
             </a>
 
-            <a href="audit.html" class="btn btn-outline">
+
+            <a
+              href="audit.html"
+              class="btn btn-outline"
+            >
               Get a Free Store Audit
             </a>
+
 
           </div>
 
@@ -1962,6 +3025,7 @@
       </div>
 
     </section>
+
 
   </main>
 
@@ -1974,7 +3038,9 @@
 
     <div class="container">
 
+
       <div class="footer-grid">
+
 
         <div class="footer-brand">
 
@@ -1982,10 +3048,13 @@
             GUNKOWII <span>SABA</span>
           </h3>
 
+
           <p>
-            E-commerce & Digital Marketing Expert helping businesses
-            improve online visibility, customer experience and
-            conversion opportunities.
+
+            E-commerce & Digital Marketing Expert helping
+            businesses improve online visibility, customer
+            experience and conversion opportunities.
+
           </p>
 
         </div>
@@ -1993,33 +3062,70 @@
 
         <div class="footer-column">
 
-          <h4>Explore</h4>
+          <h4>
+            Explore
+          </h4>
 
-          <a href="index.html">Home</a>
-          <a href="about.html">About</a>
-          <a href="services.html">Services</a>
-          <a href="portfolio.html">Portfolio</a>
-          <a href="reviews.html">Reviews</a>
+
+          <a href="index.html">
+            Home
+          </a>
+
+          <a href="about.html">
+            About
+          </a>
+
+          <a href="services.html">
+            Services
+          </a>
+
+          <a href="portfolio.html">
+            Portfolio
+          </a>
+
+          <a href="reviews.html">
+            Reviews
+          </a>
 
         </div>
 
 
         <div class="footer-column">
 
-          <h4>Work With Me</h4>
+          <h4>
+            Work With Me
+          </h4>
 
-          <a href="pricing.html">Pricing</a>
-          <a href="process.html">Process</a>
-          <a href="audit.html">Free Audit</a>
-          <a href="certificates.html">Certificates</a>
-          <a href="contact.html">Contact</a>
+
+          <a href="pricing.html">
+            Pricing
+          </a>
+
+          <a href="process.html">
+            Process
+          </a>
+
+          <a href="audit.html">
+            Free Audit
+          </a>
+
+          <a href="certificates.html">
+            Certificates
+          </a>
+
+          <a href="contact.html">
+            Contact
+          </a>
 
         </div>
 
 
         <div class="footer-column">
 
-          <h4>Connect</h4>
+          <h4>
+            Connect
+          </h4>
+
 
           <a
             href="https://wa.me/message/V26H2754ROXUB1"
@@ -2029,6 +3135,7 @@
             WhatsApp
           </a>
 
+
           <a
             href="https://instagram.com/gunkowii.saba"
             target="_blank"
@@ -2037,6 +3144,7 @@
             Instagram
           </a>
 
+
           <a
             href="https://twitter.com/agunko01"
             target="_blank"
@@ -2044,6 +3152,7 @@
           >
             X / Twitter
           </a>
+
 
           <a
             href="https://www.fiverr.com/smith_stephiene"
@@ -2055,6 +3164,7 @@
 
         </div>
 
+
       </div>
 
 
@@ -2064,11 +3174,13 @@
           © 2026 GUNKOWII SABA. All rights reserved.
         </span>
 
+
         <span>
           E-commerce • Digital Marketing • Web Development
         </span>
 
       </div>
+
 
     </div>
 
@@ -2083,41 +3195,57 @@
 
     /* Mobile Navigation */
 
-    const menuToggle = document.getElementById("menuToggle");
-    const navLinks = document.getElementById("navLinks");
+    const menuToggle =
+      document.getElementById("menuToggle");
 
-    menuToggle.addEventListener("click", function () {
-
-      const isOpen = navLinks.classList.toggle("open");
-
-      menuToggle.setAttribute(
-        "aria-expanded",
-        isOpen ? "true" : "false"
-      );
-
-      menuToggle.textContent = isOpen ? "✕" : "☰";
-
-    });
+    const navLinks =
+      document.getElementById("navLinks");
 
 
-    /* Close menu after clicking a link */
+    menuToggle.addEventListener(
+      "click",
+      function () {
 
-    document.querySelectorAll(".nav-links a").forEach(function(link) {
+        const isOpen =
+          navLinks.classList.toggle("open");
 
-      link.addEventListener("click", function() {
-
-        navLinks.classList.remove("open");
 
         menuToggle.setAttribute(
           "aria-expanded",
-          "false"
+          isOpen ? "true" : "false"
         );
 
-        menuToggle.textContent = "☰";
+
+        menuToggle.textContent =
+          isOpen ? "✕" : "☰";
+
+      }
+    );
+
+
+    /* Close mobile menu */
+
+    document
+      .querySelectorAll(".nav-links a")
+      .forEach(function (link) {
+
+        link.addEventListener(
+          "click",
+          function () {
+
+            navLinks.classList.remove("open");
+
+            menuToggle.setAttribute(
+              "aria-expanded",
+              "false"
+            );
+
+            menuToggle.textContent = "☰";
+
+          }
+        );
 
       });
-
-    });
 
 
     /* Scroll Reveal */
@@ -2125,36 +3253,60 @@
     const revealElements =
       document.querySelectorAll(".reveal");
 
-    const revealObserver =
-      new IntersectionObserver(
-        function(entries) {
 
-          entries.forEach(function(entry) {
+    if ("IntersectionObserver" in window) {
 
-            if (entry.isIntersecting) {
+      const revealObserver =
+        new IntersectionObserver(
+          function (entries) {
 
-              entry.target.classList.add("visible");
+            entries.forEach(
+              function (entry) {
 
-              revealObserver.unobserve(entry.target);
+                if (entry.isIntersecting) {
 
-            }
+                  entry.target.classList.add(
+                    "visible"
+                  );
 
-          });
+                  revealObserver.unobserve(
+                    entry.target
+                  );
 
-        },
-        {
-          threshold: 0.12
+                }
+
+              }
+            );
+
+          },
+          {
+            threshold: 0.12
+          }
+        );
+
+
+      revealElements.forEach(
+        function (element) {
+
+          revealObserver.observe(element);
+
         }
       );
 
+    } else {
 
-    revealElements.forEach(function(element) {
+      revealElements.forEach(
+        function (element) {
 
-      revealObserver.observe(element);
+          element.classList.add("visible");
 
-    });
+        }
+      );
+
+    }
 
   </script>
+
 
 </body>
 </html>
